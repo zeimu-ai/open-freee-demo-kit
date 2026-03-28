@@ -1,48 +1,48 @@
-name: 🐛 Bug Report
-description: Report a bug or unexpected behavior
+name: 🐛 バグ報告
+description: バグや予期しない動作を報告する
 labels: ["bug", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a bug! Please fill out the sections below to help us fix it.
+        バグ報告ありがとうございます！以下の項目を記入してください。
 
   - type: textarea
     id: description
     attributes:
-      label: Describe the bug
-      description: A clear and concise description of what the bug is
+      label: バグの説明
+      description: 何が問題かを明確・簡潔に説明してください
       placeholder: |
-        When I run `freee-demo-kit create --start 2026-02-20T10:00:00 --duration 60`, I get an error...
+        `fdk load accounting/quickstart` を実行すると、エラーが発生します...
     validations:
       required: true
 
   - type: textarea
     id: reproduction
     attributes:
-      label: Steps to reproduce
-      description: Steps to reproduce the behavior
+      label: 再現手順
+      description: バグを再現する手順
       placeholder: |
-        1. Run `freee-demo-kit create --start 2026-02-20T10:00:00 --duration 60`
-        2. Observe error message
-        3. ...
+        1. `fdk auth` でログイン
+        2. `fdk load accounting/quickstart` を実行
+        3. エラーメッセージを確認
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
-      description: What you expected to happen
-      placeholder: Meeting should be created successfully
+      label: 期待する動作
+      description: 本来どのような動作を期待していましたか
+      placeholder: データが正常に投入される
     validations:
       required: true
 
   - type: textarea
     id: actual
     attributes:
-      label: Actual behavior
-      description: What actually happened (include error messages if any)
+      label: 実際の動作
+      description: 実際に何が起きましたか（エラーメッセージがあれば含めてください）
       placeholder: |
         Error: Authentication failed...
     validations:
@@ -51,17 +51,17 @@ body:
   - type: input
     id: version
     attributes:
-      label: Zoomy version
-      description: Run `freee-demo-kit --version` or `npm list freee-demo-kit`
-      placeholder: "1.0.0"
+      label: freee-demo-kit バージョン
+      description: "`fdk --version` または `npm list freee-demo-kit` で確認"
+      placeholder: "0.1.0"
     validations:
       required: true
 
   - type: input
     id: node
     attributes:
-      label: Node.js version
-      description: Run `node --version`
+      label: Node.js バージョン
+      description: "`node --version` で確認"
       placeholder: "v20.10.0"
     validations:
       required: true
@@ -69,8 +69,8 @@ body:
   - type: input
     id: os
     attributes:
-      label: Operating System
-      description: e.g., macOS 14.2, Ubuntu 22.04, Windows 11
+      label: OS
+      description: "例: macOS 14.2、Ubuntu 22.04、Windows 11"
       placeholder: "macOS 14.2"
     validations:
       required: true
@@ -78,7 +78,7 @@ body:
   - type: textarea
     id: additional
     attributes:
-      label: Additional context
-      description: Any other context, screenshots, or logs that might help
+      label: 補足情報
+      description: その他の情報、スクリーンショット、ログなど
     validations:
       required: false

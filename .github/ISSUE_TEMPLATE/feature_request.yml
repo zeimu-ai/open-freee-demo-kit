@@ -1,47 +1,47 @@
-name: 💡 Feature Request
-description: Suggest a new feature or enhancement
+name: 💡 機能リクエスト
+description: 新機能や改善を提案する
 labels: ["enhancement", "needs-discussion"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for suggesting a feature! Please provide details below.
+        機能のご提案ありがとうございます！以下の項目を記入してください。
 
   - type: textarea
     id: problem
     attributes:
-      label: Problem statement
-      description: What problem does this feature solve?
+      label: 課題・背景
+      description: この機能が解決する問題や課題を説明してください
       placeholder: |
-        Currently, there's no way to...
-        This makes it difficult to...
+        現状では〇〇ができない...
+        そのため〇〇が困難...
     validations:
       required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: Proposed solution
-      description: How would you like this feature to work?
+      label: 提案する解決策
+      description: どのような機能・動作を望みますか
       placeholder: |
-        Add a new command `freee-demo-kit export` that allows users to...
+        `fdk export` コマンドを追加し、...
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives considered
-      description: What other solutions or workarounds have you considered?
+      label: 検討した代替案
+      description: 他に検討した解決策やワークアラウンドがあれば記載してください
       placeholder: |
-        I tried using... but it doesn't work because...
+        〇〇を試みましたが、△△のため対応できませんでした...
     validations:
       required: false
 
   - type: textarea
     id: additional
     attributes:
-      label: Additional context
-      description: Any other context, mockups, or examples
+      label: 補足情報
+      description: その他の情報、モックアップ、参考例など
     validations:
       required: false

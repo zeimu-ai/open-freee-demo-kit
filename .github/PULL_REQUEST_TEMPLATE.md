@@ -1,56 +1,54 @@
-## Description
+## 概要
 
-<!-- Provide a brief summary of your changes -->
+<!-- 変更の概要を簡潔に記述してください -->
 
-## Related Issues
+## 関連 Issue
 
-<!-- Link to related issues using #issue_number -->
+<!-- 関連するIssueを #番号 で記載してください -->
 Closes #
 
-## Type of Change
+## 変更の種類
 
-<!-- Check all that apply -->
-- [ ] 🐛 Bug fix (non-breaking change fixing an issue)
-- [ ] ✨ New feature (non-breaking change adding functionality)
-- [ ] 💥 Breaking change (fix or feature causing existing functionality to break)
-- [ ] 📝 Documentation update
-- [ ] 🧪 Test improvement
-- [ ] ♻️ Refactoring (no functional changes)
-- [ ] 🔧 Configuration/tooling change
+<!-- 該当するものにチェックを入れてください -->
+- [ ] 🐛 バグ修正（既存機能に影響しない変更）
+- [ ] ✨ 新機能（既存機能に影響しない機能追加）
+- [ ] 💥 破壊的変更（既存機能に影響する修正）
+- [ ] 📝 ドキュメント更新
+- [ ] 🧪 テスト追加・改善
+- [ ] ♻️ リファクタリング（機能変更なし）
+- [ ] 🔧 設定・ツール変更
 
-## Testing
+## テスト
 
-<!-- Describe how you tested your changes -->
+<!-- 変更内容のテスト方法を記述してください -->
 
-### Test Coverage
-- [ ] Unit tests added/updated
-- [ ] All tests pass locally (`npm test`)
-- [ ] Build succeeds locally (`npm run build`)
-- [ ] Manual testing performed
+### テスト確認項目
+- [ ] ユニットテスト 追加・更新済み
+- [ ] ローカルで全テストが通ることを確認（`npm test`）
+- [ ] ビルドが成功することを確認（`npm run build`）
+- [ ] 手動テスト実施済み
 
-### Test Evidence
-<!-- Paste test output or describe manual testing steps -->
+### テスト結果
+<!-- テスト出力または手動テストの手順を貼り付けてください -->
 ```bash
-# Example:
 $ npm test
-✓ All 160 tests passed
+✓ All tests passed
 ```
 
-## Checklist
+## チェックリスト
 
-- [ ] My code follows the project's style guidelines
-- [ ] I have performed a self-review of my code
-- [ ] I have commented my code where necessary
-- [ ] I have updated the documentation (README, CONTRIBUTING, etc.)
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix/feature works
-- [ ] New and existing tests pass locally
-- [ ] My commit messages follow the conventional format (e.g., `feat:`, `fix:`)
+- [ ] コードがプロジェクトのスタイルガイドに従っている
+- [ ] 自己レビューを実施した
+- [ ] 必要な箇所にコメントを追加した
+- [ ] ドキュメント（README、CONTRIBUTING等）を更新した
+- [ ] 新たな警告が発生していない
+- [ ] 修正・機能を証明するテストを追加した
+- [ ] コミットメッセージがConventional Commits形式に従っている（例: `feat:`、`fix:`）
 
-## Screenshots (if applicable)
+## スクリーンショット（該当する場合）
 
-<!-- Add screenshots for CLI output changes -->
+<!-- CLIの出力変更がある場合はスクリーンショットを添付してください -->
 
-## Additional Notes
+## 備考
 
-<!-- Any additional information reviewers should know -->
+<!-- レビュアーが知っておくべき追加情報があれば記載してください -->

@@ -1,30 +1,30 @@
-name: ❓ Question
-description: Ask a question about using Zoomy
+name: ❓ 質問・相談
+description: 使い方や動作について質問する
 labels: ["question"]
 body:
   - type: markdown
     attributes:
       value: |
-        Have a question? We're here to help!
+        ご質問をお待ちしています！お気軽にどうぞ。
 
   - type: textarea
     id: question
     attributes:
-      label: Your question
-      description: What would you like to know about Zoomy?
+      label: 質問内容
+      description: freee-demo-kit について知りたいことを記入してください
       placeholder: |
-        How do I configure multiple Zoom accounts?
-        What timezone formats are supported?
+        `fdk load` の実行後に追加でデータを投入したい場合はどうすればいいですか？
+        認証情報はどこに保存されますか？
     validations:
       required: true
 
   - type: textarea
     id: context
     attributes:
-      label: Context
-      description: Any additional context or what you've already tried
+      label: 補足情報
+      description: 試したこと、参照したドキュメントなど
       placeholder: |
-        I've tried... but I'm getting...
-        I looked at the documentation but...
+        READMEを確認しましたが...
+        `fdk auth` は実行済みですが...
     validations:
       required: false
