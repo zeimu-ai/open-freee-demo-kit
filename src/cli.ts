@@ -8,6 +8,7 @@ import { loadAllCommand } from './commands/load-all.js';
 import { resetCommand } from './commands/reset.js';
 import { validateCommand } from './commands/validate.js';
 import { dryRunCommand } from './commands/dry-run.js';
+import { verifyCommand } from './commands/verify.js';
 
 const program = new Command();
 
@@ -24,5 +25,6 @@ program.addCommand(loadAllCommand);
 program.addCommand(resetCommand);
 program.addCommand(validateCommand);
 program.addCommand(dryRunCommand);
+program.addCommand(verifyCommand);
 
 program.parse();
