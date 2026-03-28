@@ -37,3 +37,8 @@ export async function clearState(preset: string): Promise<void> {
   delete map[preset];
   await writeStateMap(map);
 }
+
+export async function listAllStates(): Promise<PresetState[]> {
+  const map = await readStateMap();
+  return Object.values(map);
+}

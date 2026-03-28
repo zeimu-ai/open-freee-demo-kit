@@ -9,6 +9,7 @@ import { resetCommand } from './commands/reset.js';
 import { validateCommand } from './commands/validate.js';
 import { dryRunCommand } from './commands/dry-run.js';
 import { verifyCommand } from './commands/verify.js';
+import { statusCommand } from './commands/status.js';
 
 const program = new Command();
 
@@ -26,5 +27,6 @@ program.addCommand(resetCommand);
 program.addCommand(validateCommand);
 program.addCommand(dryRunCommand);
 program.addCommand(verifyCommand);
+program.addCommand(statusCommand);
 
 program.parse();
