@@ -44,15 +44,17 @@ fdk reset         # デモデータを全削除
 | `fdk reset` | 全デモデータを削除 |
 | `fdk validate` | プリセットJSONのスキーマ検証 |
 | `fdk dry-run <preset>` | 投入シミュレーション（変更なし） |
+| `fdk verify <preset>` | 投入データをfreee APIで突合確認（CI/CD対応） |
+| `fdk status` | 投入済みプリセット一覧と件数を表示 |
 
 ## プリセット一覧
 
 | プリセット | 内容 | 状態 |
 |-----------|------|------|
-| `accounting/quickstart` | 取引50件・口座3件（最小構成） | Phase 2予定 |
-| `invoices/` | 請求書データ | Phase 2予定 |
-| `expenses/` | 経費精算データ | Phase 2予定 |
-| `hr/` | 人事労務データ | Phase 2予定 |
+| `accounting/quickstart` | ✅ 取引50件・口座3件・仕訳5件 | 利用可能 |
+| `invoices/quickstart` | ✅ 取引20件・口座2件・仕訳6件（請求書・売掛金） | 利用可能 |
+| `expenses/quickstart` | ✅ 取引24件・口座2件・仕訳3件（経費精算） | 利用可能 |
+| `hr/quickstart` | ✅ 取引15件・口座1件・仕訳9件（給与・人事） | 利用可能 |
 | `advanced/multi-period/` | 複数期・財務DD用 | Phase 3予定 |
 | `advanced/multi-company/` | 複数事業所・事業譲渡シナリオ | Phase 3予定 |
 

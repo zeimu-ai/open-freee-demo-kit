@@ -19,12 +19,21 @@ CLIスタブ・プロジェクト初期化
 - `fdk load-all` — 全プリセット一括投入
 - `accounting/quickstart` プリセット（取引50件・口座3件・仕訳5件）
 
-## Phase 3（将来実装予定）
+## Phase 3（一部完了）
 
-### fdk preview（ローカル Web ビューア）
+### 完了済み
+- `fdk status` — 投入済みプリセット一覧と件数表示
+- `invoices/quickstart` プリセット（取引20件・口座2件・仕訳6件）
+- `expenses/quickstart` プリセット（取引24件・口座2件・仕訳3件）
+- `hr/quickstart` プリセット（取引15件・口座1件・仕訳9件）
+- 実名混入防止テスト（`tests/unit/no-real-names.test.ts`、ブロックリスト25件）
+
+### 将来実装予定（未着手）
+
+#### fdk preview（ローカル Web ビューア）
 ```
 $ fdk preview
-🌐 http://localhost:8888 を開いています...
+🌐 http://localhost:3001 を開いています...
 Ctrl+C で終了
 ```
 
@@ -33,7 +42,7 @@ Ctrl+C で終了
 - スタイルはインライン CSS（外部 CSS 不要）
 - ページ構成: 概要サマリー / 口座一覧 / 取引一覧（最新 20 件）/ 試算表 PL
 
-### その他（候補）
+#### その他（候補）
 - `fdk export` — 本番データを匿名化してプリセット化
-- `fdk status` — 現在の投入状態サマリー表示
-- `hr` / `invoices` / `expenses` プリセット追加
+- `advanced/multi-period/` プリセット — 複数期・財務DD用
+- `advanced/multi-company/` プリセット — 複数事業所・事業譲渡シナリオ
