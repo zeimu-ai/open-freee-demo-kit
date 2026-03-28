@@ -1,0 +1,239 @@
+{
+  "name": "経費精算クイックスタート",
+  "description": "架空の中小企業（5名規模）の3ヶ月分の経費精算デモデータ。交通費・接待費・消耗品費・通信費を含む典型的な経費パターン。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 24,
+    "manualJournals": 3
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "たちばな銀行 当座預金"
+      },
+      {
+        "type": "wallet",
+        "name": "小口現金"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-06",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 18500, "description": "1月 交通費精算（営業訪問3件）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-06",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 12000, "description": "1月 交通費精算（展示会出展）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 44000, "description": "顧客接待 エコーシステムズ担当（4名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "株式会社オフィス24",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 28600, "description": "事務用品一式（コピー用紙・文具）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "サクラ通信サービス株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 33000, "description": "携帯電話代 1月（5名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "社員 森田",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 52000, "description": "出張旅費 大阪往復（宿泊含む）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "ネオリンク株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 22000, "description": "インターネット回線費 1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "中央不動産管理株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 220000, "description": "オフィス賃料 1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 22000, "description": "2月 交通費精算（客先訪問5件）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 9800, "description": "2月 交通費精算（セミナー参加）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-12",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 38500, "description": "顧客接待 フォックス産業担当（3名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "株式会社オフィス24",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 15400, "description": "プリンターカートリッジ・ファイル類" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "サクラ通信サービス株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 33000, "description": "携帯電話代 2月（5名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "社員 川田",
+        "details": [
+          { "account_item_name": "新聞図書費", "tax_code": 34, "amount": 11000, "description": "業界誌 年間購読料（2名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "ネオリンク株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 22000, "description": "インターネット回線費 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "中央不動産管理株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 220000, "description": "オフィス賃料 2月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 16500, "description": "3月 交通費精算（営業訪問4件）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "社員 森田",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 63000, "description": "出張旅費 福岡往復（宿泊2泊含む）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 55000, "description": "顧客接待 グロリア商事担当（5名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "株式会社オフィス24",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 19800, "description": "年度末備品整備（マウス・キーボード等）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "サクラ通信サービス株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 33000, "description": "携帯電話代 3月（5名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "社員 川田",
+        "details": [
+          { "account_item_name": "研修費", "tax_code": 34, "amount": 44000, "description": "外部セミナー受講費（2名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "ネオリンク株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 22000, "description": "インターネット回線費 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "中央不動産管理株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 220000, "description": "オフィス賃料 3月分" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 55100, "description": "1月末 未払経費計上（交通費精算未払分）" },
+          { "entry_side": "credit", "account_item_name": "旅費交通費", "tax_code": 0, "amount": 55100, "description": "1月末 交通費未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 31800, "description": "2月末 未払経費計上（交通費精算未払分）" },
+          { "entry_side": "credit", "account_item_name": "旅費交通費", "tax_code": 0, "amount": 31800, "description": "2月末 交通費未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "前払費用", "tax_code": 0, "amount": 66000, "description": "期末 前払費用計上（次期分保険料等）" },
+          { "entry_side": "credit", "account_item_name": "保険料", "tax_code": 0, "amount": 66000, "description": "期末 保険料前払振替" }
+        ]
+      }
+    ]
+  }
+}

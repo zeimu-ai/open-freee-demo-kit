@@ -1,0 +1,228 @@
+{
+  "name": "請求書・売掛金クイックスタート",
+  "description": "架空の中小企業（ITコンサルティング業）の請求書・売掛金デモデータ。入金前の売上計上から入金消込までのフローを含む。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 20,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "ひばり信用金庫 普通預金"
+      },
+      {
+        "type": "credit_card",
+        "name": "法人ビジネスカード"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "株式会社エコーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 1100000, "description": "ITコンサルティング 1月分（請求書 #INV-2601）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "フォックス産業株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 770000, "description": "システム導入支援 第1フェーズ（請求書 #INV-2602）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "グロリア商事株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "業務改善コンサルティング 1月（請求書 #INV-2603）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "income",
+        "partner_name": "ハーベスト物流株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "運用サポート 1月（請求書 #INV-2604）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-28",
+        "type": "income",
+        "partner_name": "株式会社エコーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 440000, "description": "追加開発対応 1月（請求書 #INV-2605）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "フォックス産業株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 770000, "description": "システム導入支援 第2フェーズ（請求書 #INV-2606）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "グロリア商事株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "業務改善コンサルティング 2月（請求書 #INV-2607）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-14",
+        "type": "income",
+        "partner_name": "イオニア製造株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "製造ライン効率化支援（請求書 #INV-2608）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "income",
+        "partner_name": "ハーベスト物流株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "運用サポート 2月（請求書 #INV-2609）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "income",
+        "partner_name": "株式会社エコーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 1100000, "description": "ITコンサルティング 2月分（請求書 #INV-2610）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "フォックス産業株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 770000, "description": "システム導入支援 第3フェーズ（請求書 #INV-2611）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "グロリア商事株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "業務改善コンサルティング 3月（請求書 #INV-2612）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "income",
+        "partner_name": "イオニア製造株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "製造ライン効率化支援 第2期（請求書 #INV-2613）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "income",
+        "partner_name": "ハーベスト物流株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "運用サポート 3月（請求書 #INV-2614）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "income",
+        "partner_name": "株式会社エコーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 880000, "description": "年度末特別対応（請求書 #INV-2615）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "ジュピター印刷株式会社",
+        "details": [
+          { "account_item_name": "印刷費", "tax_code": 34, "amount": 33000, "description": "請求書・納品書 印刷・製本代" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "クレストビジネスサービス株式会社",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 11000, "description": "請求書管理ソフト利用料 1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "クレストビジネスサービス株式会社",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 11000, "description": "請求書管理ソフト利用料 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "クレストビジネスサービス株式会社",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 11000, "description": "請求書管理ソフト利用料 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "ひばり信用金庫",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 0, "amount": 3300, "description": "振込手数料 3月分" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 3190000, "description": "1月末 売掛金計上（未入金分）" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 3190000, "description": "1月末 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "普通預金", "tax_code": 0, "amount": 1100000, "description": "エコーシステムズ 1月分入金消込" },
+          { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "売掛金回収 #INV-2601" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 3410000, "description": "2月末 売掛金計上（未入金分）" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 3410000, "description": "2月末 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "普通預金", "tax_code": 0, "amount": 770000, "description": "フォックス産業 2月分入金消込" },
+          { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 770000, "description": "売掛金回収 #INV-2606" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 3190000, "description": "3月末 売掛金計上（未入金分）" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 3190000, "description": "3月末 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 50000, "description": "期末 貸倒引当金計上" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金", "tax_code": 0, "amount": 50000, "description": "期末 貸倒引当金設定" }
+        ]
+      }
+    ]
+  }
+}
