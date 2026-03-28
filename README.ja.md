@@ -2,7 +2,7 @@
 
 # freee-demo-kit
 
-> {{PROJECT_DESCRIPTION_JA}}
+> freee サンドボックス事業所に1コマンドでデモデータを投入するOSS CLIツール
 
 ## 特徴
 
