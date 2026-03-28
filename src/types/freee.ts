@@ -1,4 +1,5 @@
-// freee REST API response types (minimum)
+// freee REST API response types
+
 export interface FreeeCompany {
   id: number;
   name: string;
@@ -18,4 +19,110 @@ export interface FreeeTokens {
   token_type: string;
   expires_at: number; // Unix timestamp (ms)
   company_id?: number;
+}
+
+// Walletable (口座)
+export type WalletableType = 'bank_account' | 'credit_card' | 'wallet' | 'other';
+
+export interface WalletableData {
+  type: WalletableType;
+  name: string;
+  bank_code?: string;
+  bank_branch_code?: string;
+  account_number?: string;
+}
+
+export interface FreeeWalletable {
+  id: number;
+  type: WalletableType;
+  name: string;
+  company_id: number;
+}
+
+// Deal (取引)
+export interface DealDetail {
+  account_item_id?: number;
+  account_item_name?: string; // resolved to id at load time
+  tax_code: number;
+  amount: number;
+  description?: string;
+  entry_side?: 'credit' | 'debit';
+}
+
+export interface DealData {
+  issue_date: string; // YYYY-MM-DD
+  type: 'income' | 'expense';
+  amount?: number;
+  partner_name?: string;
+  details: DealDetail[];
+}
+
+export interface FreeeDeal {
+  id: number;
+  company_id: number;
+  issue_date: string;
+  type: 'income' | 'expense';
+  amount: number;
+}
+
+// ManualJournal (手動仕訳)
+export interface ManualJournalDetail {
+  entry_side: 'credit' | 'debit';
+  account_item_id?: number;
+  account_item_name?: string; // resolved to id at load time
+  tax_code: number;
+  amount: number;
+  description?: string;
+}
+
+export interface ManualJournalData {
+  issue_date: string;
+  details: ManualJournalDetail[];
+}
+
+export interface FreeeManualJournal {
+  id: number;
+  company_id: number;
+  issue_date: string;
+}
+
+// AccountItem (勘定科目)
+export interface FreeeAccountItem {
+  id: number;
+  name: string;
+  account_category: string;
+}
+
+// Tax
+export interface FreeeTax {
+  id: number;
+  code: number;
+  name: string;
+}
+
+// Preset
+export interface PresetDefinition {
+  name: string;
+  description: string;
+  version: string;
+  expected: {
+    walletables: number;
+    deals: number;
+    manualJournals: number;
+    plTotal?: number;
+  };
+  data: {
+    walletables: WalletableData[];
+    deals: DealData[];
+    manualJournals: ManualJournalData[];
+  };
+}
+
+// State
+export interface PresetState {
+  preset: string;
+  loadedAt: string;
+  walletableIds: number[];
+  dealIds: number[];
+  manualJournalIds: number[];
 }

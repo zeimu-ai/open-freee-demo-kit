@@ -1,6 +1,17 @@
 import { loadTokens, saveTokens, isTokenExpired } from './token-store.js';
-import type { FreeeTokens, FreeeUser, FreeeCompany } from '../types/freee.js';
-import { createRequire } from 'node:module';
+import type {
+  FreeeTokens,
+  FreeeUser,
+  FreeeCompany,
+  FreeeWalletable,
+  WalletableData,
+  FreeeDeal,
+  DealData,
+  FreeeManualJournal,
+  ManualJournalData,
+  FreeeAccountItem,
+  FreeeTax,
+} from '../types/freee.js';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import fs from 'node:fs';
@@ -84,10 +95,10 @@ export class FreeeApiClient {
     return newTokens;
   }
 
-  private async request<T>(path: string): Promise<T> {
+  private async request<T>(apiPath: string): Promise<T> {
     const tokens = await this.getValidTokens();
 
-    const res = await fetch(`${BASE_URL}${path}`, {
+    const res = await fetch(`${BASE_URL}${apiPath}`, {
       headers: {
         Authorization: `Bearer ${tokens.access_token}`,
         'User-Agent': USER_AGENT,
@@ -96,11 +107,51 @@ export class FreeeApiClient {
     });
 
     if (!res.ok) {
-      throw new Error(`freee API error: ${res.status} ${path}`);
+      throw new Error(`freee API error: ${res.status} ${apiPath}`);
     }
 
     return res.json() as Promise<T>;
   }
+
+  private async requestPost<T>(apiPath: string, body: unknown): Promise<T> {
+    const tokens = await this.getValidTokens();
+
+    const res = await fetch(`${BASE_URL}${apiPath}`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${tokens.access_token}`,
+        'User-Agent': USER_AGENT,
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      throw new Error(`freee API error: ${res.status} POST ${apiPath} — ${text}`);
+    }
+
+    return res.json() as Promise<T>;
+  }
+
+  private async requestDelete(apiPath: string): Promise<void> {
+    const tokens = await this.getValidTokens();
+
+    const res = await fetch(`${BASE_URL}${apiPath}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${tokens.access_token}`,
+        'User-Agent': USER_AGENT,
+      },
+    });
+
+    if (!res.ok && res.status !== 204) {
+      throw new Error(`freee API error: ${res.status} DELETE ${apiPath}`);
+    }
+  }
+
+  // ── GET endpoints ───────────────────────────────────────────────────────
 
   async getMe(): Promise<FreeeUser> {
     const data = await this.request<{ user: FreeeUser }>('/api/1/users/me');
@@ -115,5 +166,84 @@ export class FreeeApiClient {
   async getCompany(companyId: number): Promise<FreeeCompany> {
     const data = await this.request<{ company: FreeeCompany }>(`/api/1/companies/${companyId}`);
     return data.company;
+  }
+
+  async getWalletables(companyId: number): Promise<FreeeWalletable[]> {
+    const data = await this.request<{ walletables: FreeeWalletable[] }>(
+      `/api/1/walletables?company_id=${companyId}`
+    );
+    return data.walletables;
+  }
+
+  async getDeals(companyId: number, params?: Record<string, string>): Promise<FreeeDeal[]> {
+    const query = new URLSearchParams({ company_id: String(companyId), ...params }).toString();
+    const data = await this.request<{ deals: FreeeDeal[] }>(`/api/1/deals?${query}`);
+    return data.deals;
+  }
+
+  async getAccountItems(companyId: number): Promise<FreeeAccountItem[]> {
+    const data = await this.request<{ account_items: FreeeAccountItem[] }>(
+      `/api/1/account_items?company_id=${companyId}`
+    );
+    return data.account_items;
+  }
+
+  async getTaxes(companyId: number): Promise<FreeeTax[]> {
+    const data = await this.request<{ taxes: FreeeTax[] }>(
+      `/api/1/taxes/companies/${companyId}`
+    );
+    return data.taxes;
+  }
+
+  async getTrialPl(companyId: number, params: Record<string, string>): Promise<unknown> {
+    const query = new URLSearchParams({ company_id: String(companyId), ...params }).toString();
+    return this.request<unknown>(`/api/1/trial_pl?${query}`);
+  }
+
+  async getTrialBs(companyId: number, params: Record<string, string>): Promise<unknown> {
+    const query = new URLSearchParams({ company_id: String(companyId), ...params }).toString();
+    return this.request<unknown>(`/api/1/trial_bs?${query}`);
+  }
+
+  // ── Walletable write ────────────────────────────────────────────────────
+
+  async createWalletable(companyId: number, data: WalletableData): Promise<FreeeWalletable> {
+    const res = await this.requestPost<{ walletable: FreeeWalletable }>('/api/1/walletables', {
+      company_id: companyId,
+      ...data,
+    });
+    return res.walletable;
+  }
+
+  async deleteWalletable(companyId: number, id: number): Promise<void> {
+    await this.requestDelete(`/api/1/walletables/${id}?company_id=${companyId}`);
+  }
+
+  // ── Deal write ──────────────────────────────────────────────────────────
+
+  async createDeal(companyId: number, data: DealData): Promise<FreeeDeal> {
+    const res = await this.requestPost<{ deal: FreeeDeal }>('/api/1/deals', {
+      company_id: companyId,
+      ...data,
+    });
+    return res.deal;
+  }
+
+  async deleteDeal(companyId: number, id: number): Promise<void> {
+    await this.requestDelete(`/api/1/deals/${id}?company_id=${companyId}`);
+  }
+
+  // ── ManualJournal write ─────────────────────────────────────────────────
+
+  async createManualJournal(companyId: number, data: ManualJournalData): Promise<FreeeManualJournal> {
+    const res = await this.requestPost<{ manual_journal: FreeeManualJournal }>(
+      '/api/1/manual_journals',
+      { company_id: companyId, ...data }
+    );
+    return res.manual_journal;
+  }
+
+  async deleteManualJournal(companyId: number, id: number): Promise<void> {
+    await this.requestDelete(`/api/1/manual_journals/${id}?company_id=${companyId}`);
   }
 }
