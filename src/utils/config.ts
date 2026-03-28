@@ -4,6 +4,7 @@ import { join } from 'path';
 export const CONFIG_DIR = join(homedir(), '.config', 'fdk');
 export const TOKEN_FILE = join(CONFIG_DIR, 'tokens.json');
 export const CONFIG_FILE = join(CONFIG_DIR, 'config.json');
+export const STATE_FILE = join(CONFIG_DIR, 'state.json');
 
 export interface FdkConfig {
   defaultCompanyId?: number;
