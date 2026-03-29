@@ -37,13 +37,28 @@ CLIスタブ・プロジェクト初期化
   - ENTERTAINMENT-001: 交際費月次上限警告（¥667,000/月超過を検出）
 - `ErrorManifestItem` 型追加（`error_manifest` フィールドでエラーの意図を明記）
 
-### エラーインジェクション・プリセット（税務AI開発・トレーニング用）
+### エラーインジェクション・プリセット（トレーニング用）
 - `errors/officer-pay` — 役員報酬誤計上（OFFICER-PAY-001）
 - `errors/tax-code` — 税区分誤り（TAX-CODE-001）
 - `errors/entertainment` — 交際費上限超過（ENTERTAINMENT-001）
 - `errors/mixed` — 複合エラー（上級トレーニング用）
 
-## Phase 5（将来実装予定）
+## Phase 5（完了）
+
+### 業種別プリセット追加
+- `accounting/full-year` — 12ヶ月分・異常値パターン付き（月次レビュー・データ分析デモ用）
+- `accounting/restaurant` — 飲食業・軽減税率仕入（食材8%・酒類10%分岐）
+- `accounting/construction` — 建設業・完成工事高・外注費3分法・未成工事仕掛計上
+- `unclassified/quickstart` — 銀行明細インポート直後を再現（全費用を「雑費」で仮計上）
+
+### セットアップウィザード
+- `fdk setup` — 対話式ウィザード（認証情報入力 → OAuth 認証 → プリセット選択 → 投入を3ステップで完結）
+- `@clack/prompts` によるスピナー・進捗表示・プリセット選択 UI
+- `env-writer.ts` — `.env` 読み書きユーティリティ
+- `auth-flow.ts` — OAuth PKCE フローを抽出（`auth.ts` と `setup.ts` で共有）
+- `runLoad()` 関数エクスポート（進捗コールバック対応）
+
+## Phase 6（将来実装予定）
 
 #### fdk corrupt（エラーインジェクション動的生成）
 ```
@@ -52,7 +67,6 @@ $ fdk corrupt accounting/quickstart --rules officer-pay,tax-code
 
 - 既存の正しいプリセットを読み込み、指定ルールのエラーパターンを動的に差し込んだ「破損版」を生成
 - 正解データと誤りデータのペアを同一コンテキストで生成できる
-- 税務AI・仕訳チェックAIの教師データ生成パイプラインへの組み込みを想定
 - `error_manifest` を自動生成してどこをどう壊したか記録
 
 #### fdk preview（ローカル Web ビューア）
