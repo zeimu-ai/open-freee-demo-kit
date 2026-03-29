@@ -1,0 +1,453 @@
+{
+  "name": "不動産賃貸クイックスタート",
+  "description": "架空の不動産賃貸業（居住用3棟・事業用1棟）の3ヶ月分デモデータ。居住用賃貸（非課税）と事業用賃貸（課税）の混在、修繕費・管理費の処理を含む。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 24,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "ひばり信用金庫 賃料入金口座",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "現金"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "居住用テナント 光陽マンション301号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 88000,
+            "description": "1月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "居住用テナント 光陽マンション302号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 75000,
+            "description": "1月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "居住用テナント 緑丘アパート101号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 65000,
+            "description": "1月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "有限会社サンビジネスサービス",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 220000,
+            "description": "1月分 事業用物件賃料（課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "不動産管理株式会社エステート",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 44800,
+            "description": "1月分 管理委託費（管理料4%）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "光陽修繕サービス",
+        "details": [
+          {
+            "account_item_name": "修繕費",
+            "tax_code": 34,
+            "amount": 88000,
+            "description": "光陽マンション301号 エアコン修理"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "オーナー 宮川 正人",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 300000,
+            "description": "1月度 役員報酬（合同会社）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "損害保険株式会社ホープ",
+        "details": [
+          {
+            "account_item_name": "保険料",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "1月分 火災保険料（月割）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "居住用テナント 光陽マンション301号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 88000,
+            "description": "2月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "居住用テナント 光陽マンション302号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 75000,
+            "description": "2月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "居住用テナント 緑丘アパート101号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 65000,
+            "description": "2月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "有限会社サンビジネスサービス",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 220000,
+            "description": "2月分 事業用物件賃料（課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "不動産管理株式会社エステート",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 44800,
+            "description": "2月分 管理委託費"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "プロウッド建設",
+        "details": [
+          {
+            "account_item_name": "修繕費",
+            "tax_code": 34,
+            "amount": 165000,
+            "description": "緑丘アパート共用部 床補修工事"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "オーナー 宮川 正人",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 300000,
+            "description": "2月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "損害保険株式会社ホープ",
+        "details": [
+          {
+            "account_item_name": "保険料",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "2月分 火災保険料（月割）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "居住用テナント 光陽マンション301号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 88000,
+            "description": "3月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "居住用テナント 光陽マンション302号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 75000,
+            "description": "3月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "居住用テナント 緑丘アパート101号",
+        "details": [
+          {
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 65000,
+            "description": "3月分 居住用家賃（非課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "有限会社サンビジネスサービス",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 220000,
+            "description": "3月分 事業用物件賃料（課税）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "不動産管理株式会社エステート",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 44800,
+            "description": "3月分 管理委託費"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "光陽修繕サービス",
+        "details": [
+          {
+            "account_item_name": "修繕費",
+            "tax_code": 34,
+            "amount": 55000,
+            "description": "光陽マンション302号 給水栓修理"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "オーナー 宮川 正人",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 300000,
+            "description": "3月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "損害保険株式会社ホープ",
+        "details": [
+          {
+            "account_item_name": "保険料",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "3月分 火災保険料（月割）"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 125000,
+            "description": "1月 建物減価償却（¥90,000,000 ÷ 720ヶ月）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "建物",
+            "tax_code": 0,
+            "amount": 125000,
+            "description": "1月 建物減価償却累計"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "未収入金",
+            "tax_code": 0,
+            "amount": 448000,
+            "description": "1月分 家賃未収計上（3月5日入金予定分）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 448000,
+            "description": "1月分 家賃収入計上（居住用合計）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 125000,
+            "description": "2月 建物減価償却"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "建物",
+            "tax_code": 0,
+            "amount": 125000,
+            "description": "2月 建物減価償却累計"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "未収入金",
+            "tax_code": 0,
+            "amount": 448000,
+            "description": "2月分 家賃未収計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 448000,
+            "description": "2月分 家賃収入計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 125000,
+            "description": "3月 建物減価償却"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "建物",
+            "tax_code": 0,
+            "amount": 125000,
+            "description": "3月 建物減価償却累計"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "未収入金",
+            "tax_code": 0,
+            "amount": 448000,
+            "description": "3月分 家賃未収計上（4月入金予定）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "賃貸収入",
+            "tax_code": 0,
+            "amount": 448000,
+            "description": "3月分 家賃収入計上"
+          }
+        ]
+      }
+    ]
+  }
+}

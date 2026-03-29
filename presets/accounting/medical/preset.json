@@ -1,0 +1,453 @@
+{
+  "name": "医療クリニッククイックスタート",
+  "description": "架空の内科クリニック（院長1名・スタッフ3名）の3ヶ月分デモデータ。保険診療（非課税）と自費診療（課税）の混在、医薬品費・医療材料費の仕入を含む。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 24,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "やよい銀行 診療報酬口座",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "現金（窓口収入）"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "社会保険診療報酬支払基金",
+        "details": [
+          {
+            "account_item_name": "医業収益",
+            "tax_code": 0,
+            "amount": 3300000,
+            "description": "保険診療報酬 1月分（11月診療分）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "患者 窓口収入",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 110000,
+            "description": "自費診療・健康診断 1月分窓口収入"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "メディカル薬品株式会社",
+        "details": [
+          {
+            "account_item_name": "医薬品費",
+            "tax_code": 34,
+            "amount": 880000,
+            "description": "処方薬・注射薬 仕入 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "クリニカル医療材料株式会社",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 165000,
+            "description": "注射針・ガーゼ・検査試薬 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "院長 中島 義雄",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 1200000,
+            "description": "1月度 院長報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "スタッフ 藤本 志保 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 720000,
+            "description": "1月 看護師・医療事務 給与3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "さくら不動産株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "クリニック賃料 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "北海通信サービス株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 22000,
+            "description": "電話・インターネット 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "社会保険診療報酬支払基金",
+        "details": [
+          {
+            "account_item_name": "医業収益",
+            "tax_code": 0,
+            "amount": 3520000,
+            "description": "保険診療報酬 2月分（12月診療分）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "income",
+        "partner_name": "患者 窓口収入",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 99000,
+            "description": "自費診療・健康診断 2月分窓口収入"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "メディカル薬品株式会社",
+        "details": [
+          {
+            "account_item_name": "医薬品費",
+            "tax_code": 34,
+            "amount": 792000,
+            "description": "処方薬・注射薬 仕入 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "クリニカル医療材料株式会社",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 143000,
+            "description": "注射針・ガーゼ・検査試薬 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "院長 中島 義雄",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 1200000,
+            "description": "2月度 院長報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "スタッフ 藤本 志保 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 720000,
+            "description": "2月 看護師・医療事務 給与3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "さくら不動産株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "クリニック賃料 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "北海通信サービス株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 22000,
+            "description": "電話・インターネット 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "社会保険診療報酬支払基金",
+        "details": [
+          {
+            "account_item_name": "医業収益",
+            "tax_code": 0,
+            "amount": 3080000,
+            "description": "保険診療報酬 3月分（1月診療分）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "income",
+        "partner_name": "患者 窓口収入",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 132000,
+            "description": "自費診療・健康診断 3月分窓口収入"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "メディカル薬品株式会社",
+        "details": [
+          {
+            "account_item_name": "医薬品費",
+            "tax_code": 34,
+            "amount": 814000,
+            "description": "処方薬・注射薬 仕入 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "クリニカル医療材料株式会社",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 154000,
+            "description": "注射針・ガーゼ・検査試薬 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "院長 中島 義雄",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 1200000,
+            "description": "3月度 院長報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "スタッフ 藤本 志保 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 720000,
+            "description": "3月 看護師・医療事務 給与3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "さくら不動産株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "クリニック賃料 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "北海通信サービス株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 22000,
+            "description": "電話・インターネット 3月分"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "法定福利費",
+            "tax_code": 0,
+            "amount": 158000,
+            "description": "1月 社会保険料 会社負担分"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 158000,
+            "description": "1月 社会保険料 未払計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "医薬品費",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "1月末 薬品費未払計上（月末締め未請求分）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "1月末 薬品費未払振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "法定福利費",
+            "tax_code": 0,
+            "amount": 158000,
+            "description": "2月 社会保険料 会社負担分"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 158000,
+            "description": "2月 社会保険料 未払計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "医薬品費",
+            "tax_code": 0,
+            "amount": 198000,
+            "description": "2月末 薬品費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 198000,
+            "description": "2月末 薬品費未払振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "法定福利費",
+            "tax_code": 0,
+            "amount": 158000,
+            "description": "3月 社会保険料 会社負担分"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 158000,
+            "description": "3月 社会保険料 未払計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "医薬品費",
+            "tax_code": 0,
+            "amount": 242000,
+            "description": "3月末 薬品費未払計上（増患分）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 242000,
+            "description": "3月末 薬品費未払振替"
+          }
+        ]
+      }
+    ]
+  }
+}

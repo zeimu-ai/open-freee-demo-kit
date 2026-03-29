@@ -1,0 +1,472 @@
+{
+  "name": "ITスタートアップ（SaaS）クイックスタート",
+  "description": "架空のSaaS企業（月額課金モデル）の3ヶ月分デモデータ。前受収益→売上計上の振替、ソフトウェア開発費の資産計上・償却、ストック型収益の会計処理を含む。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 21,
+    "manualJournals": 9
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "みらい信用銀行 法人普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "credit_card",
+        "name": "法人クレジットカード",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "クラウドサービス 月額顧客一括",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 2200000,
+            "description": "SaaSサブスクリプション 1月分（法人顧客20社 平均¥110,000/社）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "株式会社オーシャンデジタル",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "初期導入費・カスタマイズ 1月"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 岩本 健",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 660000,
+            "description": "プロダクト開発 業務委託 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "クラウドインフラ 星雲ホスティング株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 198000,
+            "description": "サーバー・CDN・DB クラウド利用料 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "代表取締役 藤崎 孝之",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 800000,
+            "description": "1月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "エンジニア 中川 亮 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 1200000,
+            "description": "1月 エンジニア・CSM 給与 3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "ルーセント通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "オフィス回線・携帯電話 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "クラウドサービス 月額顧客一括",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 2420000,
+            "description": "SaaSサブスクリプション 2月分（新規2社追加）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "株式会社ネクストフォース",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 330000,
+            "description": "初期導入費 2月"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 岩本 健",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 660000,
+            "description": "プロダクト開発 業務委託 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "クラウドインフラ 星雲ホスティング株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 214500,
+            "description": "サーバー・CDN・DB クラウド利用料 2月分（顧客増加分）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "代表取締役 藤崎 孝之",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 800000,
+            "description": "2月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "エンジニア 中川 亮 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 1200000,
+            "description": "2月 給与 3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "ルーセント通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "オフィス回線・携帯電話 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "クラウドサービス 月額顧客一括",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 2640000,
+            "description": "SaaSサブスクリプション 3月分（法人顧客24社）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "株式会社ビジョンクリエイト",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 440000,
+            "description": "初期導入費・研修費 3月"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 岩本 健",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 770000,
+            "description": "新機能開発 業務委託 3月分（工数増）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "クラウドインフラ 星雲ホスティング株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 231000,
+            "description": "サーバー・CDN・DB クラウド利用料 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "代表取締役 藤崎 孝之",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 800000,
+            "description": "3月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "エンジニア 中川 亮 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 1200000,
+            "description": "3月 給与 3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "ルーセント通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "オフィス回線・携帯電話 3月分"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 550000,
+            "description": "1月末 前払い年額契約 1月分売上振替（¥6,600,000 ÷ 12ヶ月）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "1月分 年額契約 売上計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "ソフトウエア",
+            "tax_code": 0,
+            "amount": 990000,
+            "description": "1月 自社開発SaaS 開発費資産計上（外注費の75%）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 990000,
+            "description": "1月 開発費用のソフトウェア資産振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "1月 ソフトウェア月次償却（¥3,960,000 ÷ 72ヶ月）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "ソフトウエア",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "1月 ソフトウェア減価償却累計"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 550000,
+            "description": "2月末 前払い年額契約 2月分売上振替"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "2月分 年額契約 売上計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "ソフトウエア",
+            "tax_code": 0,
+            "amount": 990000,
+            "description": "2月 自社開発SaaS 開発費資産計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 990000,
+            "description": "2月 開発費用のソフトウェア資産振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "2月 ソフトウェア月次償却"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "ソフトウエア",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "2月 ソフトウェア減価償却累計"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 550000,
+            "description": "3月末 前払い年額契約 3月分売上振替"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "3月分 年額契約 売上計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "ソフトウエア",
+            "tax_code": 0,
+            "amount": 990000,
+            "description": "3月 自社開発SaaS 開発費資産計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 990000,
+            "description": "3月 開発費用のソフトウェア資産振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "3月 ソフトウェア月次償却"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "ソフトウエア",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "3月 ソフトウェア減価償却累計"
+          }
+        ]
+      }
+    ]
+  }
+}

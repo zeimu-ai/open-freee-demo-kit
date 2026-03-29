@@ -1,0 +1,536 @@
+{
+  "name": "小売業クイックスタート",
+  "description": "架空の雑貨小売店（実店舗+EC）の3ヶ月分デモデータ。商品仕入・POSレジ売上・棚卸・月次在庫調整を含む。仕入→売上原価の流れを確認できる。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 3,
+    "deals": 30,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "さくら信用銀行 普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "POSレジ現金"
+      },
+      {
+        "type": "credit_card",
+        "name": "仕入用クレジットカード",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "店頭・EC 売上集計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1320000,
+            "description": "1月上旬 小売売上（店頭680,000 + EC640,000）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "income",
+        "partner_name": "店頭・EC 売上集計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1540000,
+            "description": "1月下旬 小売売上（冬セール期間）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "expense",
+        "partner_name": "雑貨卸売 北辰商事株式会社",
+        "details": [
+          {
+            "account_item_name": "仕入高",
+            "tax_code": 34,
+            "amount": 660000,
+            "description": "雑貨・インテリア商品 仕入（1月前半）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "雑貨卸売 北辰商事株式会社",
+        "details": [
+          {
+            "account_item_name": "仕入高",
+            "tax_code": 34,
+            "amount": 880000,
+            "description": "雑貨・インテリア商品 仕入（1月後半・セール補充）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "梅田印刷株式会社",
+        "details": [
+          {
+            "account_item_name": "広告宣伝費",
+            "tax_code": 34,
+            "amount": 55000,
+            "description": "チラシ・ポップ印刷 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "代表取締役 石橋 明子",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 400000,
+            "description": "1月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "スタッフ 久保 真里 他1名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 360000,
+            "description": "1月 パートタイム給与 2名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "モールエステート株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "ショッピングモール店舗賃料 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "クラウド決済サービス株式会社",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 38500,
+            "description": "クレジット決済手数料 1月分（売上の2.5%）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "仕入用クレジットカード",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 16500,
+            "description": "包装資材・タグ・ハンガー 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "店頭・EC 売上集計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1210000,
+            "description": "2月上旬 小売売上（バレンタイン関連商品好調）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "income",
+        "partner_name": "店頭・EC 売上集計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1430000,
+            "description": "2月下旬 小売売上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "expense",
+        "partner_name": "雑貨卸売 北辰商事株式会社",
+        "details": [
+          {
+            "account_item_name": "仕入高",
+            "tax_code": 34,
+            "amount": 594000,
+            "description": "春夏商品 先行仕入（2月前半）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-18",
+        "type": "expense",
+        "partner_name": "海外雑貨インポート 翠華",
+        "details": [
+          {
+            "account_item_name": "仕入高",
+            "tax_code": 34,
+            "amount": 726000,
+            "description": "輸入雑貨 仕入（2月後半）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "梅田印刷株式会社",
+        "details": [
+          {
+            "account_item_name": "広告宣伝費",
+            "tax_code": 34,
+            "amount": 44000,
+            "description": "春季新商品チラシ 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "代表取締役 石橋 明子",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 400000,
+            "description": "2月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "スタッフ 久保 真里 他1名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 360000,
+            "description": "2月 パートタイム給与 2名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "モールエステート株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "店舗賃料 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "クラウド決済サービス株式会社",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "クレジット決済手数料 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "仕入用クレジットカード",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 13200,
+            "description": "包装資材・備品 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "店頭・EC 売上集計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1650000,
+            "description": "3月上旬 小売売上（春新商品・年度末好調）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "income",
+        "partner_name": "店頭・EC 売上集計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1870000,
+            "description": "3月下旬 小売売上（年度末ピーク）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "雑貨卸売 北辰商事株式会社",
+        "details": [
+          {
+            "account_item_name": "仕入高",
+            "tax_code": 34,
+            "amount": 770000,
+            "description": "春夏商品 本格仕入（3月前半）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "海外雑貨インポート 翠華",
+        "details": [
+          {
+            "account_item_name": "仕入高",
+            "tax_code": 34,
+            "amount": 858000,
+            "description": "夏物輸入雑貨 仕入（3月後半）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "梅田印刷株式会社",
+        "details": [
+          {
+            "account_item_name": "広告宣伝費",
+            "tax_code": 34,
+            "amount": 66000,
+            "description": "年度末セールチラシ 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "代表取締役 石橋 明子",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 400000,
+            "description": "3月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "スタッフ 久保 真里 他1名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 360000,
+            "description": "3月 パートタイム給与 2名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "モールエステート株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "店舗賃料 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "クラウド決済サービス株式会社",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 40700,
+            "description": "クレジット決済手数料 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "仕入用クレジットカード",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 19800,
+            "description": "包装資材・春季備品 3月分"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上原価",
+            "tax_code": 0,
+            "amount": 1320000,
+            "description": "1月末 期末棚卸による売上原価計上（仕入高→売上原価振替）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "仕入高",
+            "tax_code": 0,
+            "amount": 1320000,
+            "description": "1月末 売上原価対応分 仕入高振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "商品",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "1月末 棚卸資産計上（期末在庫評価）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上原価",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "1月末 期末棚卸高（売上原価から控除）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上原価",
+            "tax_code": 0,
+            "amount": 1100000,
+            "description": "2月末 売上原価計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "仕入高",
+            "tax_code": 0,
+            "amount": 1100000,
+            "description": "2月末 売上原価対応分 仕入高振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "商品",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "2月末 棚卸資産計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上原価",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "2月末 期末棚卸高"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上原価",
+            "tax_code": 0,
+            "amount": 1430000,
+            "description": "3月末 売上原価計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "仕入高",
+            "tax_code": 0,
+            "amount": 1430000,
+            "description": "3月末 売上原価対応分 仕入高振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "商品",
+            "tax_code": 0,
+            "amount": 198000,
+            "description": "3月末 棚卸資産計上（3月末在庫評価）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上原価",
+            "tax_code": 0,
+            "amount": 198000,
+            "description": "3月末 期末棚卸高"
+          }
+        ]
+      }
+    ]
+  }
+}

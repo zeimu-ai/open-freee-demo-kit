@@ -1,0 +1,640 @@
+{
+  "name": "グループ会社・内部取引デモ",
+  "description": "架空の親会社（ホールディングス）と子会社2社の内部取引を含む3ヶ月分デモデータ。グループ内取引の識別、連結消去対象の確認、管理会計的な事業別損益分析に活用できる。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 4,
+    "deals": 36,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "さくら信用銀行 親会社口座",
+        "bank_id": 2407
+      },
+      {
+        "type": "bank_account",
+        "name": "みらい信用銀行 子会社A口座",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "現金（親会社）"
+      },
+      {
+        "type": "credit_card",
+        "name": "グループ法人カード",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "外部顧客 株式会社ハーバーコーポレーション",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 2200000,
+            "description": "[親会社] 経営コンサルティング 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "子会社A 株式会社サンライトテクノロジー [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "[親会社→子会社A] 経営管理サービス 1月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "子会社B 合同会社クリエイティブラボ [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 330000,
+            "description": "[親会社→子会社B] 経営管理サービス 1月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "外部顧客 旭明工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1650000,
+            "description": "[子会社A] システム開発 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "親会社 株式会社グローバルホールディングス [グループ内]",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 550000,
+            "description": "[子会社A→親会社] 経営管理費 1月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "フリーランス 岩井 浩一",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 440000,
+            "description": "[子会社A] 開発業務委託 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "代表取締役 中原 敦士",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 900000,
+            "description": "[親会社] 1月度 代表取締役報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "社員 橘 由美子 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 720000,
+            "description": "[親会社] 1月 スタッフ給与 3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "代表取締役（子会社A） 福島 哲也",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 600000,
+            "description": "[子会社A] 1月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "オフィスパーク株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "[親会社] 本社オフィス賃料 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "クラウドインフラ 星雲ホスティング株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 88000,
+            "description": "[子会社A] サーバー・クラウド費用 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "income",
+        "partner_name": "子会社B 合同会社クリエイティブラボ [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 220000,
+            "description": "[子会社A→子会社B] デザイン制作費 1月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "外部顧客 株式会社ハーバーコーポレーション",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 2420000,
+            "description": "[親会社] 経営コンサルティング 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "子会社A 株式会社サンライトテクノロジー [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "[親会社→子会社A] 経営管理サービス 2月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "子会社B 合同会社クリエイティブラボ [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 330000,
+            "description": "[親会社→子会社B] 経営管理サービス 2月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "income",
+        "partner_name": "外部顧客 旭明工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1980000,
+            "description": "[子会社A] システム開発 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "親会社 株式会社グローバルホールディングス [グループ内]",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 550000,
+            "description": "[子会社A→親会社] 経営管理費 2月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "フリーランス 岩井 浩一",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 440000,
+            "description": "[子会社A] 開発業務委託 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "代表取締役 中原 敦士",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 900000,
+            "description": "[親会社] 2月度 代表取締役報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "社員 橘 由美子 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 720000,
+            "description": "[親会社] 2月 スタッフ給与 3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "代表取締役（子会社A） 福島 哲也",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 600000,
+            "description": "[子会社A] 2月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "オフィスパーク株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "[親会社] 本社オフィス賃料 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "クラウドインフラ 星雲ホスティング株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 88000,
+            "description": "[子会社A] サーバー・クラウド費用 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "income",
+        "partner_name": "子会社B 合同会社クリエイティブラボ [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 220000,
+            "description": "[子会社A→子会社B] デザイン制作費 2月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "外部顧客 株式会社ハーバーコーポレーション",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1980000,
+            "description": "[親会社] 経営コンサルティング 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "子会社A 株式会社サンライトテクノロジー [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "[親会社→子会社A] 経営管理サービス 3月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "子会社B 合同会社クリエイティブラボ [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 330000,
+            "description": "[親会社→子会社B] 経営管理サービス 3月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "income",
+        "partner_name": "外部顧客 旭明工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1760000,
+            "description": "[子会社A] システム開発 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "親会社 株式会社グローバルホールディングス [グループ内]",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 550000,
+            "description": "[子会社A→親会社] 経営管理費 3月分 [連結消去対象]"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "フリーランス 岩井 浩一",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 550000,
+            "description": "[子会社A] 開発業務委託 3月分（追加作業）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "代表取締役 中原 敦士",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 900000,
+            "description": "[親会社] 3月度 代表取締役報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "社員 橘 由美子 他2名",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 720000,
+            "description": "[親会社] 3月 スタッフ給与 3名分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "代表取締役（子会社A） 福島 哲也",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 600000,
+            "description": "[子会社A] 3月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "オフィスパーク株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "[親会社] 本社オフィス賃料 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "クラウドインフラ 星雲ホスティング株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 99000,
+            "description": "[子会社A] サーバー・クラウド費用 3月分（顧客増）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "income",
+        "partner_name": "子会社B 合同会社クリエイティブラボ [グループ内]",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 275000,
+            "description": "[子会社A→子会社B] デザイン制作費 3月分 [連結消去対象]"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 880000,
+            "description": "[連結消去] 1月 グループ内売上高消去（親→子A¥550,000 + 親→子B¥330,000）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 550000,
+            "description": "[連結消去] 1月 子会社Aの経営管理費（内部取引）消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "[連結消去] 1月 子会社Bへの売上（内部取引）消去"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "[連結消去] 1月 子会社A→子会社B デザイン費消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "[連結消去] 1月 子会社B受取額消去（内部取引）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 880000,
+            "description": "[連結消去] 2月 グループ内売上高消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 550000,
+            "description": "[連結消去] 2月 子会社A経営管理費消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "[連結消去] 2月 子会社B売上消去"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "[連結消去] 2月 子会社A→子会社B デザイン費消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "[連結消去] 2月 子会社B受取額消去"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 880000,
+            "description": "[連結消去] 3月 グループ内売上高消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 550000,
+            "description": "[連結消去] 3月 子会社A経営管理費消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "[連結消去] 3月 子会社B売上消去"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 275000,
+            "description": "[連結消去] 3月 子会社A→子会社B デザイン費消去"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 275000,
+            "description": "[連結消去] 3月 子会社B受取額消去"
+          }
+        ]
+      }
+    ]
+  }
+}
