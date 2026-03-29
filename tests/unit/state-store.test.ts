@@ -15,7 +15,7 @@ vi.mock('../../src/utils/config.js', () => ({
   getTokenFile: () => `${mocks.tmpDir}/tokens.json`,
 }));
 
-import { saveState, loadState, clearState } from '../../src/utils/state-store.js';
+import { saveState, loadState, clearState, listAllStates } from '../../src/utils/state-store.js';
 import type { PresetState } from '../../src/types/freee.js';
 
 const sampleState: PresetState = {
@@ -92,6 +92,32 @@ describe('state-store', () => {
 
     it('does not throw when preset does not exist', async () => {
       await expect(clearState('nonexistent')).resolves.toBeUndefined();
+    });
+  });
+
+  describe('listAllStates', () => {
+    it('空のstateは空配列を返す', async () => {
+      const result = await listAllStates();
+      expect(result).toEqual([]);
+    });
+
+    it('1件のstateは1要素の配列を返す', async () => {
+      await saveState(sampleState);
+      const result = await listAllStates();
+      expect(result).toHaveLength(1);
+      expect(result[0].preset).toBe('accounting/quickstart');
+    });
+
+    it('複数のstateは全要素を返す', async () => {
+      await saveState(sampleState);
+      const state2: PresetState = { preset: 'hr/quickstart', loadedAt: '2026-02-01T00:00:00.000Z', walletableIds: [10], dealIds: [20], manualJournalIds: [] };
+      const state3: PresetState = { preset: 'invoices/quickstart', loadedAt: '2026-02-02T00:00:00.000Z', walletableIds: [], dealIds: [30, 31], manualJournalIds: [40] };
+      await saveState(state2);
+      await saveState(state3);
+      const result = await listAllStates();
+      expect(result).toHaveLength(3);
+      const presets = result.map(s => s.preset).sort();
+      expect(presets).toEqual(['accounting/quickstart', 'hr/quickstart', 'invoices/quickstart'].sort());
     });
   });
 });

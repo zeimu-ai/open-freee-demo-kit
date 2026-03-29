@@ -30,7 +30,7 @@ async function findPresets(dir: string, prefix = ''): Promise<string[]> {
   return results;
 }
 
-function validateAccountingBalance(preset: ReturnType<typeof loadPreset> extends Promise<infer T> ? T : never): string[] {
+export function validateAccountingBalance(preset: ReturnType<typeof loadPreset> extends Promise<infer T> ? T : never): string[] {
   const errors: string[] = [];
   for (const mj of preset.data.manualJournals) {
     const debit = mj.details.filter(d => d.entry_side === 'debit').reduce((s, x) => s + x.amount, 0);
