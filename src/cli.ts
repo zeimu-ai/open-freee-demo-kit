@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+import { loadEnv } from './utils/env-loader.js';
+loadEnv(); // .env ファイルがあれば自動読み込み（なくてもエラーにならない）
 import { Command } from 'commander';
 import { authCommand } from './commands/auth.js';
 import { whoamiCommand } from './commands/whoami.js';
