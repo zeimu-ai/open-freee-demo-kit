@@ -124,6 +124,10 @@ freee ログイン後、以下のような画面が表示されます：
 | `fdk validate <preset>` | 指定プリセットのみ検証 |
 | `fdk validate --accounting` | 会計・税務ルール検証（役員報酬・税区分・交際費） |
 | `fdk verify <preset>` | 投入データを freee API で突合確認（CI/CD 対応） |
+| `fdk corrupt <preset>` | 指定プリセットに会計エラーを注入した破損版を生成 |
+| `fdk corrupt <preset> --rules officer-pay,tax-code` | 注入するエラールールを指定 |
+| `fdk corrupt <preset> --output path/to/out.json` | 破損プリセットをファイルに出力 |
+| `fdk corrupt <preset> --dry-run` | 注入内容の確認（変更なし） |
 
 ---
 

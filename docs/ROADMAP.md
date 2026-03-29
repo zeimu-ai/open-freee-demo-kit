@@ -58,9 +58,10 @@ CLIスタブ・プロジェクト初期化
 - `auth-flow.ts` — OAuth PKCE フローを抽出（`auth.ts` と `setup.ts` で共有）
 - `runLoad()` 関数エクスポート（進捗コールバック対応）
 
-## Phase 6（将来実装予定）
+## Phase 6（一部完了）
 
-#### fdk corrupt（エラーインジェクション動的生成）
+### fdk corrupt（完了）
+
 ```
 $ fdk corrupt accounting/quickstart --rules officer-pay,tax-code
 ```
@@ -68,8 +69,12 @@ $ fdk corrupt accounting/quickstart --rules officer-pay,tax-code
 - 既存の正しいプリセットを読み込み、指定ルールのエラーパターンを動的に差し込んだ「破損版」を生成
 - 正解データと誤りデータのペアを同一コンテキストで生成できる
 - `error_manifest` を自動生成してどこをどう壊したか記録
+- `--dry-run` で注入内容のプレビュー可能
 
-#### その他（候補）
+### 今後の実装候補
+
 - `fdk export` — 本番データを匿名化してプリセット化
 - `advanced/multi-period/` プリセット — 複数期・財務DD用
 - `advanced/multi-company/` プリセット — 複数事業所・事業譲渡シナリオ
+- `common/depreciation` — 固定資産・減価償却（全業種共通）
+- `accounting/sole-proprietor` — 個人事業主（専従者給与・青色申告特別控除）
