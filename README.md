@@ -159,10 +159,16 @@ fdk load accounting/quickstart
 
 ---
 
-## クイックスタート（エンジニア向け）
+## クイックスタート
 
 ```bash
 npm install -g freee-demo-kit
+fdk setup   # ウィザードで認証 → プリセット選択 → 投入まで一括完結
+```
+
+手動で進める場合:
+
+```bash
 fdk auth          # freeeアカウントでOAuth認証
 fdk list          # 利用可能なプリセット一覧
 fdk load accounting/quickstart  # デモデータを投入
@@ -175,6 +181,7 @@ fdk reset         # デモデータを全削除
 
 | コマンド | 説明 |
 |---------|------|
+| `fdk setup` | 対話式セットアップウィザード（認証情報入力 → 認証 → プリセット選択 → 投入を3ステップで完結） |
 | `fdk auth` | freee OAuthログイン（ブラウザ起動） |
 | `fdk auth --status` | 認証状態・トークン有効期限確認 |
 | `fdk auth --logout` | トークン削除 |
