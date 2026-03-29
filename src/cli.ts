@@ -12,6 +12,7 @@ import { validateCommand } from './commands/validate.js';
 import { dryRunCommand } from './commands/dry-run.js';
 import { verifyCommand } from './commands/verify.js';
 import { statusCommand } from './commands/status.js';
+import { setupCommand } from './commands/setup.js';
 
 const program = new Command();
 
@@ -20,6 +21,7 @@ program
   .description('freee demo kit — Load demo data into your freee test company')
   .version('0.1.0');
 
+program.addCommand(setupCommand);  // ウィザード（最初に登録 = --help で先頭に表示）
 program.addCommand(authCommand);
 program.addCommand(whoamiCommand);
 program.addCommand(listCommand);
