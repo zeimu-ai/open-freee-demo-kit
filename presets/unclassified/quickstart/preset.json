@@ -131,7 +131,7 @@
       {
         "issue_date": "2026-01-16",
         "type": "expense",
-        "partner_name": "佐川急便",
+        "partner_name": "スピードデリバリー株式会社",
         "details": [
           { "account_item_name": "雑費", "tax_code": 34, "amount": 3960, "description": "宅配便 営業資料発送 8件分" }
         ]

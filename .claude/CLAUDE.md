@@ -69,7 +69,7 @@ tests/unit/            — vitest 単体テスト
 
 | プリセット | 口座 | 取引 | 仕訳 |
 |-----------|:----:|:----:|:----:|
-| accounting/quickstart | 3 | 52 | 5 |
+| accounting/quickstart | 3 | 52 | 11 |
 | accounting/full-year | 3 | 98 | 12 |
 | accounting/restaurant | 2 | 35 | 6 |
 | accounting/construction | 2 | 30 | 6 |

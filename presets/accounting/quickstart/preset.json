@@ -5,7 +5,7 @@
   "expected": {
     "walletables": 3,
     "deals": 52,
-    "manualJournals": 5
+    "manualJournals": 11
   },
   "data": {
     "walletables": [
@@ -795,6 +795,120 @@
             "tax_code": 0,
             "amount": 120000,
             "description": "期末 保険料振替"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "1月末 売掛金計上（アルファシステム・ベータ工業 Net-30条件）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1540000,
+            "description": "1月末 未収売上計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "さくら信用銀行 普通預金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "1月分売掛金 入金（アルファシステム・ベータ工業）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "1月分売掛金 消込"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "2月末 売掛金計上（アルファシステム・ベータ工業 Net-30条件）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1540000,
+            "description": "2月末 未収売上計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "さくら信用銀行 普通預金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "2月分売掛金 入金（アルファシステム・ベータ工業）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "2月分売掛金 消込"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "3月末 売掛金計上（アルファシステム・ベータ工業 Net-30条件）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 1540000,
+            "description": "3月末 未収売上計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-04-10",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "さくら信用銀行 普通預金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "3月分売掛金 入金（アルファシステム・ベータ工業）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 1540000,
+            "description": "3月分売掛金 消込"
           }
         ]
       }
