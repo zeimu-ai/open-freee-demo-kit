@@ -1,0 +1,100 @@
+{
+  "name": "役員報酬誤計上エラーデータ",
+  "description": "役員報酬を「給料手当」で誤計上したエラーデータ。OFFICER-PAY-001ルールの検証・修正トレーニング用。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 6,
+    "manualJournals": 3
+  },
+  "error_manifest": [
+    {
+      "rule": "OFFICER-PAY-001",
+      "location": "deals[0] / deals[2] / deals[4] — partner_name: 代表取締役 佐藤 義雄",
+      "description": "役員報酬を「給料手当」で計上している。役員は労働者ではないため給与規程の対象外。",
+      "expected_fix": "account_item_name を「役員報酬」に変更する"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "やよい銀行 普通預金（給与振込口座）",
+        "bank_id": 2407
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "代表取締役 佐藤 義雄",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 600000, "description": "1月度 役員報酬（科目誤り: 給料手当→役員報酬に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "1月度 基本給" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "代表取締役 佐藤 義雄",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 600000, "description": "2月度 役員報酬（科目誤り: 給料手当→役員報酬に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "2月度 基本給" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "代表取締役 佐藤 義雄",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 600000, "description": "3月度 役員報酬（科目誤り: 給料手当→役員報酬に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "3月度 基本給" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 85000, "description": "1月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 85000, "description": "1月 社会保険料 未払計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 85000, "description": "2月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 85000, "description": "2月 社会保険料 未払計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 85000, "description": "3月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 85000, "description": "3月 社会保険料 未払計上" }
+        ]
+      }
+    ]
+  }
+}

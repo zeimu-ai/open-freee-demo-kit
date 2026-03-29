@@ -1,0 +1,140 @@
+{
+  "name": "税区分誤りエラーデータ",
+  "description": "売上高・外注費・給料手当の税区分が誤っているエラーデータ。TAX-CODE-001ルールの検証・修正トレーニング用。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 9,
+    "manualJournals": 3
+  },
+  "error_manifest": [
+    {
+      "rule": "TAX-CODE-001",
+      "location": "deals[0~2] — account_item_name: 売上高, tax_code: 0",
+      "description": "売上高（課税売上10%）に非課税コード(0)が設定されている。消費税申告で売上が過少申告となる。",
+      "expected_fix": "tax_code を 21（課税売上10%）に変更する"
+    },
+    {
+      "rule": "TAX-CODE-001",
+      "location": "deals[3~5] — account_item_name: 外注費, tax_code: 0",
+      "description": "外注費（課税仕入10%）に非課税コード(0)が設定されている。仕入税額控除が受けられない。",
+      "expected_fix": "tax_code を 34（課税仕入10%）に変更する"
+    },
+    {
+      "rule": "TAX-CODE-001",
+      "location": "deals[6~8] — account_item_name: 給料手当, tax_code: 34",
+      "description": "給料手当（不課税）に課税仕入コード(34)が設定されている。消費税の仕入控除対象外の支出を誤って控除している。",
+      "expected_fix": "tax_code を 0（不課税）に変更する"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "ひばり信用金庫 普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "小口現金"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "株式会社エコーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "ITコンサルティング 1月分（税区分誤り: 0→21に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "株式会社エコーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "ITコンサルティング 2月分（税区分誤り: 0→21に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "株式会社エコーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "ITコンサルティング 3月分（税区分誤り: 0→21に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 0, "amount": 330000, "description": "開発委託費 1月（税区分誤り: 0→34に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 0, "amount": 330000, "description": "開発委託費 2月（税区分誤り: 0→34に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 0, "amount": 330000, "description": "開発委託費 3月（税区分誤り: 0→34に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 34, "amount": 280000, "description": "1月度 基本給（税区分誤り: 34→0に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 34, "amount": 280000, "description": "2月度 基本給（税区分誤り: 34→0に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 34, "amount": 280000, "description": "3月度 基本給（税区分誤り: 34→0に修正が必要）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "1月末 売掛金計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "1月末 売上計上（税区分誤り: 0→21に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "2月末 売掛金計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "2月末 売上計上（税区分誤り: 0→21に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "3月末 売掛金計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "3月末 売上計上（税区分誤り: 0→21に修正が必要）" }
+        ]
+      }
+    ]
+  }
+}

@@ -24,6 +24,10 @@ const TAX_CODE_RULES: Record<string, { allowedCodes: number[]; severity: 'error'
   '諸会費':    { allowedCodes: [0],      severity: 'warning' },
 };
 
+// 手動仕訳（振替・未払計上等）では tax_code:0 が正当な仕入・費用科目
+// 例: 外注費の月末未払計上仕訳は tax_code:0 で問題なし
+const JOURNAL_SKIP_ACCOUNTS = new Set(['外注費', '交際費', '地代家賃', '諸会費']);
+
 const ENTERTAINMENT_MONTHLY_LIMIT = 667000;
 
 export function runAccountingValidation(preset: PresetDefinition): AccountingValidationResult {
@@ -62,11 +66,12 @@ export function runAccountingValidation(preset: PresetDefinition): AccountingVal
     }
   }
 
-  // TAX-CODE-001 — manualJournals
+  // TAX-CODE-001 — manualJournals（仕入・費用科目の振替仕訳は tax_code:0 が正当なのでスキップ）
   for (const mj of preset.data.manualJournals) {
     for (const detail of mj.details) {
       const name = detail.account_item_name;
       if (!name) continue;
+      if (JOURNAL_SKIP_ACCOUNTS.has(name)) continue;
       const rule = TAX_CODE_RULES[name];
       if (!rule) continue;
       if (!rule.allowedCodes.includes(detail.tax_code)) {

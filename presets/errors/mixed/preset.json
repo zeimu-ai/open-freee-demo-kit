@@ -1,0 +1,171 @@
+{
+  "name": "複合エラーデータ（総合トレーニング用）",
+  "description": "役員報酬誤計上・税区分誤り・交際費上限超過を同時に含む複合エラーデータ。上級者向け総合トレーニング用。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 12,
+    "manualJournals": 3
+  },
+  "error_manifest": [
+    {
+      "rule": "OFFICER-PAY-001",
+      "location": "deals[0,4,8] — partner_name: 取締役 中村 浩二",
+      "description": "役員報酬を「給料手当」で計上している。",
+      "expected_fix": "account_item_name を「役員報酬」に変更する"
+    },
+    {
+      "rule": "TAX-CODE-001",
+      "location": "deals[2,6,10] — account_item_name: 外注費, tax_code: 0",
+      "description": "外注費に非課税コード(0)が設定されている。仕入税額控除が受けられない。",
+      "expected_fix": "tax_code を 34（課税仕入10%）に変更する"
+    },
+    {
+      "rule": "TAX-CODE-001",
+      "location": "manualJournals[0,1,2] — account_item_name: 売上高, tax_code: 0",
+      "description": "手動仕訳の売上高に非課税コード(0)が設定されている。",
+      "expected_fix": "tax_code を 21（課税売上10%）に変更する"
+    },
+    {
+      "rule": "ENTERTAINMENT-001",
+      "location": "deals[3,7] — issue_date: 2026-01-*, 2026-02-*",
+      "description": "1月の交際費合計¥726,000、2月の交際費合計¥704,000がそれぞれ上限超過。",
+      "expected_fix": "交際費を他の科目に振り替えるか支出削減"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "さくら信用銀行 普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "credit_card",
+        "name": "法人クレジットカード",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "取締役 中村 浩二",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 500000, "description": "1月度 取締役報酬（科目誤り: 給料手当→役員報酬に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "1月度 基本給" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 吉田",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 0, "amount": 330000, "description": "開発委託費 1月（税区分誤り: 0→34に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 726000, "description": "1月 接待費合計（¥726,000 — 上限¥667,000超過 ⚠）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "取締役 中村 浩二",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 500000, "description": "2月度 取締役報酬（科目誤り: 給料手当→役員報酬に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "2月度 基本給" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 吉田",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 0, "amount": 330000, "description": "開発委託費 2月（税区分誤り: 0→34に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 704000, "description": "2月 接待費合計（¥704,000 — 上限¥667,000超過 ⚠）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "取締役 中村 浩二",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 500000, "description": "3月度 取締役報酬（科目誤り: 給料手当→役員報酬に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "社員 青木 一郎",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "3月度 基本給" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 吉田",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 0, "amount": 330000, "description": "開発委託費 3月（税区分誤り: 0→34に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 440000, "description": "3月 接待費合計（¥440,000 — 上限内 OK）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "1月末 売掛金計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "1月末 売上計上（税区分誤り: 0→21に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "2月末 売掛金計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "2月末 売上計上（税区分誤り: 0→21に修正が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "3月末 売掛金計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 1100000, "description": "3月末 売上計上（税区分誤り: 0→21に修正が必要）" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "name": "交際費上限超過エラーデータ",
+  "description": "交際費が月次上限（¥667,000/月）を超過しているエラーデータ。ENTERTAINMENT-001ルールの検証・修正トレーニング用。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 9,
+    "manualJournals": 0
+  },
+  "error_manifest": [
+    {
+      "rule": "ENTERTAINMENT-001",
+      "location": "deals[0~2] — issue_date: 2026-01-*, account_item_name: 交際費",
+      "description": "1月の交際費合計が¥850,000（上限¥667,000/月を¥183,000超過）。中小企業（年間¥8,000,000超）の交際費損金算入限度額に抵触するリスクがある。",
+      "expected_fix": "交際費を他の経費科目（会議費・福利厚生費等）に振り替えるか、支出自体を削減する"
+    },
+    {
+      "rule": "ENTERTAINMENT-001",
+      "location": "deals[3~5] — issue_date: 2026-02-*, account_item_name: 交際費",
+      "description": "2月の交際費合計が¥770,000（上限超過）。",
+      "expected_fix": "同上"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "たちばな銀行 当座預金",
+        "bank_id": 2407
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 330000, "description": "顧客接待 エコーシステムズ担当（10名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-18",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 275000, "description": "取引先年始接待（8名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "社員 森田",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 245000, "description": "新規開拓接待（7名分）— 1月計¥850,000 ⚠上限超過" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-08",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 385000, "description": "顧客接待 北栄産業担当（12名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 220000, "description": "取引先バレンタイン接待（6名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "社員 川田",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 165000, "description": "紹介先接待（5名分）— 2月計¥770,000 ⚠上限超過" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 198000, "description": "顧客接待 三栄商事担当（6名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "社員 松本",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 143000, "description": "年度末感謝接待（4名分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-28",
+        "type": "expense",
+        "partner_name": "社員 森田",
+        "details": [
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 110000, "description": "新規先最終交渉接待（3名分）— 3月計¥451,000 OK" }
+        ]
+      }
+    ],
+    "manualJournals": []
+  }
+}
