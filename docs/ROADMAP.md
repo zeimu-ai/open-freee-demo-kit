@@ -69,18 +69,6 @@ $ fdk corrupt accounting/quickstart --rules officer-pay,tax-code
 - 正解データと誤りデータのペアを同一コンテキストで生成できる
 - `error_manifest` を自動生成してどこをどう壊したか記録
 
-#### fdk preview（ローカル Web ビューア）
-```
-$ fdk preview
-🌐 http://localhost:3001 を開いています...
-Ctrl+C で終了
-```
-
-- Node.js の `http` モジュールのみ使用（追加依存なし）
-- freee API から口座・取引・試算表を取得して HTML 表形式で表示
-- スタイルはインライン CSS（外部 CSS 不要）
-- ページ構成: 概要サマリー / 口座一覧 / 取引一覧（最新 20 件）/ 試算表 PL
-
 #### その他（候補）
 - `fdk export` — 本番データを匿名化してプリセット化
 - `advanced/multi-period/` プリセット — 複数期・財務DD用
