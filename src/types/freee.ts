@@ -100,6 +100,14 @@ export interface FreeeTax {
   name: string;
 }
 
+// ErrorManifest (意図的なエラーの記述)
+export interface ErrorManifestItem {
+  rule: string;
+  location: string;
+  description: string;
+  expected_fix: string;
+}
+
 // Preset
 export interface PresetDefinition {
   name: string;
@@ -116,6 +124,7 @@ export interface PresetDefinition {
     deals: DealData[];
     manualJournals: ManualJournalData[];
   };
+  error_manifest?: ErrorManifestItem[];
 }
 
 // State

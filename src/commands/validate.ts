@@ -4,6 +4,7 @@ import path from 'node:path';
 import { PRESETS_DIR } from '../utils/preset-validator.js';
 import { loadPreset } from '../utils/preset-loader.js';
 import { info, error as logError } from '../utils/logger.js';
+import { runAccountingValidation } from '../utils/accounting-validator.js';
 
 async function findPresets(dir: string, prefix = ''): Promise<string[]> {
   const results: string[] = [];
@@ -44,7 +45,8 @@ function validateAccountingBalance(preset: ReturnType<typeof loadPreset> extends
 export const validateCommand = new Command('validate')
   .description('Validate preset JSON files against the schema')
   .argument('[preset]', 'Validate a specific preset (omit to validate all)')
-  .action(async (presetArg?: string) => {
+  .option('--accounting', '会計・税務バリデーションを実行')
+  .action(async (presetArg?: string, options: { accounting?: boolean } = {}) => {
     const presets = presetArg ? [presetArg] : await findPresets(PRESETS_DIR);
 
     if (presets.length === 0) {
@@ -81,6 +83,37 @@ export const validateCommand = new Command('validate')
             logError(`  ${err}`);
           }
           allPassed = false;
+        }
+
+        // --accounting オプション
+        if (options.accounting) {
+          const accResult = runAccountingValidation(definition);
+          console.log('\n📋 会計・税務バリデーション:');
+          const ruleNames = ['OFFICER-PAY-001', 'TAX-CODE-001', 'ENTERTAINMENT-001'];
+          for (const rule of ruleNames) {
+            const ruleIssues = accResult.issues.filter(i => i.rule === rule);
+            if (ruleIssues.length === 0) {
+              console.log(`  ✅ [PASS]  ${rule}`);
+            } else {
+              for (const issue of ruleIssues) {
+                const mark = issue.severity === 'error' ? '❌ [ERROR]' : '⚠  [WARN] ';
+                console.log(`  ${mark} ${issue.rule}: ${issue.message}`);
+              }
+            }
+          }
+          console.log('────────────────');
+          const errorCount = accResult.issues.filter(i => i.severity === 'error').length;
+          const warnCount = accResult.issues.filter(i => i.severity === 'warning').length;
+          if (accResult.passed) {
+            if (warnCount > 0) {
+              console.log(`⚠  会計バリデーション PASS（警告: ${warnCount}件）`);
+            } else {
+              console.log('✅ 会計バリデーション PASS');
+            }
+          } else {
+            console.log(`❌ 会計バリデーション失敗 (エラー: ${errorCount}件, 警告: ${warnCount}件)`);
+            allPassed = false;
+          }
         }
       } catch (err) {
         console.log(' ❌ ERROR');
