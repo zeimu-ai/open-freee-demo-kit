@@ -67,9 +67,13 @@ tests/unit/            — vitest 単体テスト
 | プリセット | 口座 | 取引 | 仕訳 |
 |-----------|:----:|:----:|:----:|
 | accounting/quickstart | 3 | 52 | 5 |
+| accounting/full-year | 3 | 98 | 12 |
+| accounting/restaurant | 2 | 35 | 6 |
+| accounting/construction | 2 | 30 | 6 |
 | invoices/quickstart | 2 | 22 | 6 |
 | expenses/quickstart | 2 | 24 | 3 |
 | hr/quickstart | 1 | 15 | 9 |
+| unclassified/quickstart | 1 | 20 | 0 |
 | errors/officer-pay | 1 | 6 | 3 |
 | errors/tax-code | 2 | 9 | 3 |
 | errors/entertainment | 1 | 9 | 0 |
