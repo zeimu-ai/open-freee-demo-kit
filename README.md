@@ -135,16 +135,37 @@ freee ログイン後、以下のような画面が表示されます：
 
 ### 通常プリセット
 
+#### 汎用・スタンダード
+
 | プリセット | 内容 | 口座 | 取引 | 仕訳 |
 |-----------|------|:----:|:----:|:----:|
-| `accounting/quickstart` | 架空ITサービス業・3ヶ月分の会計データ（売掛金入金フロー含む） | 3 | 52 | 11 |
+| `accounting/quickstart` | 架空ITサービス業・3ヶ月分（売掛金入金フロー含む） | 3 | 52 | 11 |
 | `accounting/full-year` | 架空ITサービス業・12ヶ月分・異常値パターン付き | 3 | 98 | 12 |
-| `accounting/restaurant` | 架空居酒屋・食材仕入の軽減税率（8%）と酒類（10%）を分岐 | 2 | 35 | 6 |
-| `accounting/construction` | 架空外装工事業・完成工事高・外注費3分法 | 2 | 30 | 6 |
 | `invoices/quickstart` | 請求書・売掛金管理（入金消込フロー含む） | 2 | 22 | 6 |
 | `expenses/quickstart` | 経費精算（交通費・接待費・消耗品費・通信費） | 2 | 24 | 3 |
-| `hr/quickstart` | 給与・人事（基本給・残業代・夏季賞与・社会保険・源泉税） | 1 | 34 | 20 |
+| `hr/quickstart` | 給与・人事（基本給・残業代・夏季賞与・社会保険・源泉税）6ヶ月分 | 1 | 34 | 20 |
 | `unclassified/quickstart` | 銀行明細インポート直後を再現（全費用を「雑費」で仮計上） | 1 | 20 | 0 |
+| `common/depreciation` | 固定資産・月次減価償却（PC・サーバー・エアコン） | 1 | 18 | 9 |
+
+#### 業種別
+
+| プリセット | 内容 | 口座 | 取引 | 仕訳 |
+|-----------|------|:----:|:----:|:----:|
+| `accounting/restaurant` | 架空居酒屋・食材仕入の軽減税率（8%）と酒類（10%）を分岐 | 2 | 35 | 6 |
+| `accounting/construction` | 架空外装工事業・完成工事高・外注費3分法 | 2 | 30 | 6 |
+| `accounting/sole-proprietor` | 架空フリーランス（個人事業主）・事業主報酬・専従者対応 | 2 | 20 | 6 |
+| `accounting/medical` | 架空内科クリニック・保険診療（非課税）と自費診療（課税）の混在 | 2 | 24 | 6 |
+| `accounting/real-estate` | 架空不動産賃貸業・居住用（非課税）と事務所（課税）の混在 | 1 | 24 | 6 |
+| `accounting/retail` | 架空雑貨小売店・商品仕入・棚卸・月次在庫調整 | 2 | 30 | 6 |
+| `accounting/it-startup` | 架空SaaS企業・サブスク収益・ソフトウェア資産計上・前受収益 | 1 | 21 | 9 |
+| `accounting/non-profit` | 架空NPO法人・収益事業（課税）と非収益事業（非課税）の区分管理 | 1 | 18 | 6 |
+
+#### 高度・複合
+
+| プリセット | 内容 | 口座 | 取引 | 仕訳 |
+|-----------|------|:----:|:----:|:----:|
+| `advanced/multi-period` | 複数期比較・前期繰越残高・期首仕訳（財務DD・年度比較デモ用） | 3 | 32 | 9 |
+| `advanced/multi-company` | グループ会社・親子会社間取引・連結消去仕訳（M&A PMI デモ用） | 4 | 36 | 6 |
 
 ### エラーインジェクション・プリセット
 
@@ -178,6 +199,28 @@ fdk validate errors/mixed --accounting  # 特定プリセットのみ
 
 ---
 
+## テストカバレッジ
+
+`npm test` で 136 テストが実行されます。
+
+| テストファイル | 対象 |
+|---|---|
+| `accounting-validator.test.ts` | 役員報酬・税区分・交際費の会計バリデーションルール |
+| `confirm-company.test.ts` | 事業所確認プロンプト（`--yes` / y/n 入力） |
+| `corrupt-injector.test.ts` | エラー注入ロジック（3ルール・イミュータビリティ） |
+| `env-loader.test.ts` | `.env` 読み込み・不存在時の安全性 |
+| `env-writer.test.ts` | `.env` 書き込み・パーミッション 600 |
+| `freee-api.test.ts` / `freee-api-write.test.ts` | API クライアント（正常系・トークンリフレッシュ） |
+| `no-real-names.test.ts` | 全プリセットへの実在名混入防止（ブロックリスト 25 件） |
+| `preset-loader.test.ts` | プリセット読み込み・スキーマ検証 |
+| `preset-validator.test.ts` | パストラバーサル防止・文字種バリデーション |
+| `state-store.test.ts` / `token-store.test.ts` | ファイル永続化・パーミッション |
+| `status.test.ts` | `fdk status` 出力フォーマット |
+
+> freee API との実際の通信（load / reset / verify）は統合テスト未対応です。動作確認は実際のサンドボックス事業所に対して手動で実施してください。
+
+---
+
 ## コントリビューション
 
 コントリビューションを歓迎します。[CONTRIBUTING.md](CONTRIBUTING.md) をお読みください。
@@ -202,6 +245,20 @@ npm test
 2. 該当アプリをクリックして編集画面を開く
 3. コールバック URL を `http://localhost:8080/callback` に変更して保存する
 4. `fdk setup` または `fdk auth` を再実行する
+
+---
+
+### `fdk load` で「勘定科目が見つかりません」が表示され、取引/仕訳が一部投入されない
+
+**原因：** freee の勘定科目はアカウント種別（法人/個人事業主）やプランによって異なります。業種別プリセット（`accounting/medical` など）が使用する科目が、お使いの事業所に存在しない場合に発生します。
+
+**対処方法：**
+- `fdk dry-run <preset>` で投入予定の科目名を事前確認する
+- `fdk validate <preset>` でスキーマチェックを実施する
+- freee の「勘定科目の設定」から対象科目を追加する
+
+> **個人事業主プリセット（`accounting/sole-proprietor`）について：**
+> `事業主貸`・`専従者給与` などの科目は個人事業主専用です。法人アカウントでは `役員報酬`・`給料手当` に置き換えて投入されます。
 
 ---
 
