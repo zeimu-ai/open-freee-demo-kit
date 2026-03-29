@@ -26,7 +26,7 @@
         "partner_name": "居住用テナント 光陽マンション301号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 88000,
             "description": "1月分 居住用家賃（非課税）"
@@ -39,7 +39,7 @@
         "partner_name": "居住用テナント 光陽マンション302号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 75000,
             "description": "1月分 居住用家賃（非課税）"
@@ -52,7 +52,7 @@
         "partner_name": "居住用テナント 緑丘アパート101号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 65000,
             "description": "1月分 居住用家賃（非課税）"
@@ -130,7 +130,7 @@
         "partner_name": "居住用テナント 光陽マンション301号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 88000,
             "description": "2月分 居住用家賃（非課税）"
@@ -143,7 +143,7 @@
         "partner_name": "居住用テナント 光陽マンション302号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 75000,
             "description": "2月分 居住用家賃（非課税）"
@@ -156,7 +156,7 @@
         "partner_name": "居住用テナント 緑丘アパート101号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 65000,
             "description": "2月分 居住用家賃（非課税）"
@@ -234,7 +234,7 @@
         "partner_name": "居住用テナント 光陽マンション301号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 88000,
             "description": "3月分 居住用家賃（非課税）"
@@ -247,7 +247,7 @@
         "partner_name": "居住用テナント 光陽マンション302号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 75000,
             "description": "3月分 居住用家賃（非課税）"
@@ -260,7 +260,7 @@
         "partner_name": "居住用テナント 緑丘アパート101号",
         "details": [
           {
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 65000,
             "description": "3月分 居住用家賃（非課税）"
@@ -365,7 +365,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 448000,
             "description": "1月分 家賃収入計上（居住用合計）"
@@ -403,7 +403,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 448000,
             "description": "2月分 家賃収入計上"
@@ -441,7 +441,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "賃貸収入",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 448000,
             "description": "3月分 家賃収入計上"

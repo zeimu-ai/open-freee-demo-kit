@@ -448,7 +448,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "普通預金",
+            "account_item_name": "さくら信用銀行 普通預金",
             "tax_code": 0,
             "amount": 3200000,
             "description": "期首繰越: 普通預金残高"
@@ -595,7 +595,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "普通預金",
+            "account_item_name": "さくら信用銀行 普通預金",
             "tax_code": 0,
             "amount": 1430000,
             "description": "前期末 売掛金 当期入金（フォレスト商事 前期3月分）"
@@ -614,7 +614,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "普通預金",
+            "account_item_name": "さくら信用銀行 普通預金",
             "tax_code": 0,
             "amount": 1694000,
             "description": "当期1月分 売掛金 入金（フォレスト商事）"

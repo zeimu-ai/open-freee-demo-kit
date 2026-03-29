@@ -53,7 +53,7 @@
         "partner_name": "空調設備工事 北星",
         "details": [
           {
-            "account_item_name": "建物附属設備",
+            "account_item_name": "附属設備",
             "tax_code": 34,
             "amount": 220000,
             "description": "事務所エアコン設置工事（耐用年数15年）"
@@ -307,7 +307,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "建物附属設備",
+            "account_item_name": "附属設備",
             "tax_code": 0,
             "amount": 1222,
             "description": "エアコン工事 減価償却累計"
@@ -364,7 +364,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "建物附属設備",
+            "account_item_name": "附属設備",
             "tax_code": 0,
             "amount": 1222,
             "description": "エアコン工事 減価償却累計"
@@ -421,7 +421,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "建物附属設備",
+            "account_item_name": "附属設備",
             "tax_code": 0,
             "amount": 1222,
             "description": "エアコン工事 減価償却累計"

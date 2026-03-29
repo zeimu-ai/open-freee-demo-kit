@@ -26,7 +26,7 @@
         "partner_name": "社会保険診療報酬支払基金",
         "details": [
           {
-            "account_item_name": "医業収益",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 3300000,
             "description": "保険診療報酬 1月分（11月診療分）"
@@ -52,7 +52,7 @@
         "partner_name": "メディカル薬品株式会社",
         "details": [
           {
-            "account_item_name": "医薬品費",
+            "account_item_name": "仕入高",
             "tax_code": 34,
             "amount": 880000,
             "description": "処方薬・注射薬 仕入 1月分"
@@ -130,7 +130,7 @@
         "partner_name": "社会保険診療報酬支払基金",
         "details": [
           {
-            "account_item_name": "医業収益",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 3520000,
             "description": "保険診療報酬 2月分（12月診療分）"
@@ -156,7 +156,7 @@
         "partner_name": "メディカル薬品株式会社",
         "details": [
           {
-            "account_item_name": "医薬品費",
+            "account_item_name": "仕入高",
             "tax_code": 34,
             "amount": 792000,
             "description": "処方薬・注射薬 仕入 2月分"
@@ -234,7 +234,7 @@
         "partner_name": "社会保険診療報酬支払基金",
         "details": [
           {
-            "account_item_name": "医業収益",
+            "account_item_name": "役務収益",
             "tax_code": 0,
             "amount": 3080000,
             "description": "保険診療報酬 3月分（1月診療分）"
@@ -260,7 +260,7 @@
         "partner_name": "メディカル薬品株式会社",
         "details": [
           {
-            "account_item_name": "医薬品費",
+            "account_item_name": "仕入高",
             "tax_code": 34,
             "amount": 814000,
             "description": "処方薬・注射薬 仕入 3月分"
@@ -358,7 +358,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "医薬品費",
+            "account_item_name": "仕入高",
             "tax_code": 0,
             "amount": 220000,
             "description": "1月末 薬品費未払計上（月末締め未請求分）"
@@ -396,7 +396,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "医薬品費",
+            "account_item_name": "仕入高",
             "tax_code": 0,
             "amount": 198000,
             "description": "2月末 薬品費未払計上"
@@ -434,7 +434,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "医薬品費",
+            "account_item_name": "仕入高",
             "tax_code": 0,
             "amount": 242000,
             "description": "3月末 薬品費未払計上（増患分）"

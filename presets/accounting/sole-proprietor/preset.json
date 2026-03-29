@@ -53,7 +53,7 @@
         "partner_name": "事業主本人",
         "details": [
           {
-            "account_item_name": "事業主貸",
+            "account_item_name": "役員報酬",
             "tax_code": 0,
             "amount": 300000,
             "description": "1月 生活費引き出し"
@@ -66,7 +66,7 @@
         "partner_name": "配偶者 吉田 美咲",
         "details": [
           {
-            "account_item_name": "専従者給与",
+            "account_item_name": "給料手当",
             "tax_code": 0,
             "amount": 150000,
             "description": "1月 専従者給与（事務補助）"
@@ -131,7 +131,7 @@
         "partner_name": "事業主本人",
         "details": [
           {
-            "account_item_name": "事業主貸",
+            "account_item_name": "役員報酬",
             "tax_code": 0,
             "amount": 300000,
             "description": "2月 生活費引き出し"
@@ -144,7 +144,7 @@
         "partner_name": "配偶者 吉田 美咲",
         "details": [
           {
-            "account_item_name": "専従者給与",
+            "account_item_name": "給料手当",
             "tax_code": 0,
             "amount": 150000,
             "description": "2月 専従者給与（事務補助）"
@@ -235,7 +235,7 @@
         "partner_name": "事業主本人",
         "details": [
           {
-            "account_item_name": "事業主貸",
+            "account_item_name": "役員報酬",
             "tax_code": 0,
             "amount": 300000,
             "description": "3月 生活費引き出し"
@@ -248,7 +248,7 @@
         "partner_name": "配偶者 吉田 美咲",
         "details": [
           {
-            "account_item_name": "専従者給与",
+            "account_item_name": "給料手当",
             "tax_code": 0,
             "amount": 150000,
             "description": "3月 専従者給与（事務補助）"
@@ -349,7 +349,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "普通預金",
+            "account_item_name": "さくら信用銀行 事業用普通預金",
             "tax_code": 0,
             "amount": 1100000,
             "description": "1月分売掛金 入金"
@@ -369,7 +369,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "普通預金",
+            "account_item_name": "さくら信用銀行 事業用普通預金",
             "tax_code": 0,
             "amount": 880000,
             "description": "2月分売掛金 入金"
@@ -389,7 +389,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "普通預金",
+            "account_item_name": "さくら信用銀行 事業用普通預金",
             "tax_code": 0,
             "amount": 1100000,
             "description": "3月分売掛金 期末入金"

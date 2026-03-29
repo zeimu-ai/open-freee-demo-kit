@@ -422,7 +422,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "売上原価",
+            "account_item_name": "期末商品棚卸高",
             "tax_code": 0,
             "amount": 1320000,
             "description": "1月末 期末棚卸による売上原価計上（仕入高→売上原価振替）"
@@ -448,7 +448,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "売上原価",
+            "account_item_name": "期末商品棚卸高",
             "tax_code": 0,
             "amount": 220000,
             "description": "1月末 期末棚卸高（売上原価から控除）"
@@ -460,7 +460,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "売上原価",
+            "account_item_name": "期末商品棚卸高",
             "tax_code": 0,
             "amount": 1100000,
             "description": "2月末 売上原価計上"
@@ -486,7 +486,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "売上原価",
+            "account_item_name": "期末商品棚卸高",
             "tax_code": 0,
             "amount": 220000,
             "description": "2月末 期末棚卸高"
@@ -498,7 +498,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "売上原価",
+            "account_item_name": "期末商品棚卸高",
             "tax_code": 0,
             "amount": 1430000,
             "description": "3月末 売上原価計上"
@@ -524,7 +524,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "売上原価",
+            "account_item_name": "期末商品棚卸高",
             "tax_code": 0,
             "amount": 198000,
             "description": "3月末 期末棚卸高"

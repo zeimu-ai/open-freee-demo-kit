@@ -2,11 +2,22 @@
   "name": "NPO法人クイックスタート",
   "description": "架空のNPO法人（地域コミュニティ支援）の3ヶ月分デモデータ。収益事業（課税）と非収益事業（非課税）の区分管理、寄附金収入・助成金収入・会費収入の処理を含む。",
   "version": "1.0.0",
-  "expected": { "walletables": 2, "deals": 18, "manualJournals": 6 },
+  "expected": {
+    "walletables": 2,
+    "deals": 18,
+    "manualJournals": 6
+  },
   "data": {
     "walletables": [
-      { "type": "bank_account", "name": "ひばり信用金庫 法人普通預金", "bank_id": 2407 },
-      { "type": "wallet", "name": "現金" }
+      {
+        "type": "bank_account",
+        "name": "ひばり信用金庫 法人普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "現金"
+      }
     ],
     "deals": [
       {
@@ -14,7 +25,12 @@
         "type": "income",
         "partner_name": "会員 年会費一括",
         "details": [
-          { "account_item_name": "受取会費", "tax_code": 0, "amount": 360000, "description": "1月 年会費一括入金（法人会員12社 × ¥30,000）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 360000,
+            "description": "1月 年会費一括入金（法人会員12社 × ¥30,000）"
+          }
         ]
       },
       {
@@ -22,7 +38,12 @@
         "type": "income",
         "partner_name": "市民向けワークショップ参加費",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 165000, "description": "1月 有料講座・ワークショップ参加費（課税事業収益）" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 165000,
+            "description": "1月 有料講座・ワークショップ参加費（課税事業収益）"
+          }
         ]
       },
       {
@@ -30,7 +51,12 @@
         "type": "income",
         "partner_name": "匿名・個人 寄附",
         "details": [
-          { "account_item_name": "寄附金収入", "tax_code": 0, "amount": 220000, "description": "1月 個人寄附金（非課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "1月 個人寄附金（非課税）"
+          }
         ]
       },
       {
@@ -38,7 +64,12 @@
         "type": "expense",
         "partner_name": "事務局長 西村 佳代",
         "details": [
-          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "1月 事務局スタッフ給与（事務局長1名）" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "1月 事務局スタッフ給与（事務局長1名）"
+          }
         ]
       },
       {
@@ -46,7 +77,12 @@
         "type": "expense",
         "partner_name": "講師 岡田 浩二",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 88000, "description": "1月 ワークショップ講師謝礼" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 88000,
+            "description": "1月 ワークショップ講師謝礼"
+          }
         ]
       },
       {
@@ -54,7 +90,12 @@
         "type": "expense",
         "partner_name": "コモンスペース株式会社",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 66000, "description": "1月 事務局スペース賃料" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 66000,
+            "description": "1月 事務局スペース賃料"
+          }
         ]
       },
       {
@@ -62,7 +103,12 @@
         "type": "income",
         "partner_name": "公益財団法人 地域振興基金",
         "details": [
-          { "account_item_name": "補助金等収入", "tax_code": 0, "amount": 500000, "description": "2月 地域活動助成金 第1回交付" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "2月 地域活動助成金 第1回交付"
+          }
         ]
       },
       {
@@ -70,7 +116,12 @@
         "type": "income",
         "partner_name": "市民向けワークショップ参加費",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 198000, "description": "2月 有料講座・ワークショップ参加費" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 198000,
+            "description": "2月 有料講座・ワークショップ参加費"
+          }
         ]
       },
       {
@@ -78,7 +129,12 @@
         "type": "income",
         "partner_name": "匿名・個人 寄附",
         "details": [
-          { "account_item_name": "寄附金収入", "tax_code": 0, "amount": 180000, "description": "2月 個人寄附金（非課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 180000,
+            "description": "2月 個人寄附金（非課税）"
+          }
         ]
       },
       {
@@ -86,7 +142,12 @@
         "type": "expense",
         "partner_name": "事務局長 西村 佳代",
         "details": [
-          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "2月 事務局スタッフ給与" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "2月 事務局スタッフ給与"
+          }
         ]
       },
       {
@@ -94,7 +155,12 @@
         "type": "expense",
         "partner_name": "講師 岡田 浩二",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 110000, "description": "2月 ワークショップ講師謝礼（2回分）" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "2月 ワークショップ講師謝礼（2回分）"
+          }
         ]
       },
       {
@@ -102,7 +168,12 @@
         "type": "expense",
         "partner_name": "コモンスペース株式会社",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 66000, "description": "2月 事務局スペース賃料" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 66000,
+            "description": "2月 事務局スペース賃料"
+          }
         ]
       },
       {
@@ -110,7 +181,12 @@
         "type": "income",
         "partner_name": "会員 年会費一括",
         "details": [
-          { "account_item_name": "受取会費", "tax_code": 0, "amount": 90000, "description": "3月 個人会員更新（個人会員30名 × ¥3,000）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 90000,
+            "description": "3月 個人会員更新（個人会員30名 × ¥3,000）"
+          }
         ]
       },
       {
@@ -118,7 +194,12 @@
         "type": "income",
         "partner_name": "市民向けワークショップ参加費",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 231000, "description": "3月 年度末特別講座参加費" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 231000,
+            "description": "3月 年度末特別講座参加費"
+          }
         ]
       },
       {
@@ -126,7 +207,12 @@
         "type": "income",
         "partner_name": "匿名・個人 寄附",
         "details": [
-          { "account_item_name": "寄附金収入", "tax_code": 0, "amount": 310000, "description": "3月 個人・法人寄附金（年度末集中）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 310000,
+            "description": "3月 個人・法人寄附金（年度末集中）"
+          }
         ]
       },
       {
@@ -134,7 +220,12 @@
         "type": "expense",
         "partner_name": "事務局長 西村 佳代",
         "details": [
-          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "3月 事務局スタッフ給与" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "3月 事務局スタッフ給与"
+          }
         ]
       },
       {
@@ -142,7 +233,12 @@
         "type": "expense",
         "partner_name": "講師 岡田 浩二",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 132000, "description": "3月 ワークショップ講師謝礼（特別講座）" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 132000,
+            "description": "3月 ワークショップ講師謝礼（特別講座）"
+          }
         ]
       },
       {
@@ -150,7 +246,12 @@
         "type": "expense",
         "partner_name": "コモンスペース株式会社",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 66000, "description": "3月 事務局スペース賃料" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 66000,
+            "description": "3月 事務局スペース賃料"
+          }
         ]
       }
     ],
@@ -158,43 +259,115 @@
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "前受収益", "tax_code": 0, "amount": 330000, "description": "1月末 年会費 未経過分繰延（11ヶ月分: ¥360,000 × 11/12）" },
-          { "entry_side": "credit", "account_item_name": "受取会費", "tax_code": 0, "amount": 330000, "description": "1月末 年会費 繰延振替" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "1月末 年会費 未経過分繰延（11ヶ月分: ¥360,000 × 11/12）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 330000,
+            "description": "1月末 年会費 繰延振替"
+          }
         ]
       },
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 42000, "description": "1月 社会保険料 会社（法人）負担分" },
-          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 42000, "description": "1月 社会保険料 未払計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "法定福利費",
+            "tax_code": 0,
+            "amount": 42000,
+            "description": "1月 社会保険料 会社（法人）負担分"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 42000,
+            "description": "1月 社会保険料 未払計上"
+          }
         ]
       },
       {
         "issue_date": "2026-02-28",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "前受収益", "tax_code": 0, "amount": 41667, "description": "2月末 年会費 月次経過按分（¥360,000 ÷ 12ヶ月 × 1ヶ月）" },
-          { "entry_side": "credit", "account_item_name": "受取会費", "tax_code": 0, "amount": 41667, "description": "2月末 年会費 月次収益計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 41667,
+            "description": "2月末 年会費 月次経過按分（¥360,000 ÷ 12ヶ月 × 1ヶ月）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 41667,
+            "description": "2月末 年会費 月次収益計上"
+          }
         ]
       },
       {
         "issue_date": "2026-02-28",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 42000, "description": "2月 社会保険料 法人負担分" },
-          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 42000, "description": "2月 社会保険料 未払計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "法定福利費",
+            "tax_code": 0,
+            "amount": 42000,
+            "description": "2月 社会保険料 法人負担分"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 42000,
+            "description": "2月 社会保険料 未払計上"
+          }
         ]
       },
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "前受収益", "tax_code": 0, "amount": 41667, "description": "3月末 年会費 月次経過按分" },
-          { "entry_side": "credit", "account_item_name": "受取会費", "tax_code": 0, "amount": 41667, "description": "3月末 年会費 月次収益計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 41667,
+            "description": "3月末 年会費 月次経過按分"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 41667,
+            "description": "3月末 年会費 月次収益計上"
+          }
         ]
       },
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 42000, "description": "3月 社会保険料 法人負担分" },
-          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 42000, "description": "3月 社会保険料 未払計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "法定福利費",
+            "tax_code": 0,
+            "amount": 42000,
+            "description": "3月 社会保険料 法人負担分"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 42000,
+            "description": "3月 社会保険料 未払計上"
+          }
         ]
       }
     ]

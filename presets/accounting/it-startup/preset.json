@@ -320,7 +320,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "ソフトウエア",
+            "account_item_name": "ソフトウェア",
             "tax_code": 0,
             "amount": 990000,
             "description": "1月 自社開発SaaS 開発費資産計上（外注費の75%）"
@@ -346,7 +346,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "ソフトウエア",
+            "account_item_name": "ソフトウェア",
             "tax_code": 0,
             "amount": 55000,
             "description": "1月 ソフトウェア減価償却累計"
@@ -377,7 +377,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "ソフトウエア",
+            "account_item_name": "ソフトウェア",
             "tax_code": 0,
             "amount": 990000,
             "description": "2月 自社開発SaaS 開発費資産計上"
@@ -403,7 +403,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "ソフトウエア",
+            "account_item_name": "ソフトウェア",
             "tax_code": 0,
             "amount": 55000,
             "description": "2月 ソフトウェア減価償却累計"
@@ -434,7 +434,7 @@
         "details": [
           {
             "entry_side": "debit",
-            "account_item_name": "ソフトウエア",
+            "account_item_name": "ソフトウェア",
             "tax_code": 0,
             "amount": 990000,
             "description": "3月 自社開発SaaS 開発費資産計上"
@@ -460,7 +460,7 @@
           },
           {
             "entry_side": "credit",
-            "account_item_name": "ソフトウエア",
+            "account_item_name": "ソフトウェア",
             "tax_code": 0,
             "amount": 55000,
             "description": "3月 ソフトウェア減価償却累計"
