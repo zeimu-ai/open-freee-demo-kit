@@ -54,12 +54,19 @@ describe('FreeeApiClient — write methods', () => {
   });
 
   describe('deleteWalletable', () => {
-    it('DELETEs /api/1/walletables/{id}', async () => {
+    it('DELETEs /api/1/walletables/{type}/{id}', async () => {
       fetchMock.mockResolvedValue(makeResponse(null, 204));
-      await client.deleteWalletable(99, 42);
+      await client.deleteWalletable(99, 42, 'bank_account');
       const [url, opts] = fetchMock.mock.calls[0] as [string, RequestInit];
-      expect(url).toContain('/api/1/walletables/42');
+      expect(url).toContain('/api/1/walletables/bank_account/42');
       expect(opts.method).toBe('DELETE');
+    });
+
+    it('credit_card タイプも正しい URL を使う', async () => {
+      fetchMock.mockResolvedValue(makeResponse(null, 204));
+      await client.deleteWalletable(99, 99, 'credit_card');
+      const [url] = fetchMock.mock.calls[0] as [string, RequestInit];
+      expect(url).toContain('/api/1/walletables/credit_card/99');
     });
   });
 

@@ -5,6 +5,7 @@ import type {
   FreeeCompany,
   FreeeWalletable,
   WalletableData,
+  WalletableType,
   FreeeDeal,
   DealData,
   FreeeManualJournal,
@@ -215,8 +216,8 @@ export class FreeeApiClient {
     return res.walletable;
   }
 
-  async deleteWalletable(companyId: number, id: number): Promise<void> {
-    await this.requestDelete(`/api/1/walletables/${id}?company_id=${companyId}`);
+  async deleteWalletable(companyId: number, id: number, type: WalletableType): Promise<void> {
+    await this.requestDelete(`/api/1/walletables/${type}/${id}?company_id=${companyId}`);
   }
 
   // ── Deal write ──────────────────────────────────────────────────────────

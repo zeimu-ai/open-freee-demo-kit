@@ -3,6 +3,7 @@ import { FreeeApiClient } from '../utils/freee-api.js';
 import { loadTokens } from '../utils/token-store.js';
 import { loadState, clearState } from '../utils/state-store.js';
 import { info, warn, error as logError } from '../utils/logger.js';
+import { confirmCompany } from '../utils/confirm-company.js';
 
 const DELAY_MS = 200;
 
@@ -43,9 +44,17 @@ async function resetPreset(preset: string, companyId: number, client: FreeeApiCl
     }
   }
 
+  const existingWalletables = await client.getWalletables(companyId);
+  const walletableTypeMap = new Map(existingWalletables.map(w => [w.id, w.type]));
+
   for (const id of state.walletableIds) {
+    const type = walletableTypeMap.get(id);
+    if (!type) {
+      warn(`口座が見つかりません (id: ${id}) — スキップ`);
+      continue;
+    }
     try {
-      await client.deleteWalletable(companyId, id);
+      await client.deleteWalletable(companyId, id, type);
       await sleep(DELAY_MS);
     } catch {
       warn(`口座の削除失敗 (id: ${id})`);
@@ -66,7 +75,8 @@ export const resetCommand = new Command('reset')
   .description('Delete all demo data from the freee sandbox company')
   .argument('[preset]', 'Reset only a specific preset (omit to reset all)')
   .option('--dry-run', 'Show what would be deleted without actually deleting')
-  .action(async (preset: string | undefined, options: { dryRun?: boolean }) => {
+  .option('--yes', 'Skip confirmation prompt')
+  .action(async (preset: string | undefined, options: { dryRun?: boolean; yes?: boolean }) => {
     const tokens = await loadTokens();
     if (!tokens) {
       logError('Not authenticated. Run `fdk auth` first.');
@@ -78,6 +88,11 @@ export const resetCommand = new Command('reset')
       logError('Company not set. Run `fdk auth` first.');
       process.exit(1);
     }
+
+    const client = new FreeeApiClient();
+    const company = await client.getCompany(companyId);
+
+    const companyName = company.display_name || company.name;
 
     if (options.dryRun) {
       const targets = preset ? [preset] : ['all presets in state.json'];
@@ -95,7 +110,11 @@ export const resetCommand = new Command('reset')
       return;
     }
 
-    const client = new FreeeApiClient();
+    const ok = await confirmCompany(companyName, companyId, options.yes ?? false);
+    if (!ok) {
+      console.log('キャンセルしました。');
+      process.exit(0);
+    }
 
     if (preset) {
       await resetPreset(preset, companyId, client);
