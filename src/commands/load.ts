@@ -5,6 +5,7 @@ import { FreeeApiClient } from '../utils/freee-api.js';
 import { loadTokens, saveTokens } from '../utils/token-store.js';
 import { saveState, loadState } from '../utils/state-store.js';
 import { info, warn, error as logError } from '../utils/logger.js';
+import { confirmCompany } from '../utils/confirm-company.js';
 import type { DealData, ManualJournalData } from '../types/freee.js';
 
 const DELAY_MS = 200; // rate limit: 200ms between API calls
@@ -18,7 +19,8 @@ export const loadCommand = new Command('load')
   .argument('<preset>', 'Preset name (e.g. accounting/quickstart)')
   .option('--dry-run', 'Preview without making API calls')
   .option('--force', 'Load even if state.json already exists for this preset')
-  .action(async (preset: string, options: { dryRun?: boolean; force?: boolean }) => {
+  .option('--yes', 'Skip confirmation prompt')
+  .action(async (preset: string, options: { dryRun?: boolean; force?: boolean; yes?: boolean }) => {
     // 1. Validate preset name
     try {
       validatePresetName(preset);
@@ -77,6 +79,7 @@ export const loadCommand = new Command('load')
 
     let companyId = tokens.company_id;
     const client = new FreeeApiClient();
+    let companyName = `ID: ${companyId}`;
 
     if (!companyId) {
       const companies = await client.getCompanies();
@@ -85,18 +88,28 @@ export const loadCommand = new Command('load')
         process.exit(1);
       }
       companyId = companies[0].id;
-      warn(`Company ID not set. Using first company: [${companyId}] ${companies[0].display_name || companies[0].name}`);
+      companyName = companies[0].display_name || companies[0].name;
+      warn(`Company ID not set. Using first company: [${companyId}] ${companyName}`);
       await saveTokens({ ...tokens, company_id: companyId });
+    } else {
+      const company = await client.getCompany(companyId);
+      companyName = company.display_name || company.name;
+    }
+
+    // Confirm before writing
+    if (!options.dryRun) {
+      const ok = await confirmCompany(companyName, companyId, options.yes ?? false);
+      if (!ok) {
+        console.log('キャンセルしました。');
+        process.exit(0);
+      }
     }
 
     console.log(`\n📦 ${presetName} を投入中... (company_id: ${companyId})`);
 
-    // 5. Build account item name→id map
-    info('勘定科目を取得中...');
-    const accountItems = await client.getAccountItems(companyId);
-    const itemMap = new Map<string, number>(accountItems.map(a => [a.name, a.id]));
+    // 5. Resolve account_item_name → id (uses itemMap built after walletable creation)
+    let itemMap = new Map<string, number>();
 
-    // 6. Resolve account_item_name → id
     function resolveDeals(deals: DealData[]): DealData[] {
       return deals.map(deal => ({
         ...deal,
@@ -129,9 +142,18 @@ export const loadCommand = new Command('load')
     const dealIds: number[] = [];
     const manualJournalIds: number[] = [];
 
-    // 7. Create walletables
+    // 6. Create walletables (skip if already exists with same name)
+    const existingWalletables = await client.getWalletables(companyId);
+    const existingWalletableMap = new Map(existingWalletables.map(w => [w.name, w.id]));
+
     console.log(`\n口座を作成中 (${data.walletables.length}件)...`);
     for (const w of data.walletables) {
+      const existingId = existingWalletableMap.get(w.name);
+      if (existingId !== undefined) {
+        // 既存口座は削除対象に含めない（システム口座等を誤って削除しないため）
+        info(`  ✓ ${w.name} (既存 id: ${existingId}) — スキップ`);
+        continue;
+      }
       try {
         const created = await client.createWalletable(companyId, w);
         walletableIds.push(created.id);
@@ -141,6 +163,11 @@ export const loadCommand = new Command('load')
         logError(`口座作成失敗: ${w.name} — ${String(err)}`);
       }
     }
+
+    // 7. Build account item name→id map (after walletable creation so bank account items are included)
+    info('勘定科目を取得中...');
+    const accountItems = await client.getAccountItems(companyId);
+    itemMap = new Map<string, number>(accountItems.map(a => [a.name, a.id]));
 
     // 8. Create deals
     console.log(`\n取引を作成中 (${data.deals.length}件)...`);
