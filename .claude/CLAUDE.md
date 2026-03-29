@@ -75,7 +75,7 @@ tests/unit/            — vitest 単体テスト
 | accounting/construction | 2 | 30 | 6 |
 | invoices/quickstart | 2 | 22 | 6 |
 | expenses/quickstart | 2 | 24 | 3 |
-| hr/quickstart | 1 | 15 | 9 |
+| hr/quickstart | 1 | 34 | 20 |
 | unclassified/quickstart | 1 | 20 | 0 |
 | errors/officer-pay | 1 | 6 | 3 |
 | errors/tax-code | 2 | 9 | 3 |
