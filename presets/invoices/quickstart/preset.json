@@ -203,7 +203,7 @@
         "issue_date": "2026-01-31",
         "details": [
           { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 3190000, "description": "1月末 売掛金計上（未入金分）" },
-          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 3190000, "description": "1月末 売上計上" }
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 3190000, "description": "1月末 売上計上" }
         ]
       },
       {
@@ -217,7 +217,7 @@
         "issue_date": "2026-02-28",
         "details": [
           { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 3410000, "description": "2月末 売掛金計上（未入金分）" },
-          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 3410000, "description": "2月末 売上計上" }
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 3410000, "description": "2月末 売上計上" }
         ]
       },
       {
@@ -231,7 +231,7 @@
         "issue_date": "2026-03-31",
         "details": [
           { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 3190000, "description": "3月末 売掛金計上（未入金分）" },
-          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 3190000, "description": "3月末 売上計上" }
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 3190000, "description": "3月末 売上計上" }
         ]
       },
       {
