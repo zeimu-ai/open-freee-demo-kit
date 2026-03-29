@@ -19,16 +19,41 @@ CLIスタブ・プロジェクト初期化
 - `fdk load-all` — 全プリセット一括投入
 - `accounting/quickstart` プリセット（取引50件・口座3件・仕訳5件）
 
-## Phase 3（一部完了）
+## Phase 3（完了）
 
-### 完了済み
 - `fdk status` — 投入済みプリセット一覧と件数表示
-- `invoices/quickstart` プリセット（取引20件・口座2件・仕訳6件）
+- `invoices/quickstart` プリセット（取引22件・口座2件・仕訳6件）
 - `expenses/quickstart` プリセット（取引24件・口座2件・仕訳3件）
 - `hr/quickstart` プリセット（取引15件・口座1件・仕訳9件）
 - 実名混入防止テスト（`tests/unit/no-real-names.test.ts`、ブロックリスト25件）
+- プリセットデータのリアリティ向上（会社名の日本語化・売上変動・経費バリエーション）
 
-### 将来実装予定（未着手）
+## Phase 4（完了）
+
+### 会計・税務バリデーション
+- `fdk validate --accounting` — 会計・税務ルールチェック
+  - OFFICER-PAY-001: 役員報酬の科目チェック（取締役・役員の給料手当誤計上を検出）
+  - TAX-CODE-001: 税区分整合性チェック（売上高/外注費/給料手当等の税区分を検証）
+  - ENTERTAINMENT-001: 交際費月次上限警告（¥667,000/月超過を検出）
+- `ErrorManifestItem` 型追加（`error_manifest` フィールドでエラーの意図を明記）
+
+### エラーインジェクション・プリセット（税務AI開発・トレーニング用）
+- `errors/officer-pay` — 役員報酬誤計上（OFFICER-PAY-001）
+- `errors/tax-code` — 税区分誤り（TAX-CODE-001）
+- `errors/entertainment` — 交際費上限超過（ENTERTAINMENT-001）
+- `errors/mixed` — 複合エラー（上級トレーニング用）
+
+## Phase 5（将来実装予定）
+
+#### fdk corrupt（エラーインジェクション動的生成）
+```
+$ fdk corrupt accounting/quickstart --rules officer-pay,tax-code
+```
+
+- 既存の正しいプリセットを読み込み、指定ルールのエラーパターンを動的に差し込んだ「破損版」を生成
+- 正解データと誤りデータのペアを同一コンテキストで生成できる
+- 税務AI・仕訳チェックAIの教師データ生成パイプラインへの組み込みを想定
+- `error_manifest` を自動生成してどこをどう壊したか記録
 
 #### fdk preview（ローカル Web ビューア）
 ```
