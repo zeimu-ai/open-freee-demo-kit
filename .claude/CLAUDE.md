@@ -95,7 +95,7 @@ tests/unit/            — vitest 単体テスト
 
 ### テスト
 - 実装は必ず TDD（Red → Green → Refactor）で進める
-- `npm test` で全テストがパスすること（現在 113 テスト）
+- `npm test` で全テストがパスすること（現在 167 テスト）
 - `tests/unit/no-real-names.test.ts` のブロックリストに引っかかる名前をプリセットに入れない
 
 ### プリセットデータの命名

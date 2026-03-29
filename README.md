@@ -201,7 +201,7 @@ fdk validate errors/mixed --accounting  # 特定プリセットのみ
 
 ## テストカバレッジ
 
-`npm test` で 136 テストが実行されます。
+`npm test` で 167 テストが実行されます。
 
 | テストファイル | 対象 |
 |---|---|
@@ -211,11 +211,14 @@ fdk validate errors/mixed --accounting  # 特定プリセットのみ
 | `env-loader.test.ts` | `.env` 読み込み・不存在時の安全性 |
 | `env-writer.test.ts` | `.env` 書き込み・パーミッション 600 |
 | `freee-api.test.ts` / `freee-api-write.test.ts` | API クライアント（正常系・トークンリフレッシュ） |
+| `freee-api-errors.test.ts` | GET/POST/DELETE エラー・トークンリフレッシュ失敗 |
 | `no-real-names.test.ts` | 全プリセットへの実在名混入防止（ブロックリスト 25 件） |
 | `preset-loader.test.ts` | プリセット読み込み・スキーマ検証 |
 | `preset-validator.test.ts` | パストラバーサル防止・文字種バリデーション |
-| `state-store.test.ts` / `token-store.test.ts` | ファイル永続化・パーミッション |
+| `run-load.test.ts` | `runLoad` ブランチ（dryRun・force・confirmCompany・onProgress 等） |
+| `state-store.test.ts` / `token-store.test.ts` | ファイル永続化・パーミッション・`listAllStates` |
 | `status.test.ts` | `fdk status` 出力フォーマット |
+| `validate-balance.test.ts` | `validateAccountingBalance` 貸借一致チェック |
 
 > freee API との実際の通信（load / reset / verify）は統合テスト未対応です。動作確認は実際のサンドボックス事業所に対して手動で実施してください。
 
