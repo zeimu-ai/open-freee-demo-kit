@@ -217,15 +217,15 @@
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 55100, "description": "1月末 未払経費計上（交通費精算未払分）" },
-          { "entry_side": "credit", "account_item_name": "旅費交通費", "tax_code": 0, "amount": 55100, "description": "1月末 交通費未払振替" }
+          { "entry_side": "debit",  "account_item_name": "旅費交通費", "tax_code": 0, "amount": 55100, "description": "1月末 未払経費計上（交通費精算未払分）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 55100, "description": "1月末 交通費未払振替" }
         ]
       },
       {
         "issue_date": "2026-02-28",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 31800, "description": "2月末 未払経費計上（交通費精算未払分）" },
-          { "entry_side": "credit", "account_item_name": "旅費交通費", "tax_code": 0, "amount": 31800, "description": "2月末 交通費未払振替" }
+          { "entry_side": "debit",  "account_item_name": "旅費交通費", "tax_code": 0, "amount": 31800, "description": "2月末 未払経費計上（交通費精算未払分）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 31800, "description": "2月末 交通費未払振替" }
         ]
       },
       {

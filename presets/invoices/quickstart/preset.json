@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "expected": {
     "walletables": 2,
-    "deals": 20,
+    "deals": 22,
     "manualJournals": 6
   },
   "data": {
@@ -32,7 +32,7 @@
       {
         "issue_date": "2026-01-10",
         "type": "income",
-        "partner_name": "フォックス産業株式会社",
+        "partner_name": "北栄産業株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 770000, "description": "システム導入支援 第1フェーズ（請求書 #INV-2602）" }
         ]
@@ -40,7 +40,7 @@
       {
         "issue_date": "2026-01-15",
         "type": "income",
-        "partner_name": "グロリア商事株式会社",
+        "partner_name": "三栄商事株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "業務改善コンサルティング 1月（請求書 #INV-2603）" }
         ]
@@ -48,7 +48,7 @@
       {
         "issue_date": "2026-01-20",
         "type": "income",
-        "partner_name": "ハーベスト物流株式会社",
+        "partner_name": "中央物流株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "運用サポート 1月（請求書 #INV-2604）" }
         ]
@@ -64,7 +64,7 @@
       {
         "issue_date": "2026-02-05",
         "type": "income",
-        "partner_name": "フォックス産業株式会社",
+        "partner_name": "北栄産業株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 770000, "description": "システム導入支援 第2フェーズ（請求書 #INV-2606）" }
         ]
@@ -72,7 +72,7 @@
       {
         "issue_date": "2026-02-10",
         "type": "income",
-        "partner_name": "グロリア商事株式会社",
+        "partner_name": "三栄商事株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "業務改善コンサルティング 2月（請求書 #INV-2607）" }
         ]
@@ -80,7 +80,7 @@
       {
         "issue_date": "2026-02-14",
         "type": "income",
-        "partner_name": "イオニア製造株式会社",
+        "partner_name": "太平製造株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "製造ライン効率化支援（請求書 #INV-2608）" }
         ]
@@ -88,7 +88,7 @@
       {
         "issue_date": "2026-02-20",
         "type": "income",
-        "partner_name": "ハーベスト物流株式会社",
+        "partner_name": "中央物流株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "運用サポート 2月（請求書 #INV-2609）" }
         ]
@@ -104,7 +104,7 @@
       {
         "issue_date": "2026-03-05",
         "type": "income",
-        "partner_name": "フォックス産業株式会社",
+        "partner_name": "北栄産業株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 770000, "description": "システム導入支援 第3フェーズ（請求書 #INV-2611）" }
         ]
@@ -112,7 +112,7 @@
       {
         "issue_date": "2026-03-10",
         "type": "income",
-        "partner_name": "グロリア商事株式会社",
+        "partner_name": "三栄商事株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "業務改善コンサルティング 3月（請求書 #INV-2612）" }
         ]
@@ -120,7 +120,7 @@
       {
         "issue_date": "2026-03-15",
         "type": "income",
-        "partner_name": "イオニア製造株式会社",
+        "partner_name": "太平製造株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "製造ライン効率化支援 第2期（請求書 #INV-2613）" }
         ]
@@ -128,7 +128,7 @@
       {
         "issue_date": "2026-03-20",
         "type": "income",
-        "partner_name": "ハーベスト物流株式会社",
+        "partner_name": "中央物流株式会社",
         "details": [
           { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "運用サポート 3月（請求書 #INV-2614）" }
         ]
@@ -144,7 +144,7 @@
       {
         "issue_date": "2026-01-15",
         "type": "expense",
-        "partner_name": "ジュピター印刷株式会社",
+        "partner_name": "山田印刷株式会社",
         "details": [
           { "account_item_name": "消耗品費", "tax_code": 34, "amount": 33000, "description": "請求書・納品書 印刷・製本代" }
         ]
@@ -180,6 +180,22 @@
         "details": [
           { "account_item_name": "支払手数料", "tax_code": 0, "amount": 3300, "description": "振込手数料 3月分" }
         ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "コンサルタント 中村",
+        "details": [
+          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 24800, "description": "客先訪問 交通費精算（名古屋往復）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "ネットワーク通信株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 18700, "description": "オフィス回線・携帯電話代 3月分" }
+        ]
       }
     ],
     "manualJournals": [
@@ -207,7 +223,7 @@
       {
         "issue_date": "2026-03-15",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "ひばり信用金庫 普通預金", "tax_code": 0, "amount": 770000, "description": "フォックス産業 2月分入金消込" },
+          { "entry_side": "debit",  "account_item_name": "ひばり信用金庫 普通預金", "tax_code": 0, "amount": 770000, "description": "北栄産業 2月分入金消込" },
           { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 770000, "description": "売掛金回収 #INV-2606" }
         ]
       },

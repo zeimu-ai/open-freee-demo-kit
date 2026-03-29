@@ -49,8 +49,17 @@ export const verifyCommand = new Command('verify')
     const client = new FreeeApiClient();
     let passed = true;
 
-    // Verify walletable count via state IDs
-    const walletableCount = state.walletableIds.length;
+    // Verify walletable count by checking preset-defined names exist in freee
+    // (existing walletables that were reused are not in state.walletableIds)
+    let walletableCount = 0;
+    try {
+      const liveWalletables = await client.getWalletables(companyId);
+      const liveNames = new Set(liveWalletables.map(w => w.name));
+      walletableCount = definition.data.walletables.filter(w => liveNames.has(w.name)).length;
+    } catch {
+      // Fallback to state count
+      walletableCount = state.walletableIds.length;
+    }
     const walletableOk = walletableCount === expected.walletables;
     const walletableMark = walletableOk ? '✅' : '❌';
     console.log(`${walletableMark} 口座: ${walletableCount}件 (期待値: ${expected.walletables}件)`);
@@ -69,19 +78,6 @@ export const verifyCommand = new Command('verify')
     const journalMark = journalOk ? '✅' : '❌';
     console.log(`${journalMark} 手動仕訳: ${journalCount}件 (期待値: ${expected.manualJournals}件)`);
     if (!journalOk) passed = false;
-
-    // Also verify via API: check walletables actually exist
-    try {
-      const liveWalletables = await client.getWalletables(companyId);
-      const foundIds = new Set(liveWalletables.map(w => w.id));
-      const missingCount = state.walletableIds.filter(id => !foundIds.has(id)).length;
-      if (missingCount > 0) {
-        console.log(`⚠️  freee上に存在しない口座: ${missingCount}件`);
-        passed = false;
-      }
-    } catch {
-      console.log('⚠️  freee API での口座確認をスキップしました');
-    }
 
     console.log('──────────────────');
     if (passed) {
