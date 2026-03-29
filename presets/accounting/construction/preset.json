@@ -1,0 +1,309 @@
+{
+  "name": "建設業クイックスタート",
+  "description": "架空の小規模外装工事業（年商6,000万円相当）の3ヶ月分の会計データ。完成工事高・工事原価（材料費・労務費・外注費の3分法）・未成工事の仕掛計上を含む。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 30,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "東海信用金庫 普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "小口現金"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-20",
+        "type": "income",
+        "partner_name": "旭川工業株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 3300000, "description": "外壁塗装工事 完成引渡（旭川工業様 倉庫棟）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "income",
+        "partner_name": "緑丘住宅株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 1980000, "description": "屋根防水工事 完成引渡（緑丘住宅様 集合住宅）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "東洋建材株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 880000, "description": "外壁塗装工事 塗装材料費（旭川工業様 現場分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "職人 渡辺 組",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 660000, "description": "外壁塗装工事 施工外注費（渡辺組）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "城南足場リース株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 330000, "description": "足場リース費（旭川工業様 現場）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "防水工業 北山",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 550000, "description": "屋根防水工事 防水施工外注（緑丘住宅様）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "社員 大島 健一 他2名",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 780000, "description": "1月 現場管理スタッフ3名 給与" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "代表取締役 上野 正則",
+        "details": [
+          { "account_item_name": "役員報酬", "tax_code": 0, "amount": 600000, "description": "1月度 役員報酬" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "桜台不動産株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 110000, "description": "事務所・資材倉庫 賃料 1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "建機リース株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 165000, "description": "高圧洗浄機・コンプレッサー レンタル代 1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "income",
+        "partner_name": "株式会社サンライズ建設",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 5500000, "description": "新築外構工事 中間払（サンライズ建設様 分譲地 #2）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "東洋建材株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 1320000, "description": "新築外構工事 コンクリート・砕石材料（サンライズ建設様）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "大林土木工事",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 880000, "description": "新築外構工事 掘削・基礎工事（大林土木）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "職人 渡辺 組",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 550000, "description": "新築外構工事 左官・タイル施工（渡辺組）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "社員 大島 健一 他2名",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 780000, "description": "2月 現場管理スタッフ3名 給与" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "代表取締役 上野 正則",
+        "details": [
+          { "account_item_name": "役員報酬", "tax_code": 0, "amount": 600000, "description": "2月度 役員報酬" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "桜台不動産株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 110000, "description": "事務所・資材倉庫 賃料 2月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "建機リース株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 220000, "description": "重機リース代 2月（油圧ショベル）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "サクラ通信サービス株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 22000, "description": "現場用携帯電話代 2月（4台分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "income",
+        "partner_name": "株式会社サンライズ建設",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 5500000, "description": "新築外構工事 最終払（サンライズ建設様 分譲地 #2 完成引渡）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "income",
+        "partner_name": "東海マンション管理組合",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 2200000, "description": "マンション大規模修繕 外壁補修完成引渡" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "東洋建材株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 660000, "description": "マンション外壁補修 補修材料費" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "職人 渡辺 組",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 440000, "description": "マンション外壁補修 施工外注（渡辺組）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "城南足場リース株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 275000, "description": "マンション外壁補修 足場リース費" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "大林土木工事",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 330000, "description": "サンライズ建設様 外構最終仕上げ工事（大林土木）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "社員 大島 健一 他2名",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 780000, "description": "3月 現場管理スタッフ3名 給与" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "代表取締役 上野 正則",
+        "details": [
+          { "account_item_name": "役員報酬", "tax_code": 0, "amount": 600000, "description": "3月度 役員報酬" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "桜台不動産株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 110000, "description": "事務所・資材倉庫 賃料 3月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "建機リース株式会社",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 165000, "description": "重機リース代 3月（油圧ショベル）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "サクラ通信サービス株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 22000, "description": "現場用携帯電話代 3月（4台分）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "外注費", "tax_code": 0, "amount": 198000, "description": "1月末 工事外注費未払計上（月末未入力分）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 198000, "description": "1月末 外注費未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 122000, "description": "1月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 122000, "description": "1月 社会保険料 未払計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "外注費", "tax_code": 0, "amount": 330000, "description": "2月末 工事外注費未払計上（サンライズ建設様 3月引渡分）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 330000, "description": "2月末 外注費未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 122000, "description": "2月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 122000, "description": "2月 社会保険料 未払計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "外注費", "tax_code": 0, "amount": 275000, "description": "3月末 工事外注費未払計上（年度末精算分）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 275000, "description": "3月末 外注費未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 122000, "description": "3月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 122000, "description": "3月 社会保険料 未払計上" }
+        ]
+      }
+    ]
+  }
+}

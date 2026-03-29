@@ -1,0 +1,1534 @@
+{
+  "name": "会計クイックスタート（12ヶ月・異常値込み）",
+  "description": "架空のITサービス業（年商3,600万円相当）の12ヶ月分の会計データ。9月の売上急落・11月の外注費急増・2月の二重仕訳を含む。月次チェック自動化のデモ用。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 3,
+    "deals": 98,
+    "manualJournals": 12
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "さくら信用銀行 普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "現金"
+      },
+      {
+        "type": "credit_card",
+        "name": "法人クレジットカード",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2025-04-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 920000,
+            "description": "Webシステム開発 4月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-04-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 700000,
+            "description": "基幹システム保守 4月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-04-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 4月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-04-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "4月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-04-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "4月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-04-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 4月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-04-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 4月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 5月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 5月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-20",
+        "type": "income",
+        "partner_name": "ガンマ商事株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 600000,
+            "description": "コンサルティング 5月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 5月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "5月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "5月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 5月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 5月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-28",
+        "type": "expense",
+        "partner_name": "株式会社オフィスリンク",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 18000,
+            "description": "文房具・コピー用紙 5月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 950000,
+            "description": "Webシステム開発 6月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 720000,
+            "description": "基幹システム保守 6月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 6月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "6月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "6月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 6月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 6月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 7月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 7月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-20",
+        "type": "income",
+        "partner_name": "ガンマ商事株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "コンサルティング 7月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 7月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "7月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "7月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 7月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 7月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-28",
+        "type": "expense",
+        "partner_name": "株式会社オフィスリンク",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 22000,
+            "description": "文房具・コピー用紙 7月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 900000,
+            "description": "Webシステム開発 8月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 680000,
+            "description": "基幹システム保守 8月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 8月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "8月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "8月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 8月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 8月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 440000,
+            "description": "システム開発 9月分（大型案件一時停止）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 330000,
+            "description": "基幹システム保守 9月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 9月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "9月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "9月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 9月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 9月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-28",
+        "type": "expense",
+        "partner_name": "株式会社オフィスリンク",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 18000,
+            "description": "文房具・コピー用紙 9月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 10月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 10月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 10月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "10月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "10月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 10月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 10月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 990000,
+            "description": "Webシステム開発 11月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 770000,
+            "description": "基幹システム保守 11月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-20",
+        "type": "income",
+        "partner_name": "ガンマ商事株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "コンサルティング 11月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 660000,
+            "description": "開発委託費 11月（年末繁忙期増員）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 佐々木",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 440000,
+            "description": "開発委託費 11月（臨時増員）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "11月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "11月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 11月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 11月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-28",
+        "type": "expense",
+        "partner_name": "株式会社オフィスリンク",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 20000,
+            "description": "文房具・コピー用紙 11月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 12月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 12月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 12月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "12月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "12月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 12月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 12月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 700000,
+            "description": "基幹システム保守 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "income",
+        "partner_name": "ガンマ商事株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "コンサルティング 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "1月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "1月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-28",
+        "type": "expense",
+        "partner_name": "株式会社オフィスリンク",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 19000,
+            "description": "文房具・コピー用紙 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "income",
+        "partner_name": "ガンマ商事株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "業務改善コンサルティング 2月"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "income",
+        "partner_name": "ガンマ商事株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "業務改善コンサルティング 2月（重複計上 ※削除が必要）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "2月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "2月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "株式会社アルファシステム",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "income",
+        "partner_name": "ベータ工業株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "income",
+        "partner_name": "ガンマ商事株式会社",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "コンサルティング 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "フリーランスエンジニア 木村",
+        "details": [
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発委託費 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "代表取締役 山田 義明",
+        "details": [
+          {
+            "account_item_name": "役員報酬",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "3月度 役員報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "給与（社員3名）",
+        "details": [
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 950000,
+            "description": "3月度 給与"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-07",
+        "type": "expense",
+        "partner_name": "株式会社クラウドサービス",
+        "details": [
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "クラウドサービス利用料 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-12",
+        "type": "expense",
+        "partner_name": "ネットリンク通信株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス通信費 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-28",
+        "type": "expense",
+        "partner_name": "株式会社オフィスリンク",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 21000,
+            "description": "文房具・コピー用紙 3月分"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2025-04-30",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "4月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "4月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-05-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "5月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "5月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-06-30",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "6月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "6月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-07-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "7月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "7月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-08-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "8月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "8月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-09-30",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "9月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "9月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-10-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "10月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "10月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-11-30",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "11月末 外注費未払計上（繁忙期増員分）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 220000,
+            "description": "11月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2025-12-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "12月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "12月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "1月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "1月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "2月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "2月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "外注費",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "3月末 外注費未払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "3月末 外注費未払"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "name": "飲食業クイックスタート",
+  "description": "架空の居酒屋（席数20席・月商200万円相当）の3ヶ月分の会計データ。食材仕入・パート人件費・酒税の税区分分岐を含む。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 35,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "ひまわり信用金庫 普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "レジ現金"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 682000, "description": "1月第1週 飲食売上（酒込み）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 715000, "description": "1月第2週 飲食売上（酒込み）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-19",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 748000, "description": "1月第3週 飲食売上（忘年会シーズン余波）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-26",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 693000, "description": "1月第4週 飲食売上" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-08",
+        "type": "expense",
+        "partner_name": "さんわ食材センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 13, "amount": 198000, "description": "食材仕入 1月第1-2週分（野菜・鮮魚・肉類）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "さんわ食材センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 13, "amount": 176000, "description": "食材仕入 1月第3週分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-22",
+        "type": "expense",
+        "partner_name": "さんわ食材センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 13, "amount": 187000, "description": "食材仕入 1月第4週分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-08",
+        "type": "expense",
+        "partner_name": "みのり酒販株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 132000, "description": "酒類仕入 1月前半（ビール・日本酒・焼酎）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-22",
+        "type": "expense",
+        "partner_name": "みのり酒販株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 121000, "description": "酒類仕入 1月後半" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "パート 小川 美咲 他3名",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 198000, "description": "1月 ホールスタッフ パート代（4名合計）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "調理スタッフ 吉田 誠",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "1月 料理長 給与" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "橘不動産管理株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 198000, "description": "店舗賃料 1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-02",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 594000, "description": "2月第1週 飲食売上（節分週）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-09",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 726000, "description": "2月第2週 飲食売上（バレンタイン需要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-16",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 638000, "description": "2月第3週 飲食売上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-23",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 605000, "description": "2月第4週 飲食売上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-06",
+        "type": "expense",
+        "partner_name": "さんわ食材センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 13, "amount": 165000, "description": "食材仕入 2月第1-2週分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "さんわ食材センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 13, "amount": 154000, "description": "食材仕入 2月第3-4週分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-06",
+        "type": "expense",
+        "partner_name": "みのり酒販株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 110000, "description": "酒類仕入 2月前半" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "みのり酒販株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 99000, "description": "酒類仕入 2月後半" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "パート 小川 美咲 他3名",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 187000, "description": "2月 ホールスタッフ パート代（4名合計）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "調理スタッフ 吉田 誠",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "2月 料理長 給与" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "橘不動産管理株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 198000, "description": "店舗賃料 2月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-02",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 616000, "description": "3月第1週 飲食売上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-09",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 770000, "description": "3月第2週 飲食売上（歓送迎会シーズン開始）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-16",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 803000, "description": "3月第3週 飲食売上（歓送迎会ピーク）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-23",
+        "type": "income",
+        "partner_name": "売上（現金・クレジット合算）",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 748000, "description": "3月第4週 飲食売上（歓送迎会）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-06",
+        "type": "expense",
+        "partner_name": "さんわ食材センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 13, "amount": 209000, "description": "食材仕入 3月第1-2週分（歓送迎会対応増量）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "さんわ食材センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 13, "amount": 220000, "description": "食材仕入 3月第3-4週分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-06",
+        "type": "expense",
+        "partner_name": "みのり酒販株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 143000, "description": "酒類仕入 3月前半（歓送迎会対応）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "みのり酒販株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 132000, "description": "酒類仕入 3月後半" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "パート 小川 美咲 他3名",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 231000, "description": "3月 ホールスタッフ パート代（4名・繁忙期増時間）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "調理スタッフ 吉田 誠",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "3月 料理長 給与" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "株式会社セントラルエナジー",
+        "details": [
+          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 44000, "description": "電気代・ガス代 3月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "橘不動産管理株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 198000, "description": "店舗賃料 3月分" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仕入高", "tax_code": 0, "amount": 55000, "description": "1月末 食材仕入未払計上" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 55000, "description": "1月末 仕入未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 72000, "description": "1月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 72000, "description": "1月 社会保険料 未払計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仕入高", "tax_code": 0, "amount": 44000, "description": "2月末 食材仕入未払計上" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 44000, "description": "2月末 仕入未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 69000, "description": "2月 社会保険料 会社負担分" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 69000, "description": "2月 社会保険料 未払計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仕入高", "tax_code": 0, "amount": 66000, "description": "3月末 食材仕入未払計上（歓送迎会繁忙期）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0, "amount": 66000, "description": "3月末 仕入未払振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "法定福利費", "tax_code": 0, "amount": 77000, "description": "3月 社会保険料 会社負担分（繁忙期増員分含む）" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0, "amount": 77000, "description": "3月 社会保険料 未払計上" }
+        ]
+      }
+    ]
+  }
+}

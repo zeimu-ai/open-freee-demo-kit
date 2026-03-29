@@ -1,0 +1,182 @@
+{
+  "name": "未分類取引 クイックスタート",
+  "description": "AI自動仕分けデモ用。銀行明細インポート直後の状態を再現した1ヶ月分の取引データ。費用科目はすべて「雑費」で仮計上されており、摘要を手がかりに正しい科目へ分類する精度を検証できる（架空サービス業）。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 20,
+    "manualJournals": 0
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "ひかり信用金庫 普通預金",
+        "bank_id": 2407
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "株式会社コスモウェブ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "Webサイト制作費 / コスモウェブ様" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-28",
+        "type": "income",
+        "partner_name": "有限会社ライジングワーク",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "コンサルティング料 2026年1月分 / ライジングワーク様" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-06",
+        "type": "expense",
+        "partner_name": "東邦エネルギーサービス",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 27500, "description": "電気料金 2026年1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-06",
+        "type": "expense",
+        "partner_name": "セントラル水道局",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 8800, "description": "水道料金 2026年1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-07",
+        "type": "expense",
+        "partner_name": "ひかりネット株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 8800, "description": "光回線インターネット 月額利用料 2026年1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-07",
+        "type": "expense",
+        "partner_name": "スターモバイル株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 33000, "description": "法人携帯電話料金 3台分 2026年1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-09",
+        "type": "expense",
+        "partner_name": "オフィスピア株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 12100, "description": "事務用品購入 文具・コピー用紙・ボールペン等" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "expense",
+        "partner_name": "プリントワールド株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 16500, "description": "会社案内パンフレット印刷・製本 200部" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-13",
+        "type": "expense",
+        "partner_name": "シルバータクシー",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 4400, "description": "タクシー乗車 品川→新宿 営業訪問" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-14",
+        "type": "expense",
+        "partner_name": "センチュリーホテルズ",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 17600, "description": "出張宿泊費 大阪出張 1泊 2026/1/14" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-14",
+        "type": "expense",
+        "partner_name": "新幹線チケット",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 28600, "description": "東海道新幹線 東京⇔大阪 往復 出張交通費" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "レストラン海風",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 55000, "description": "取引先接待 コスモウェブ様 3名 会食" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "桜台不動産株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 220000, "description": "事務所賃料 2026年1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-08",
+        "type": "expense",
+        "partner_name": "ひかり信用金庫",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 880, "description": "他行宛振込手数料 3件分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-16",
+        "type": "expense",
+        "partner_name": "佐川急便",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 3960, "description": "宅配便 営業資料発送 8件分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-18",
+        "type": "expense",
+        "partner_name": "ブックスマート株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 4400, "description": "IT・会計専門書籍 2冊購入" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "リースオフィス株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 16500, "description": "複合機リース料 2026年1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-22",
+        "type": "expense",
+        "partner_name": "クリーンサービス株式会社",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 34, "amount": 33000, "description": "事務所清掃サービス委託 1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "あおば損害保険",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 0, "amount": 24200, "description": "事業者賠償責任保険 2026年1月分 保険料" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "ITビジネス協会",
+        "details": [
+          { "account_item_name": "雑費", "tax_code": 0, "amount": 11000, "description": "ITビジネス協会 年会費 2026年度分" }
+        ]
+      }
+    ],
+    "manualJournals": []
+  }
+}
