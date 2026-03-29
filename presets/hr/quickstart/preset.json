@@ -11,7 +11,8 @@
     "walletables": [
       {
         "type": "bank_account",
-        "name": "やよい銀行 普通預金（給与振込口座）"
+        "name": "やよい銀行 普通預金（給与振込口座）",
+        "bank_id": 2407
       }
     ],
     "deals": [
@@ -20,8 +21,8 @@
         "type": "expense",
         "partner_name": "社員 青木 一郎",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 280000, "description": "1月度 基本給" },
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 28000, "description": "1月度 残業代" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "1月度 基本給" },
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 28000, "description": "1月度 残業代" }
         ]
       },
       {
@@ -29,7 +30,7 @@
         "type": "expense",
         "partner_name": "社員 松本 花子",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 250000, "description": "1月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 250000, "description": "1月度 基本給" }
         ]
       },
       {
@@ -37,8 +38,8 @@
         "type": "expense",
         "partner_name": "社員 森田 健太",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 320000, "description": "1月度 基本給" },
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 45000, "description": "1月度 残業代" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 320000, "description": "1月度 基本給" },
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 45000, "description": "1月度 残業代" }
         ]
       },
       {
@@ -46,7 +47,7 @@
         "type": "expense",
         "partner_name": "社員 川田 誠",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 260000, "description": "1月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 260000, "description": "1月度 基本給" }
         ]
       },
       {
@@ -62,7 +63,7 @@
         "type": "expense",
         "partner_name": "社員 青木 一郎",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 280000, "description": "2月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "2月度 基本給" }
         ]
       },
       {
@@ -70,7 +71,7 @@
         "type": "expense",
         "partner_name": "社員 松本 花子",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 250000, "description": "2月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 250000, "description": "2月度 基本給" }
         ]
       },
       {
@@ -78,8 +79,8 @@
         "type": "expense",
         "partner_name": "社員 森田 健太",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 320000, "description": "2月度 基本給" },
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 32000, "description": "2月度 残業代" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 320000, "description": "2月度 基本給" },
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 32000, "description": "2月度 残業代" }
         ]
       },
       {
@@ -87,7 +88,7 @@
         "type": "expense",
         "partner_name": "社員 川田 誠",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 260000, "description": "2月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 260000, "description": "2月度 基本給" }
         ]
       },
       {
@@ -103,8 +104,8 @@
         "type": "expense",
         "partner_name": "社員 青木 一郎",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 280000, "description": "3月度 基本給" },
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 21000, "description": "3月度 残業代" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "3月度 基本給" },
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 21000, "description": "3月度 残業代" }
         ]
       },
       {
@@ -112,7 +113,7 @@
         "type": "expense",
         "partner_name": "社員 松本 花子",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 250000, "description": "3月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 250000, "description": "3月度 基本給" }
         ]
       },
       {
@@ -120,7 +121,7 @@
         "type": "expense",
         "partner_name": "社員 森田 健太",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 320000, "description": "3月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 320000, "description": "3月度 基本給" }
         ]
       },
       {
@@ -128,7 +129,7 @@
         "type": "expense",
         "partner_name": "社員 川田 誠",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 260000, "description": "3月度 基本給" }
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 260000, "description": "3月度 基本給" }
         ]
       },
       {
@@ -159,7 +160,7 @@
         "issue_date": "2026-01-31",
         "details": [
           { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 273000, "description": "1月 給与 差引支給額 未払計上" },
-          { "entry_side": "credit", "account_item_name": "普通預金", "tax_code": 0, "amount": 273000, "description": "1月 給与振込" }
+          { "entry_side": "credit", "account_item_name": "やよい銀行 普通預金（給与振込口座）", "tax_code": 0, "amount": 273000, "description": "1月 給与振込" }
         ]
       },
       {
@@ -180,7 +181,7 @@
         "issue_date": "2026-02-28",
         "details": [
           { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 260000, "description": "2月 給与 差引支給額 未払計上" },
-          { "entry_side": "credit", "account_item_name": "普通預金", "tax_code": 0, "amount": 260000, "description": "2月 給与振込" }
+          { "entry_side": "credit", "account_item_name": "やよい銀行 普通預金（給与振込口座）", "tax_code": 0, "amount": 260000, "description": "2月 給与振込" }
         ]
       },
       {
@@ -201,7 +202,7 @@
         "issue_date": "2026-03-31",
         "details": [
           { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 265000, "description": "3月 給与 差引支給額 未払計上" },
-          { "entry_side": "credit", "account_item_name": "普通預金", "tax_code": 0, "amount": 265000, "description": "3月 給与振込" }
+          { "entry_side": "credit", "account_item_name": "やよい銀行 普通預金（給与振込口座）", "tax_code": 0, "amount": 265000, "description": "3月 給与振込" }
         ]
       }
     ]

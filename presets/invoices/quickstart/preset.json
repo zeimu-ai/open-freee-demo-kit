@@ -11,11 +11,13 @@
     "walletables": [
       {
         "type": "bank_account",
-        "name": "ひばり信用金庫 普通預金"
+        "name": "ひばり信用金庫 普通預金",
+        "bank_id": 2407
       },
       {
         "type": "credit_card",
-        "name": "法人ビジネスカード"
+        "name": "法人ビジネスカード",
+        "bank_id": 1442
       }
     ],
     "deals": [
@@ -144,7 +146,7 @@
         "type": "expense",
         "partner_name": "ジュピター印刷株式会社",
         "details": [
-          { "account_item_name": "印刷費", "tax_code": 34, "amount": 33000, "description": "請求書・納品書 印刷・製本代" }
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 33000, "description": "請求書・納品書 印刷・製本代" }
         ]
       },
       {
@@ -191,7 +193,7 @@
       {
         "issue_date": "2026-02-15",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "普通預金", "tax_code": 0, "amount": 1100000, "description": "エコーシステムズ 1月分入金消込" },
+          { "entry_side": "debit",  "account_item_name": "ひばり信用金庫 普通預金", "tax_code": 0, "amount": 1100000, "description": "エコーシステムズ 1月分入金消込" },
           { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 1100000, "description": "売掛金回収 #INV-2601" }
         ]
       },
@@ -205,7 +207,7 @@
       {
         "issue_date": "2026-03-15",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "普通預金", "tax_code": 0, "amount": 770000, "description": "フォックス産業 2月分入金消込" },
+          { "entry_side": "debit",  "account_item_name": "ひばり信用金庫 普通預金", "tax_code": 0, "amount": 770000, "description": "フォックス産業 2月分入金消込" },
           { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 770000, "description": "売掛金回収 #INV-2606" }
         ]
       },
@@ -219,8 +221,8 @@
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 50000, "description": "期末 貸倒引当金計上" },
-          { "entry_side": "credit", "account_item_name": "貸倒引当金", "tax_code": 0, "amount": 50000, "description": "期末 貸倒引当金設定" }
+          { "entry_side": "debit",  "account_item_name": "貸倒繰入額(販)", "tax_code": 0, "amount": 50000, "description": "期末 貸倒引当金計上" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金(売)", "tax_code": 0, "amount": 50000, "description": "期末 貸倒引当金設定" }
         ]
       }
     ]

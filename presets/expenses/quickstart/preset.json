@@ -11,7 +11,8 @@
     "walletables": [
       {
         "type": "bank_account",
-        "name": "たちばな銀行 当座預金"
+        "name": "たちばな銀行 当座預金",
+        "bank_id": 2407
       },
       {
         "type": "wallet",
@@ -40,7 +41,7 @@
         "type": "expense",
         "partner_name": "社員 青木",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 44000, "description": "顧客接待 エコーシステムズ担当（4名分）" }
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 44000, "description": "顧客接待 エコーシステムズ担当（4名分）" }
         ]
       },
       {
@@ -104,7 +105,7 @@
         "type": "expense",
         "partner_name": "社員 松本",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 38500, "description": "顧客接待 フォックス産業担当（3名分）" }
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 38500, "description": "顧客接待 フォックス産業担当（3名分）" }
         ]
       },
       {
@@ -168,7 +169,7 @@
         "type": "expense",
         "partner_name": "社員 青木",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 55000, "description": "顧客接待 グロリア商事担当（5名分）" }
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 55000, "description": "顧客接待 グロリア商事担当（5名分）" }
         ]
       },
       {

@@ -11,7 +11,8 @@
     "walletables": [
       {
         "type": "bank_account",
-        "name": "さくら信用銀行 普通預金"
+        "name": "さくら信用銀行 普通預金",
+        "bank_id": 2407
       },
       {
         "type": "wallet",
@@ -19,7 +20,8 @@
       },
       {
         "type": "credit_card",
-        "name": "法人クレジットカード"
+        "name": "法人クレジットカード",
+        "bank_id": 1442
       }
     ],
     "deals": [
@@ -28,7 +30,12 @@
         "type": "income",
         "partner_name": "株式会社アルファシステム",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 880000, "description": "Webシステム開発 1月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 1月分"
+          }
         ]
       },
       {
@@ -36,7 +43,12 @@
         "type": "income",
         "partner_name": "ベータ工業株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "基幹システム保守 1月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 1月分"
+          }
         ]
       },
       {
@@ -44,7 +56,12 @@
         "type": "income",
         "partner_name": "ガンマ商事株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "コンサルティング 1月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "コンサルティング 1月分"
+          }
         ]
       },
       {
@@ -52,7 +69,12 @@
         "type": "income",
         "partner_name": "デルタ物流株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 440000, "description": "データ分析支援 1月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 440000,
+            "description": "データ分析支援 1月分"
+          }
         ]
       },
       {
@@ -60,7 +82,12 @@
         "type": "income",
         "partner_name": "株式会社アルファシステム",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 880000, "description": "Webシステム開発 2月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 2月分"
+          }
         ]
       },
       {
@@ -68,7 +95,12 @@
         "type": "income",
         "partner_name": "ベータ工業株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "基幹システム保守 2月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 2月分"
+          }
         ]
       },
       {
@@ -76,7 +108,12 @@
         "type": "income",
         "partner_name": "ガンマ商事株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "コンサルティング 2月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "コンサルティング 2月分"
+          }
         ]
       },
       {
@@ -84,7 +121,12 @@
         "type": "income",
         "partner_name": "デルタ物流株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 440000, "description": "データ分析支援 2月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 440000,
+            "description": "データ分析支援 2月分"
+          }
         ]
       },
       {
@@ -92,7 +134,12 @@
         "type": "income",
         "partner_name": "株式会社アルファシステム",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 880000, "description": "Webシステム開発 3月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 880000,
+            "description": "Webシステム開発 3月分"
+          }
         ]
       },
       {
@@ -100,7 +147,12 @@
         "type": "income",
         "partner_name": "ベータ工業株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "基幹システム保守 3月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 660000,
+            "description": "基幹システム保守 3月分"
+          }
         ]
       },
       {
@@ -108,7 +160,12 @@
         "type": "income",
         "partner_name": "ガンマ商事株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "コンサルティング 3月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 550000,
+            "description": "コンサルティング 3月分"
+          }
         ]
       },
       {
@@ -116,7 +173,12 @@
         "type": "income",
         "partner_name": "デルタ物流株式会社",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 21, "amount": 440000, "description": "データ分析支援 3月分" }
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 440000,
+            "description": "データ分析支援 3月分"
+          }
         ]
       },
       {
@@ -124,7 +186,12 @@
         "type": "expense",
         "partner_name": "フリーランスエンジニア 木村",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 330000, "description": "開発業務委託 1月分" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発業務委託 1月分"
+          }
         ]
       },
       {
@@ -132,7 +199,12 @@
         "type": "expense",
         "partner_name": "株式会社クラウドサービス",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 110000, "description": "インフラ構築支援 1月" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "インフラ構築支援 1月"
+          }
         ]
       },
       {
@@ -140,7 +212,12 @@
         "type": "expense",
         "partner_name": "クラウドネクスト合同会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 55000, "description": "クラウドサーバー利用料 2025年12月分" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 55000,
+            "description": "クラウドサーバー利用料 2025年12月分"
+          }
         ]
       },
       {
@@ -148,7 +225,12 @@
         "type": "expense",
         "partner_name": "株式会社オフィスリンク",
         "details": [
-          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 22000, "description": "文房具・コピー用紙" }
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 22000,
+            "description": "文房具・コピー用紙"
+          }
         ]
       },
       {
@@ -156,7 +238,12 @@
         "type": "expense",
         "partner_name": "フリーランスエンジニア 木村",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 330000, "description": "開発業務委託 2月分" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発業務委託 2月分"
+          }
         ]
       },
       {
@@ -164,7 +251,12 @@
         "type": "expense",
         "partner_name": "株式会社クラウドサービス",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 110000, "description": "インフラ構築支援 2月" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "インフラ構築支援 2月"
+          }
         ]
       },
       {
@@ -172,7 +264,12 @@
         "type": "expense",
         "partner_name": "クラウドネクスト合同会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 58000, "description": "クラウドサーバー利用料 2026年1月分" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 58000,
+            "description": "クラウドサーバー利用料 2026年1月分"
+          }
         ]
       },
       {
@@ -180,7 +277,12 @@
         "type": "expense",
         "partner_name": "株式会社オフィスリンク",
         "details": [
-          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 18000, "description": "プリンターインク他" }
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 18000,
+            "description": "プリンターインク他"
+          }
         ]
       },
       {
@@ -188,7 +290,12 @@
         "type": "expense",
         "partner_name": "フリーランスエンジニア 木村",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 330000, "description": "開発業務委託 3月分" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 330000,
+            "description": "開発業務委託 3月分"
+          }
         ]
       },
       {
@@ -196,7 +303,12 @@
         "type": "expense",
         "partner_name": "株式会社クラウドサービス",
         "details": [
-          { "account_item_name": "外注費", "tax_code": 34, "amount": 110000, "description": "インフラ構築支援 3月" }
+          {
+            "account_item_name": "外注費",
+            "tax_code": 34,
+            "amount": 110000,
+            "description": "インフラ構築支援 3月"
+          }
         ]
       },
       {
@@ -204,7 +316,12 @@
         "type": "expense",
         "partner_name": "クラウドネクスト合同会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 52000, "description": "クラウドサーバー利用料 2026年2月分" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 52000,
+            "description": "クラウドサーバー利用料 2026年2月分"
+          }
         ]
       },
       {
@@ -212,7 +329,12 @@
         "type": "expense",
         "partner_name": "株式会社オフィスリンク",
         "details": [
-          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 15000, "description": "コピー用紙・ファイル類" }
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "コピー用紙・ファイル類"
+          }
         ]
       },
       {
@@ -220,7 +342,12 @@
         "type": "expense",
         "partner_name": "代表取締役社長 山田",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 500000, "description": "1月度 給与支払" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "1月度 給与支払"
+          }
         ]
       },
       {
@@ -228,7 +355,12 @@
         "type": "expense",
         "partner_name": "代表取締役社長 山田",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 500000, "description": "2月度 給与支払" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "2月度 給与支払"
+          }
         ]
       },
       {
@@ -236,7 +368,12 @@
         "type": "expense",
         "partner_name": "代表取締役社長 山田",
         "details": [
-          { "account_item_name": "給料賃金", "tax_code": 0, "amount": 500000, "description": "3月度 給与支払" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "3月度 給与支払"
+          }
         ]
       },
       {
@@ -244,7 +381,12 @@
         "type": "expense",
         "partner_name": "メトロポリス鉄道株式会社",
         "details": [
-          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 12000, "description": "1月 交通費精算" }
+          {
+            "account_item_name": "旅費交通費",
+            "tax_code": 34,
+            "amount": 12000,
+            "description": "1月 交通費精算"
+          }
         ]
       },
       {
@@ -252,7 +394,12 @@
         "type": "expense",
         "partner_name": "ネットリンク通信株式会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 15000, "description": "オフィス電話・インターネット 1月" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス電話・インターネット 1月"
+          }
         ]
       },
       {
@@ -260,7 +407,12 @@
         "type": "expense",
         "partner_name": "首都エネルギー株式会社",
         "details": [
-          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 28000, "description": "電気料金 12月分" }
+          {
+            "account_item_name": "水道光熱費",
+            "tax_code": 34,
+            "amount": 28000,
+            "description": "電気料金 12月分"
+          }
         ]
       },
       {
@@ -268,7 +420,12 @@
         "type": "expense",
         "partner_name": "サーチマーケティング合同会社",
         "details": [
-          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 80000, "description": "ネット広告費 1月分" }
+          {
+            "account_item_name": "広告宣伝費",
+            "tax_code": 34,
+            "amount": 80000,
+            "description": "ネット広告費 1月分"
+          }
         ]
       },
       {
@@ -276,7 +433,12 @@
         "type": "expense",
         "partner_name": "銀座 日本料理 さくら",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 33000, "description": "顧客接待 アルファシステム担当" }
+          {
+            "account_item_name": "交際費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "顧客接待 アルファシステム担当"
+          }
         ]
       },
       {
@@ -284,7 +446,12 @@
         "type": "expense",
         "partner_name": "エムオーテックス株式会社",
         "details": [
-          { "account_item_name": "諸会費", "tax_code": 0, "amount": 5000, "description": "ITツール年会費" }
+          {
+            "account_item_name": "諸会費",
+            "tax_code": 0,
+            "amount": 5000,
+            "description": "ITツール年会費"
+          }
         ]
       },
       {
@@ -292,7 +459,12 @@
         "type": "expense",
         "partner_name": "株式会社ドメイン",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 150000, "description": "オフィス賃料 1月分" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 150000,
+            "description": "オフィス賃料 1月分"
+          }
         ]
       },
       {
@@ -300,7 +472,12 @@
         "type": "expense",
         "partner_name": "メトロポリス鉄道株式会社",
         "details": [
-          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 9500, "description": "2月 交通費精算" }
+          {
+            "account_item_name": "旅費交通費",
+            "tax_code": 34,
+            "amount": 9500,
+            "description": "2月 交通費精算"
+          }
         ]
       },
       {
@@ -308,7 +485,12 @@
         "type": "expense",
         "partner_name": "ネットリンク通信株式会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 15000, "description": "オフィス電話・インターネット 2月" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス電話・インターネット 2月"
+          }
         ]
       },
       {
@@ -316,7 +498,12 @@
         "type": "expense",
         "partner_name": "首都エネルギー株式会社",
         "details": [
-          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 31000, "description": "電気料金 1月分" }
+          {
+            "account_item_name": "水道光熱費",
+            "tax_code": 34,
+            "amount": 31000,
+            "description": "電気料金 1月分"
+          }
         ]
       },
       {
@@ -324,7 +511,12 @@
         "type": "expense",
         "partner_name": "サーチマーケティング合同会社",
         "details": [
-          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 90000, "description": "ネット広告費 2月分" }
+          {
+            "account_item_name": "広告宣伝費",
+            "tax_code": 34,
+            "amount": 90000,
+            "description": "ネット広告費 2月分"
+          }
         ]
       },
       {
@@ -332,7 +524,12 @@
         "type": "expense",
         "partner_name": "渋谷 寿司 海鮮",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 44000, "description": "顧客接待 ベータ工業担当" }
+          {
+            "account_item_name": "交際費",
+            "tax_code": 34,
+            "amount": 44000,
+            "description": "顧客接待 ベータ工業担当"
+          }
         ]
       },
       {
@@ -340,7 +537,12 @@
         "type": "expense",
         "partner_name": "株式会社ドメイン",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 150000, "description": "オフィス賃料 2月分" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 150000,
+            "description": "オフィス賃料 2月分"
+          }
         ]
       },
       {
@@ -348,7 +550,12 @@
         "type": "expense",
         "partner_name": "メトロポリス鉄道株式会社",
         "details": [
-          { "account_item_name": "旅費交通費", "tax_code": 34, "amount": 14000, "description": "3月 交通費精算" }
+          {
+            "account_item_name": "旅費交通費",
+            "tax_code": 34,
+            "amount": 14000,
+            "description": "3月 交通費精算"
+          }
         ]
       },
       {
@@ -356,7 +563,12 @@
         "type": "expense",
         "partner_name": "ネットリンク通信株式会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 15000, "description": "オフィス電話・インターネット 3月" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 15000,
+            "description": "オフィス電話・インターネット 3月"
+          }
         ]
       },
       {
@@ -364,7 +576,12 @@
         "type": "expense",
         "partner_name": "首都エネルギー株式会社",
         "details": [
-          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 25000, "description": "電気料金 2月分" }
+          {
+            "account_item_name": "水道光熱費",
+            "tax_code": 34,
+            "amount": 25000,
+            "description": "電気料金 2月分"
+          }
         ]
       },
       {
@@ -372,7 +589,12 @@
         "type": "expense",
         "partner_name": "サーチマーケティング合同会社",
         "details": [
-          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 85000, "description": "ネット広告費 3月分" }
+          {
+            "account_item_name": "広告宣伝費",
+            "tax_code": 34,
+            "amount": 85000,
+            "description": "ネット広告費 3月分"
+          }
         ]
       },
       {
@@ -380,7 +602,12 @@
         "type": "expense",
         "partner_name": "銀座 イタリアン アルプス",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 38500, "description": "顧客接待 ガンマ商事担当" }
+          {
+            "account_item_name": "交際費",
+            "tax_code": 34,
+            "amount": 38500,
+            "description": "顧客接待 ガンマ商事担当"
+          }
         ]
       },
       {
@@ -388,7 +615,12 @@
         "type": "expense",
         "partner_name": "株式会社ドメイン",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 0, "amount": 150000, "description": "オフィス賃料 3月分" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 150000,
+            "description": "オフィス賃料 3月分"
+          }
         ]
       },
       {
@@ -396,7 +628,12 @@
         "type": "expense",
         "partner_name": "オフィスソリューションズ株式会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 33000, "description": "オフィスソフト利用料 1月分" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "オフィスソフト利用料 1月分"
+          }
         ]
       },
       {
@@ -404,7 +641,12 @@
         "type": "expense",
         "partner_name": "オフィスソリューションズ株式会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 33000, "description": "オフィスソフト利用料 2月分" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "オフィスソフト利用料 2月分"
+          }
         ]
       },
       {
@@ -412,7 +654,12 @@
         "type": "expense",
         "partner_name": "オフィスソリューションズ株式会社",
         "details": [
-          { "account_item_name": "通信費", "tax_code": 34, "amount": 33000, "description": "オフィスソフト利用料 3月分" }
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "オフィスソフト利用料 3月分"
+          }
         ]
       },
       {
@@ -420,7 +667,12 @@
         "type": "expense",
         "partner_name": "株式会社ビジネスサポート",
         "details": [
-          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 11000, "description": "会計ソフト利用料 2月分" }
+          {
+            "account_item_name": "支払手数料",
+            "tax_code": 34,
+            "amount": 11000,
+            "description": "会計ソフト利用料 2月分"
+          }
         ]
       }
     ],
@@ -428,36 +680,96 @@
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 2530000, "description": "1月末 売掛金計上" },
-          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 2530000, "description": "1月末 売上計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 2530000,
+            "description": "1月末 売掛金計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 2530000,
+            "description": "1月末 売上計上"
+          }
         ]
       },
       {
         "issue_date": "2026-02-28",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 2530000, "description": "2月末 売掛金計上" },
-          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 2530000, "description": "2月末 売上計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 2530000,
+            "description": "2月末 売掛金計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 2530000,
+            "description": "2月末 売上計上"
+          }
         ]
       },
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0, "amount": 2530000, "description": "3月末 売掛金計上" },
-          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 2530000, "description": "3月末 売上計上" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 2530000,
+            "description": "3月末 売掛金計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 0,
+            "amount": 2530000,
+            "description": "3月末 売上計上"
+          }
         ]
       },
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "減価償却費", "tax_code": 0, "amount": 50000, "description": "1月 PC・機器 月次償却" },
-          { "entry_side": "credit", "account_item_name": "器具備品", "tax_code": 0, "amount": 50000, "description": "1月 減価償却累計" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 50000,
+            "description": "1月 PC・機器 月次償却"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "工具器具備品",
+            "tax_code": 0,
+            "amount": 50000,
+            "description": "1月 減価償却累計"
+          }
         ]
       },
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "前払費用", "tax_code": 0, "amount": 120000, "description": "期末 保険料前払計上" },
-          { "entry_side": "credit", "account_item_name": "保険料", "tax_code": 0, "amount": 120000, "description": "期末 保険料振替" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "前払費用",
+            "tax_code": 0,
+            "amount": 120000,
+            "description": "期末 保険料前払計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "保険料",
+            "tax_code": 0,
+            "amount": 120000,
+            "description": "期末 保険料振替"
+          }
         ]
       }
     ]
