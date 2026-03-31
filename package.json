@@ -4,7 +4,7 @@
   "description": "freee sandbox seeder CLI — Load demo data into your freee test company",
   "type": "module",
   "bin": {
-    "fdk": "./dist/cli.js"
+    "fdk": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
