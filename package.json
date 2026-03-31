@@ -14,6 +14,12 @@
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build && npm test"
   },
+  "files": [
+    "dist/",
+    "presets/",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "freee",
     "cli",
