@@ -154,8 +154,8 @@
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 15000, "description": "売掛金 貸倒引当金計上（計上漏れ: 期末評価の引当金計上忘れ）" },
-          { "entry_side": "credit", "account_item_name": "貸倒引当金",       "tax_code": 0, "amount": 15000, "description": "売掛金残高の1%相当 貸倒引当金計上" }
+          { "entry_side": "debit",  "account_item_name": "貸倒繰入額(販)", "tax_code": 0, "amount": 15000, "description": "売掛金 貸倒引当金計上（計上漏れ: 期末評価の引当金計上忘れ）" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金(売)",       "tax_code": 0, "amount": 15000, "description": "売掛金残高の1%相当 貸倒引当金計上" }
         ]
       }
     ]

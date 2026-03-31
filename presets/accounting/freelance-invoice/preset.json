@@ -177,7 +177,7 @@
         "type": "expense",
         "partner_name": "カフェレストラン エスプレッソ",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 8800, "description": "クライアント打ち合わせ飲食 1月（インボイス登録業者・課税仕入10%）" }
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 8800, "description": "クライアント打ち合わせ飲食 1月（インボイス登録業者・課税仕入10%）" }
         ]
       },
       {
@@ -185,7 +185,7 @@
         "type": "expense",
         "partner_name": "カフェレストラン エスプレッソ",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 6600, "description": "クライアント打ち合わせ飲食 2月（インボイス登録業者・課税仕入10%）" }
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 6600, "description": "クライアント打ち合わせ飲食 2月（インボイス登録業者・課税仕入10%）" }
         ]
       },
       {
@@ -193,7 +193,7 @@
         "type": "expense",
         "partner_name": "カフェレストラン エスプレッソ",
         "details": [
-          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 11000, "description": "クライアント打ち合わせ飲食 3月（インボイス登録業者・課税仕入10%）" }
+          { "account_item_name": "交際費", "tax_code": 34, "amount": 11000, "description": "クライアント打ち合わせ飲食 3月（インボイス登録業者・課税仕入10%）" }
         ]
       },
       {
@@ -224,7 +224,7 @@
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "事業主貸", "tax_code": 0, "amount": 35000, "description": "1月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
+          { "entry_side": "debit",  "account_item_name": "立替金", "tax_code": 0, "amount": 35000, "description": "1月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
           { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 35000, "description": "1月 源泉徴収差引後入金調整" }
         ]
       },
@@ -238,7 +238,7 @@
       {
         "issue_date": "2026-02-28",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "事業主貸", "tax_code": 0, "amount": 35000, "description": "2月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
+          { "entry_side": "debit",  "account_item_name": "立替金", "tax_code": 0, "amount": 35000, "description": "2月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
           { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 35000, "description": "2月 源泉徴収差引後入金調整" }
         ]
       },
@@ -252,7 +252,7 @@
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "事業主貸", "tax_code": 0, "amount": 35000, "description": "3月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
+          { "entry_side": "debit",  "account_item_name": "立替金", "tax_code": 0, "amount": 35000, "description": "3月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
           { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 35000, "description": "3月 源泉徴収差引後入金調整" }
         ]
       }

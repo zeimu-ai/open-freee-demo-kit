@@ -113,14 +113,14 @@
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 412500, "description": "レイクサイドトレーディング 長期未回収売掛金 貸倒引当金計上（825,000×50%）" },
-          { "entry_side": "credit", "account_item_name": "貸倒引当金",       "tax_code": 0, "amount": 412500, "description": "長期未回収売掛金 個別評価引当（回収可能性50%判断）" }
+          { "entry_side": "debit",  "account_item_name": "貸倒繰入額(販)", "tax_code": 0, "amount": 412500, "description": "レイクサイドトレーディング 長期未回収売掛金 貸倒引当金計上（825,000×50%）" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金(売)",       "tax_code": 0, "amount": 412500, "description": "長期未回収売掛金 個別評価引当（回収可能性50%判断）" }
         ]
       },
       {
         "issue_date": "2026-02-28",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "貸倒損失", "tax_code": 0, "amount": 770000, "description": "サンセットカンパニー 破産手続き開始決定に伴う売掛金の貸倒損失計上（440,000+220,000+110,000）" },
+          { "entry_side": "debit",  "account_item_name": "貸倒損失(販)", "tax_code": 0, "amount": 770000, "description": "サンセットカンパニー 破産手続き開始決定に伴う売掛金の貸倒損失計上（440,000+220,000+110,000）" },
           { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 770000, "description": "サンセットカンパニー 売掛金消込（貸倒確定）" }
         ]
       },
@@ -148,8 +148,8 @@
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 5000, "description": "3月末 一般債権 期末残高の1%貸倒引当金追加計上" },
-          { "entry_side": "credit", "account_item_name": "貸倒引当金",       "tax_code": 0, "amount": 5000, "description": "一般債権 期末評価 引当金計上" }
+          { "entry_side": "debit",  "account_item_name": "貸倒繰入額(販)", "tax_code": 0, "amount": 5000, "description": "3月末 一般債権 期末残高の1%貸倒引当金追加計上" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金(売)",       "tax_code": 0, "amount": 5000, "description": "一般債権 期末評価 引当金計上" }
         ]
       }
     ]

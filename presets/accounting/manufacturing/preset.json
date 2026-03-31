@@ -310,21 +310,21 @@
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売上原価", "tax_code": 0, "amount": 580000, "description": "1月 売上原価計上（製品出庫分）" },
+          { "entry_side": "debit",  "account_item_name": "仕入高", "tax_code": 0, "amount": 580000, "description": "1月 売上原価計上（製品出庫分）" },
           { "entry_side": "credit", "account_item_name": "製品",     "tax_code": 0, "amount": 580000, "description": "1月 製品→売上原価振替" }
         ]
       },
       {
         "issue_date": "2026-02-28",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売上原価", "tax_code": 0, "amount": 740000, "description": "2月 売上原価計上（製品出庫分）" },
+          { "entry_side": "debit",  "account_item_name": "仕入高", "tax_code": 0, "amount": 740000, "description": "2月 売上原価計上（製品出庫分）" },
           { "entry_side": "credit", "account_item_name": "製品",     "tax_code": 0, "amount": 740000, "description": "2月 製品→売上原価振替" }
         ]
       },
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売上原価", "tax_code": 0, "amount": 650000, "description": "3月 売上原価計上（製品出庫分）" },
+          { "entry_side": "debit",  "account_item_name": "仕入高", "tax_code": 0, "amount": 650000, "description": "3月 売上原価計上（製品出庫分）" },
           { "entry_side": "credit", "account_item_name": "製品",     "tax_code": 0, "amount": 650000, "description": "3月 製品→売上原価振替" }
         ]
       }

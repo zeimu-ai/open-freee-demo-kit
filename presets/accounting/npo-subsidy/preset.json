@@ -210,7 +210,7 @@
         "type": "expense",
         "partner_name": "専門家報酬",
         "details": [
-          { "account_item_name": "支払報酬", "tax_code": 34, "amount": 55000, "description": "公認会計士 監査報酬 年次（NPO法人は外部監査が推奨）" }
+          { "account_item_name": "支払報酬料", "tax_code": 34, "amount": 55000, "description": "公認会計士 監査報酬 年次（NPO法人は外部監査が推奨）" }
         ]
       }
     ],
@@ -225,7 +225,7 @@
       {
         "issue_date": "2026-02-05",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "普通預金",  "tax_code": 0, "amount": 1500000, "description": "補助金 入金確認（補助金専用口座に着金）" },
+          { "entry_side": "debit",  "account_item_name": "現金",  "tax_code": 0, "amount": 1500000, "description": "補助金 入金確認（補助金専用口座に着金）" },
           { "entry_side": "credit", "account_item_name": "未収入金", "tax_code": 0, "amount": 1500000, "description": "補助金 未収入金消込（入金完了）" }
         ]
       },
