@@ -26,7 +26,12 @@
         "type": "income",
         "partner_name": "厚生労働省（社会福祉事業補助）",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 1500000, "description": "地域福祉活動支援補助金 交付決定（不課税収入: NPO事業補助金）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 1500000,
+            "description": "地域福祉活動支援補助金 交付決定（不課税収入: NPO事業補助金）"
+          }
         ]
       },
       {
@@ -34,7 +39,12 @@
         "type": "income",
         "partner_name": "東京都（地域活動助成）",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 500000, "description": "NPO活動助成金 入金（不課税: 公費助成）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 500000,
+            "description": "NPO活動助成金 入金（不課税: 公費助成）"
+          }
         ]
       },
       {
@@ -42,7 +52,12 @@
         "type": "income",
         "partner_name": "会員・賛助会員",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 120000, "description": "会費収入 1月（正会員20名×5,000円 + 賛助会員2口×5,000円 不課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 120000,
+            "description": "会費収入 1月（正会員20名×5,000円 + 賛助会員2口×5,000円 不課税）"
+          }
         ]
       },
       {
@@ -50,7 +65,12 @@
         "type": "income",
         "partner_name": "会員・賛助会員",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 100000, "description": "会費収入 2月（不課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 100000,
+            "description": "会費収入 2月（不課税）"
+          }
         ]
       },
       {
@@ -58,7 +78,12 @@
         "type": "income",
         "partner_name": "会員・賛助会員",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 115000, "description": "会費収入 3月（不課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 115000,
+            "description": "会費収入 3月（不課税）"
+          }
         ]
       },
       {
@@ -66,7 +91,12 @@
         "type": "income",
         "partner_name": "地域住民・イベント参加者",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 45000, "description": "チャリティイベント参加費 1月（不課税: 慈善事業収入）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "チャリティイベント参加費 1月（不課税: 慈善事業収入）"
+          }
         ]
       },
       {
@@ -74,7 +104,12 @@
         "type": "income",
         "partner_name": "地域住民・イベント参加者",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 62000, "description": "チャリティバザー売上 2月（不課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 62000,
+            "description": "チャリティバザー売上 2月（不課税）"
+          }
         ]
       },
       {
@@ -82,7 +117,12 @@
         "type": "income",
         "partner_name": "地域住民・イベント参加者",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 38000, "description": "講演会参加費 3月（不課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 38000,
+            "description": "講演会参加費 3月（不課税）"
+          }
         ]
       },
       {
@@ -90,7 +130,12 @@
         "type": "income",
         "partner_name": "企業・個人 寄附者",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 200000, "description": "寄附金収入 1月（不課税: NPO寄附）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 200000,
+            "description": "寄附金収入 1月（不課税: NPO寄附）"
+          }
         ]
       },
       {
@@ -98,7 +143,12 @@
         "type": "income",
         "partner_name": "企業・個人 寄附者",
         "details": [
-          { "account_item_name": "売上高", "tax_code": 0, "amount": 350000, "description": "年度末 寄附金収入（不課税）" }
+          {
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 350000,
+            "description": "年度末 寄附金収入（不課税）"
+          }
         ]
       },
       {
@@ -106,7 +156,12 @@
         "type": "expense",
         "partner_name": "福祉用具レンタル株式会社",
         "details": [
-          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 55000, "description": "事業活動用消耗品 1月（補助金充当: 課税仕入）" }
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 55000,
+            "description": "事業活動用消耗品 1月（補助金充当: 課税仕入）"
+          }
         ]
       },
       {
@@ -114,7 +169,12 @@
         "type": "expense",
         "partner_name": "ボランティア研修センター",
         "details": [
-          { "account_item_name": "研修費", "tax_code": 34, "amount": 33000, "description": "スタッフ研修費 2月（補助金充当）" }
+          {
+            "account_item_name": "研修費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "スタッフ研修費 2月（補助金充当）"
+          }
         ]
       },
       {
@@ -122,7 +182,12 @@
         "type": "expense",
         "partner_name": "印刷会社",
         "details": [
-          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 44000, "description": "活動報告書・チラシ印刷費 3月（補助金充当）" }
+          {
+            "account_item_name": "広告宣伝費",
+            "tax_code": 34,
+            "amount": 44000,
+            "description": "活動報告書・チラシ印刷費 3月（補助金充当）"
+          }
         ]
       },
       {
@@ -130,7 +195,12 @@
         "type": "expense",
         "partner_name": "給与計算",
         "details": [
-          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "専従職員 人件費 1月（事業費: 補助金充当可能）" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "専従職員 人件費 1月（事業費: 補助金充当可能）"
+          }
         ]
       },
       {
@@ -138,7 +208,12 @@
         "type": "expense",
         "partner_name": "給与計算",
         "details": [
-          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "専従職員 人件費 2月" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "専従職員 人件費 2月"
+          }
         ]
       },
       {
@@ -146,7 +221,12 @@
         "type": "expense",
         "partner_name": "給与計算",
         "details": [
-          { "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "専従職員 人件費 3月" }
+          {
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "専従職員 人件費 3月"
+          }
         ]
       },
       {
@@ -154,7 +234,12 @@
         "type": "expense",
         "partner_name": "ビジネスシェアスペース株式会社",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 66000, "description": "活動拠点 賃料 1月（事業費）" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 34,
+            "amount": 66000,
+            "description": "活動拠点 賃料 1月（事業費）"
+          }
         ]
       },
       {
@@ -162,7 +247,12 @@
         "type": "expense",
         "partner_name": "ビジネスシェアスペース株式会社",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 66000, "description": "活動拠点 賃料 2月" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 34,
+            "amount": 66000,
+            "description": "活動拠点 賃料 2月"
+          }
         ]
       },
       {
@@ -170,7 +260,12 @@
         "type": "expense",
         "partner_name": "ビジネスシェアスペース株式会社",
         "details": [
-          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 66000, "description": "活動拠点 賃料 3月" }
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 34,
+            "amount": 66000,
+            "description": "活動拠点 賃料 3月"
+          }
         ]
       },
       {
@@ -178,7 +273,12 @@
         "type": "expense",
         "partner_name": "ボランティア活動費",
         "details": [
-          { "account_item_name": "雑費", "tax_code": 0, "amount": 18000, "description": "ボランティア交通費実費補助 1月（不課税: 実費補填）" }
+          {
+            "account_item_name": "雑費",
+            "tax_code": 0,
+            "amount": 18000,
+            "description": "ボランティア交通費実費補助 1月（不課税: 実費補填）"
+          }
         ]
       },
       {
@@ -186,7 +286,12 @@
         "type": "expense",
         "partner_name": "ボランティア活動費",
         "details": [
-          { "account_item_name": "雑費", "tax_code": 0, "amount": 22000, "description": "ボランティア交通費実費補助 2月（不課税）" }
+          {
+            "account_item_name": "雑費",
+            "tax_code": 0,
+            "amount": 22000,
+            "description": "ボランティア交通費実費補助 2月（不課税）"
+          }
         ]
       },
       {
@@ -194,7 +299,12 @@
         "type": "expense",
         "partner_name": "ボランティア活動費",
         "details": [
-          { "account_item_name": "雑費", "tax_code": 0, "amount": 15000, "description": "ボランティア交通費実費補助 3月（不課税）" }
+          {
+            "account_item_name": "雑費",
+            "tax_code": 0,
+            "amount": 15000,
+            "description": "ボランティア交通費実費補助 3月（不課税）"
+          }
         ]
       },
       {
@@ -202,7 +312,12 @@
         "type": "expense",
         "partner_name": "NPO支援団体",
         "details": [
-          { "account_item_name": "諸会費", "tax_code": 0, "amount": 10000, "description": "NPO支援ネットワーク 年会費（不課税）" }
+          {
+            "account_item_name": "諸会費",
+            "tax_code": 0,
+            "amount": 10000,
+            "description": "NPO支援ネットワーク 年会費（不課税）"
+          }
         ]
       },
       {
@@ -210,7 +325,12 @@
         "type": "expense",
         "partner_name": "専門家報酬",
         "details": [
-          { "account_item_name": "支払報酬料", "tax_code": 34, "amount": 55000, "description": "公認会計士 監査報酬 年次（NPO法人は外部監査が推奨）" }
+          {
+            "account_item_name": "支払報酬料",
+            "tax_code": 34,
+            "amount": 55000,
+            "description": "公認会計士 監査報酬 年次（NPO法人は外部監査が推奨）"
+          }
         ]
       }
     ],
@@ -218,43 +338,115 @@
       {
         "issue_date": "2026-01-15",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "未収入金", "tax_code": 0, "amount": 1500000, "description": "補助金 交付決定通知受領（未入金のため未収入金計上）" },
-          { "entry_side": "credit", "account_item_name": "売上高",   "tax_code": 0, "amount": 1500000, "description": "補助金収入 収益認識（交付決定時点で収益計上）" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "未収入金",
+            "tax_code": 0,
+            "amount": 1500000,
+            "description": "補助金 交付決定通知受領（未入金のため未収入金計上）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 1500000,
+            "description": "補助金収入 収益認識（交付決定時点で収益計上）"
+          }
         ]
       },
       {
         "issue_date": "2026-02-05",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "現金",  "tax_code": 0, "amount": 1500000, "description": "補助金 入金確認（補助金専用口座に着金）" },
-          { "entry_side": "credit", "account_item_name": "未収入金", "tax_code": 0, "amount": 1500000, "description": "補助金 未収入金消込（入金完了）" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "現金",
+            "tax_code": 0,
+            "amount": 1500000,
+            "description": "補助金 入金確認（補助金専用口座に着金）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未収入金",
+            "tax_code": 0,
+            "amount": 1500000,
+            "description": "補助金 未収入金消込（入金完了）"
+          }
         ]
       },
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売上高",   "tax_code": 0, "amount": 200000, "description": "補助金 未使用分 精算返納（使用実績が交付決定額を下回った部分）" },
-          { "entry_side": "credit", "account_item_name": "未払金",   "tax_code": 0, "amount": 200000, "description": "補助金 返納未払金計上（翌期返納）" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 200000,
+            "description": "補助金 未使用分 精算返納（使用実績が交付決定額を下回った部分）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "未払金",
+            "tax_code": 0,
+            "amount": 200000,
+            "description": "補助金 返納未払金計上（翌期返納）"
+          }
         ]
       },
       {
         "issue_date": "2026-01-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "売上高", "tax_code": 0, "amount": 45000, "description": "イベント参加費 前受計上（2月イベント分を1月に受領）" },
-          { "entry_side": "credit", "account_item_name": "前受金", "tax_code": 0, "amount": 45000, "description": "イベント参加費 前受金計上（サービス提供前受領）" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "イベント参加費 前受計上（2月イベント分を1月に受領）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "前受金",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "イベント参加費 前受金計上（サービス提供前受領）"
+          }
         ]
       },
       {
         "issue_date": "2026-02-15",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "前受金", "tax_code": 0, "amount": 45000, "description": "イベント参加費 前受金振替（イベント実施により収益認識）" },
-          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 0, "amount": 45000, "description": "イベント参加費 収益計上（サービス提供完了）" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受金",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "イベント参加費 前受金振替（イベント実施により収益認識）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "雑収入",
+            "tax_code": 0,
+            "amount": 45000,
+            "description": "イベント参加費 収益計上（サービス提供完了）"
+          }
         ]
       },
       {
         "issue_date": "2026-03-31",
         "details": [
-          { "entry_side": "debit",  "account_item_name": "未払費用", "tax_code": 0, "amount": 280000, "description": "3月 専従職員 未払給与計上（月末締め翌月払）" },
-          { "entry_side": "credit", "account_item_name": "給料手当", "tax_code": 0, "amount": 280000, "description": "3月 人件費 費用計上（未払）" }
+          {
+            "entry_side": "debit",
+            "account_item_name": "未払費用",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "3月 専従職員 未払給与計上（月末締め翌月払）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "給料手当",
+            "tax_code": 0,
+            "amount": 280000,
+            "description": "3月 人件費 費用計上（未払）"
+          }
         ]
       }
     ]
