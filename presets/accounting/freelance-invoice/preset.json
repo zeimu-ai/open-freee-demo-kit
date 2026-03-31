@@ -1,0 +1,261 @@
+{
+  "name": "フリーランス・インボイス制度対応",
+  "description": "インボイス制度（適格請求書等保存方式）に対応した個人事業主（フリーランス）の会計データ。登録番号あり・なし取引先との混在、源泉徴収あり取引、軽減税率対応を含む。2024年フリーランス保護新法以降の実務に即したシナリオ。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 24,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "桜川銀行 普通預金（事業用）",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "事業用クレジットカード"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-31",
+        "type": "income",
+        "partner_name": "株式会社ハーモニーテック",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 385000, "description": "Webデザイン業務委託 1月分（税込・インボイス登録番号あり・源泉徴収あり: 源泉税35,000円差引）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "income",
+        "partner_name": "株式会社ハーモニーテック",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 385000, "description": "Webデザイン業務委託 2月分（税込・インボイス登録番号あり・源泉徴収あり: 源泉税35,000円差引）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "income",
+        "partner_name": "株式会社ハーモニーテック",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 385000, "description": "Webデザイン業務委託 3月分（税込・インボイス登録番号あり・源泉徴収あり: 源泉税35,000円差引）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "income",
+        "partner_name": "合同会社ノースウェーブ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 165000, "description": "コンテンツ制作 1月（税込・スポット案件・インボイス登録番号あり）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-18",
+        "type": "income",
+        "partner_name": "合同会社ノースウェーブ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 110000, "description": "コンテンツ制作 2月（税込・スポット案件・インボイス登録番号あり）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-22",
+        "type": "income",
+        "partner_name": "合同会社ノースウェーブ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 220000, "description": "コンテンツ制作 3月（税込・スポット案件・インボイス登録番号あり）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "株式会社クリエイティブツールズ",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 16500, "description": "デザインソフト年間ライセンス（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "ネットワークインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 5500, "description": "インターネット接続料 1月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "ネットワークインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 5500, "description": "インターネット接続料 2月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "ネットワークインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 5500, "description": "インターネット接続料 3月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "expense",
+        "partner_name": "ビジネスシェアスペース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 33000, "description": "コワーキングスペース利用料 1月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "expense",
+        "partner_name": "ビジネスシェアスペース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 33000, "description": "コワーキングスペース利用料 2月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "ビジネスシェアスペース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 33000, "description": "コワーキングスペース利用料 3月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "フリーランスライター 鈴木 花子",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 55000, "description": "記事執筆委託 1月（免税事業者・インボイス未登録・経過措置80%控除適用）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "フリーランスライター 鈴木 花子",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 55000, "description": "記事執筆委託 2月（免税事業者・インボイス未登録・経過措置80%控除適用）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "フリーランスライター 鈴木 花子",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 55000, "description": "記事執筆委託 3月（免税事業者・インボイス未登録・経過措置80%控除適用）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "株式会社ブックスタンダード",
+        "details": [
+          { "account_item_name": "新聞図書費", "tax_code": 34, "amount": 3300, "description": "技術書籍 1月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "株式会社ブックスタンダード",
+        "details": [
+          { "account_item_name": "新聞図書費", "tax_code": 34, "amount": 2200, "description": "技術書籍 2月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "株式会社ブックスタンダード",
+        "details": [
+          { "account_item_name": "新聞図書費", "tax_code": 34, "amount": 4400, "description": "技術書籍・雑誌 3月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-28",
+        "type": "expense",
+        "partner_name": "カフェレストラン エスプレッソ",
+        "details": [
+          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 8800, "description": "クライアント打ち合わせ飲食 1月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-12",
+        "type": "expense",
+        "partner_name": "カフェレストラン エスプレッソ",
+        "details": [
+          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 6600, "description": "クライアント打ち合わせ飲食 2月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-18",
+        "type": "expense",
+        "partner_name": "カフェレストラン エスプレッソ",
+        "details": [
+          { "account_item_name": "接待交際費", "tax_code": 34, "amount": 11000, "description": "クライアント打ち合わせ飲食 3月（インボイス登録業者・課税仕入10%）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "国民健康保険",
+        "details": [
+          { "account_item_name": "保険料", "tax_code": 0, "amount": 28000, "description": "国民健康保険料 1月（不課税）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "国民健康保険",
+        "details": [
+          { "account_item_name": "保険料", "tax_code": 0, "amount": 28000, "description": "国民健康保険料 2月（不課税）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金",   "tax_code": 0, "amount": 550000, "description": "1月 売掛金計上（ハーモニーテック + ノースウェーブ）" },
+          { "entry_side": "credit", "account_item_name": "売上高",   "tax_code": 21, "amount": 550000, "description": "1月 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "事業主貸", "tax_code": 0, "amount": 35000, "description": "1月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
+          { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 35000, "description": "1月 源泉徴収差引後入金調整" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金",   "tax_code": 0, "amount": 495000, "description": "2月 売掛金計上（ハーモニーテック + ノースウェーブ）" },
+          { "entry_side": "credit", "account_item_name": "売上高",   "tax_code": 21, "amount": 495000, "description": "2月 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "事業主貸", "tax_code": 0, "amount": 35000, "description": "2月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
+          { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 35000, "description": "2月 源泉徴収差引後入金調整" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金",   "tax_code": 0, "amount": 605000, "description": "3月 売掛金計上（ハーモニーテック + ノースウェーブ）" },
+          { "entry_side": "credit", "account_item_name": "売上高",   "tax_code": 21, "amount": 605000, "description": "3月 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "事業主貸", "tax_code": 0, "amount": 35000, "description": "3月 源泉所得税（ハーモニーテック分・確定申告で精算）" },
+          { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 35000, "description": "3月 源泉徴収差引後入金調整" }
+        ]
+      }
+    ]
+  }
+}

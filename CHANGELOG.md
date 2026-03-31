@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2026-03-31
+
+### Added
+- New preset `accounting/freelance-invoice` — インボイス制度対応の個人事業主（フリーランス）会計データ
+  - 登録番号あり事業者との取引（課税仕入10%・源泉徴収あり）
+  - 免税事業者への外注費（インボイス未登録・経過措置80%控除）
+  - コワーキングスペース・通信費・書籍・交際費の課税仕入処理
+  - 源泉所得税の事業主貸による調整仕訳（確定申告で精算）
+
 ## [0.1.2] - 2026-03-31
 
 ### Added

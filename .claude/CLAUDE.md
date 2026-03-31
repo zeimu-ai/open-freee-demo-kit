@@ -82,6 +82,7 @@ tests/unit/            — vitest 単体テスト
 | errors/entertainment | 1 | 9 | 0 |
 | errors/mixed | 2 | 12 | 3 |
 | errors/consumption-tax | 1 | 9 | 3 |
+| accounting/freelance-invoice | 2 | 24 | 6 |
 
 **⚠️ プリセットを変更したらこの表も更新する。**
 
