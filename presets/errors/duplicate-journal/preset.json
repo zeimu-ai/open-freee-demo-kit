@@ -1,0 +1,181 @@
+{
+  "name": "二重仕訳・重複計上エラーデータ",
+  "description": "二重仕訳・重複計上に関するエラーデータ。同一取引の二重入力、請求書と支払い調書からの重複計上、自動仕訳と手動仕訳の重複など。内部統制の弱点と検出方法の研修用シナリオ。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 12,
+    "manualJournals": 6
+  },
+  "error_manifest": [
+    {
+      "rule": "DUPLICATE-001",
+      "location": "deals[0~3] — 同一取引 二重入力",
+      "description": "同一の仕入取引が請求書と納品書の2つのソースから二重に入力されている。仕入高が過大計上（二重計上）されており、買掛金も同額過大計上されている。",
+      "expected_fix": "重複エントリを特定し、片方を削除する。請求書番号・金額・日付が一致するエントリの重複チェックを定期的に実施する仕組みを導入する"
+    },
+    {
+      "rule": "DUPLICATE-002",
+      "location": "deals[4~7] — 自動仕訳+手動仕訳 重複",
+      "description": "銀行連携の自動仕訳で既に計上された取引を、担当者が気づかずに手動でも入力している。費用が二重計上され、現預金の残高と帳簿残高が不一致となる原因になる。",
+      "expected_fix": "銀行連携の自動仕訳とその他入力の突合チェックを実施する。既に自動仕訳がある取引を手動入力する際は、重複確認を必須とする運用ルールを設ける"
+    },
+    {
+      "rule": "DUPLICATE-003",
+      "location": "deals[8~11] — 月次締め後の追加計上",
+      "description": "月次締め後に同一内容の費用を再度計上している。担当者の引き継ぎ不足や月次締め後の追加入力権限管理の不備が原因。",
+      "expected_fix": "月次締め後の修正は必ず上長承認を要する運用とし、締め後入力には理由コメントを必須化する。月次レビューで重複エントリの確認を組み込む"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "みどり銀行 普通預金（二重仕訳テスト）",
+        "bank_id": 2407
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "株式会社スタートサプライ",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 220000, "description": "商品仕入 1月（請求書No.001から入力 — 正常エントリ）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "株式会社スタートサプライ",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 220000, "description": "商品仕入 1月（納品書から二重入力 — 誤り: 請求書No.001と同一取引）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "オフィス消耗品 ネクスト",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 44000, "description": "事務用品 2月（正常エントリ）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "オフィス消耗品 ネクスト",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 44000, "description": "事務用品 2月（誤り: 同日同金額の重複入力。支払確認票からの二重計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "電力会社",
+        "details": [
+          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 28600, "description": "電気料金 1月（銀行連携の自動仕訳から計上 — 正常）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "電力会社",
+        "details": [
+          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 28600, "description": "電気料金 1月（誤り: 担当者が自動仕訳に気づかず手動入力。二重計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "ネットワークインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 16500, "description": "インターネット接続料 2月（銀行連携自動仕訳 — 正常）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "ネットワークインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 16500, "description": "インターネット接続料 2月（誤り: 請求書から手動入力。自動仕訳との二重計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "ビジネスシェアスペース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 88000, "description": "事務所家賃 3月（月次締め前の正常計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "ビジネスシェアスペース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 88000, "description": "事務所家賃 3月（誤り: 月次締め後に前任者の未入力と誤解して再計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 450000, "description": "3月 給与 正常計上（給与確定日）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 450000, "description": "3月 給与 重複計上（誤り: 月次締め後の引き継ぎ時に給与未計上と誤認して再入力）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仕入高",  "tax_code": 34, "amount": 220000, "description": "スタートサプライ 仕入 手動仕訳（誤り: deals側でも同額計上済み→二重計上）" },
+          { "entry_side": "credit", "account_item_name": "買掛金",  "tax_code": 0,  "amount": 220000, "description": "スタートサプライ 買掛金（二重計上に伴う過大計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "買掛金", "tax_code": 0,  "amount": 220000, "description": "スタートサプライ 二重計上修正: 手動仕訳分を消込（修正仕訳の見本）" },
+          { "entry_side": "credit", "account_item_name": "仕入高", "tax_code": 34, "amount": 220000, "description": "スタートサプライ 二重計上修正: 仕入高戻し" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0,  "amount": 550000, "description": "2月末 売掛金計上（正常な売上対応仕訳）" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "2月末 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0,  "amount": 660000, "description": "3月末 売掛金計上（正常）" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "3月末 売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "地代家賃", "tax_code": 34, "amount": 88000, "description": "3月 家賃 二重計上修正: 重複分戻し（修正仕訳の見本）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0,  "amount": 88000, "description": "3月 家賃 二重計上分: 未払費用対応修正" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "給料手当",  "tax_code": 0, "amount": 450000, "description": "3月 給与 二重計上修正: 重複入力分を戻す" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0,  "amount": 450000, "description": "3月 給与 重複分: 未払費用対応（修正仕訳の見本）" }
+        ]
+      }
+    ]
+  }
+}

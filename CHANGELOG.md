@@ -5,6 +5,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2026-03-31
+
+### Added
+- New preset `errors/year-end-closing` — 期末決算ミスエラーデータ
+  - 翌期売上の当期前倒し計上（実現主義違反）
+  - 翌期分費用の前払費用未計上（期間帰属誤り）
+  - 電気料金・外注費の未払費用計上漏れ（発生主義違反）
+  - 仮受金の期末未振替（仮勘定放置）
+  - 減価償却費・貸倒引当金の計上漏れ
+- New preset `accounting/manufacturing` — 製造業・原価計算
+  - 材料費・労務費・製造間接費の三分法による原価集計
+  - 仕掛品・製品勘定の月次動き（製造原価報告書の基礎）
+  - 工場電力費・設備リース・工場賃料の間接費計上
+  - 売上原価振替仕訳（製品→売上原価）
+- New preset `errors/depreciation-method` — 減価償却ミスエラーデータ
+  - 機械装置の定額法誤適用（定率法が原則）
+  - 業務用普通乗用車の耐用年数誤適用（3年→正しくは6年）
+  - 30万円超資産を消耗品費で一括費用化（少額特例の誤適用）
+- New preset `invoices/subscription` — SaaS・月次サブスクリプション請求
+  - 月次・年次プランの混在、前受収益の月次振替処理
+  - トライアル→有料転換、途中解約返金処理
+  - 決済手数料・クラウドインフラ費用の計上
+- New preset `accounting/payroll-agency` — 社労士・給与計算代行
+  - 顧問料・給与計算代行収入の月次管理
+  - 社会保険料の預り金処理と機構納付
+  - 労働保険料申告代行・各種手続き代行手数料
+- New preset `accounting/npo-subsidy` — NPO・補助金受給団体
+  - 補助金の交付決定→入金→精算の完全フロー
+  - 会費収入・寄附金収入・チャリティイベント収入（全て不課税）
+  - 補助金返納・前受金の収益振替処理
+- New preset `errors/overdue-receivable` — 売掛金・未収金 回収遅延エラーデータ
+  - 6ヶ月超未回収売掛金への貸倒引当金未計上
+  - 合意なし相殺処理（民法上の問題）
+  - 破産確定後の売掛金未処理（貸倒損失計上漏れ）
+- New preset `errors/duplicate-journal` — 二重仕訳・重複計上エラーデータ
+  - 請求書と納品書からの同一取引二重入力
+  - 銀行連携自動仕訳と手動仕訳の重複
+  - 月次締め後の誤認識による再計上
+
 ## [0.1.3] - 2026-03-31
 
 ### Added

@@ -159,6 +159,11 @@ freee ログイン後、以下のような画面が表示されます：
 | `accounting/retail` | 架空雑貨小売店・商品仕入・棚卸・月次在庫調整 | 2 | 30 | 6 |
 | `accounting/it-startup` | 架空SaaS企業・サブスク収益・ソフトウェア資産計上・前受収益 | 1 | 21 | 9 |
 | `accounting/non-profit` | 架空NPO法人・収益事業（課税）と非収益事業（非課税）の区分管理 | 1 | 18 | 6 |
+| `accounting/manufacturing` | 架空製造業・材料費・労務費・製造間接費の三分法・仕掛品・製品勘定 | 2 | 30 | 9 |
+| `accounting/payroll-agency` | 社労士・給与計算代行事務所・顧問料収入・社会保険料預り金処理 | 2 | 27 | 6 |
+| `accounting/npo-subsidy` | 補助金受給NPO法人・交付決定→入金→精算・前受金・会費収入 | 2 | 24 | 6 |
+| `accounting/freelance-invoice` | インボイス制度対応フリーランス・登録番号あり/なし混在・源泉徴収 | 2 | 24 | 6 |
+| `invoices/subscription` | SaaS月次サブスクリプション・年次一括・前受収益の月次振替 | 2 | 24 | 6 |
 
 #### 高度・複合
 
@@ -177,6 +182,11 @@ freee ログイン後、以下のような画面が表示されます：
 | `errors/tax-code` | 売上高・外注費・給料手当の税区分誤り | TAX-CODE-001 |
 | `errors/entertainment` | 交際費の月次上限（¥667,000）超過 | ENTERTAINMENT-001 |
 | `errors/mixed` | 上記3種の複合エラー | 全ルール |
+| `errors/consumption-tax` | インボイス未登録業者の控除過大・軽減税率/非課税の誤適用 | TAX-CODE-001 |
+| `errors/year-end-closing` | 翌期売上の前倒し計上・前払費用の誤処理・未払費用計上漏れ・仮勘定未振替 | PERIOD-001/002, ACCRUAL-001, SUSPENSE-001 |
+| `errors/depreciation-method` | 償却方法誤り（定額↔定率）・耐用年数誤適用・少額減価償却特例の誤適用 | DEPRECIATION-001/002/003 |
+| `errors/overdue-receivable` | 長期未回収売掛金・貸倒引当金未計上・法的貸倒の未処理・合意なし相殺 | RECEIVABLE-001/002/003 |
+| `errors/duplicate-journal` | 同一取引の二重入力・自動仕訳と手動仕訳の重複・月次締め後の再計上 | DUPLICATE-001/002/003 |
 
 プリセットの仕様・カスタムプリセットの作り方は [`presets/README.md`](presets/README.md) を参照してください。
 

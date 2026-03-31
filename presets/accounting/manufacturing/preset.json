@@ -1,0 +1,333 @@
+{
+  "name": "製造業・原価計算",
+  "description": "製造業の原価計算を含む会計データ。材料費・労務費・製造間接費の三分法、仕掛品・製品勘定の動き、製造原価報告書の基礎となるデータ構造を網羅。中小製造業・メーカーのデモ・研修用。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 30,
+    "manualJournals": 9
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "さくら銀行 普通預金（製造事業用）",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "工場用クレジットカード"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "東洋素材株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 385000, "description": "原材料 アルミ板材 仕入 1月（製造用材料）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "東洋素材株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 440000, "description": "原材料 アルミ板材 仕入 2月（製造用材料）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "東洋素材株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 330000, "description": "原材料 アルミ板材 仕入 3月（製造用材料）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "expense",
+        "partner_name": "ケミカルサプライ株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 44000, "description": "補助材料 塗料・切削油 仕入 1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-12",
+        "type": "expense",
+        "partner_name": "ケミカルサプライ株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 38500, "description": "補助材料 塗料・切削油 仕入 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-12",
+        "type": "expense",
+        "partner_name": "ケミカルサプライ株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 41800, "description": "補助材料 塗料・切削油 仕入 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 650000, "description": "製造部門 人件費 1月（直接労務費: 製造原価に算入）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 650000, "description": "製造部門 人件費 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 650000, "description": "製造部門 人件費 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "電力会社",
+        "details": [
+          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 88000, "description": "工場電力費 1月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "電力会社",
+        "details": [
+          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 92400, "description": "工場電力費 2月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "電力会社",
+        "details": [
+          { "account_item_name": "水道光熱費", "tax_code": 34, "amount": 79200, "description": "工場電力費 3月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "機械メンテナンス株式会社",
+        "details": [
+          { "account_item_name": "修繕費", "tax_code": 34, "amount": 55000, "description": "製造設備 定期メンテナンス 1月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "機械メンテナンス株式会社",
+        "details": [
+          { "account_item_name": "修繕費", "tax_code": 34, "amount": 33000, "description": "製造設備 定期メンテナンス 3月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "expense",
+        "partner_name": "工場リース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 220000, "description": "工場賃料 1月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "expense",
+        "partner_name": "工場リース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 220000, "description": "工場賃料 2月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "工場リース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 220000, "description": "工場賃料 3月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "income",
+        "partner_name": "株式会社テクノパーツ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 880000, "description": "精密部品 A-200型 50個納品 1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "income",
+        "partner_name": "株式会社テクノパーツ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 1100000, "description": "精密部品 A-200型 60個・B-100型 20個納品 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "income",
+        "partner_name": "株式会社テクノパーツ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 990000, "description": "精密部品 A-200型 45個納品 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "income",
+        "partner_name": "合同会社イノベーションマニュファクチャリング",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 440000, "description": "プレス部品 C-50型 受注生産 1月納品" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "income",
+        "partner_name": "合同会社イノベーションマニュファクチャリング",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 550000, "description": "プレス部品 C-50型・D-30型 受注生産 3月納品" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "精密機器リース株式会社",
+        "details": [
+          { "account_item_name": "賃借料", "tax_code": 34, "amount": 110000, "description": "CNC旋盤 リース料 1月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "精密機器リース株式会社",
+        "details": [
+          { "account_item_name": "賃借料", "tax_code": 34, "amount": 110000, "description": "CNC旋盤 リース料 2月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "精密機器リース株式会社",
+        "details": [
+          { "account_item_name": "賃借料", "tax_code": 34, "amount": 110000, "description": "CNC旋盤 リース料 3月（製造間接費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 250000, "description": "管理部門 人件費 1月（販管費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 250000, "description": "管理部門 人件費 2月（販管費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 250000, "description": "管理部門 人件費 3月（販管費）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "物流サービス株式会社",
+        "details": [
+          { "account_item_name": "荷造運賃", "tax_code": 34, "amount": 33000, "description": "製品出荷 運送費 1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "物流サービス株式会社",
+        "details": [
+          { "account_item_name": "荷造運賃", "tax_code": 34, "amount": 44000, "description": "製品出荷 運送費 3月" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仕掛品",  "tax_code": 0, "amount": 280000, "description": "1月末 仕掛品計上（材料費+労務費+間接費の月末未完成分）" },
+          { "entry_side": "credit", "account_item_name": "仕入高",  "tax_code": 0, "amount": 180000, "description": "1月末 仕掛品振替: 材料費分" },
+          { "entry_side": "credit", "account_item_name": "給料手当", "tax_code": 0, "amount": 100000, "description": "1月末 仕掛品振替: 労務費分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仕掛品",  "tax_code": 0, "amount": 320000, "description": "2月末 仕掛品計上（月末未完成分）" },
+          { "entry_side": "credit", "account_item_name": "仕入高",  "tax_code": 0, "amount": 200000, "description": "2月末 仕掛品振替: 材料費分" },
+          { "entry_side": "credit", "account_item_name": "給料手当", "tax_code": 0, "amount": 120000, "description": "2月末 仕掛品振替: 労務費分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仕掛品",  "tax_code": 0, "amount": 240000, "description": "3月末 仕掛品計上（期末未完成分）" },
+          { "entry_side": "credit", "account_item_name": "仕入高",  "tax_code": 0, "amount": 150000, "description": "3月末 仕掛品振替: 材料費分" },
+          { "entry_side": "credit", "account_item_name": "給料手当", "tax_code": 0, "amount": 90000, "description": "3月末 仕掛品振替: 労務費分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "製品",   "tax_code": 0, "amount": 620000, "description": "1月 製品完成計上（製造原価振替）" },
+          { "entry_side": "credit", "account_item_name": "仕掛品", "tax_code": 0, "amount": 620000, "description": "1月 仕掛品→製品振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "製品",   "tax_code": 0, "amount": 780000, "description": "2月 製品完成計上（製造原価振替）" },
+          { "entry_side": "credit", "account_item_name": "仕掛品", "tax_code": 0, "amount": 780000, "description": "2月 仕掛品→製品振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "製品",   "tax_code": 0, "amount": 690000, "description": "3月 製品完成計上（製造原価振替）" },
+          { "entry_side": "credit", "account_item_name": "仕掛品", "tax_code": 0, "amount": 690000, "description": "3月 仕掛品→製品振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売上原価", "tax_code": 0, "amount": 580000, "description": "1月 売上原価計上（製品出庫分）" },
+          { "entry_side": "credit", "account_item_name": "製品",     "tax_code": 0, "amount": 580000, "description": "1月 製品→売上原価振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売上原価", "tax_code": 0, "amount": 740000, "description": "2月 売上原価計上（製品出庫分）" },
+          { "entry_side": "credit", "account_item_name": "製品",     "tax_code": 0, "amount": 740000, "description": "2月 製品→売上原価振替" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売上原価", "tax_code": 0, "amount": 650000, "description": "3月 売上原価計上（製品出庫分）" },
+          { "entry_side": "credit", "account_item_name": "製品",     "tax_code": 0, "amount": 650000, "description": "3月 製品→売上原価振替" }
+        ]
+      }
+    ]
+  }
+}

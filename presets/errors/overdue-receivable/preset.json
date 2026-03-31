@@ -1,0 +1,157 @@
+{
+  "name": "売掛金・未収金 回収遅延エラーデータ",
+  "description": "売掛金・未収金の回収遅延・貸倒れに関するエラーデータ。長期未回収売掛金の放置、貸倒引当金の未計上、貸倒損失の計上漏れ、不適切な相殺処理など。与信管理と債権管理の研修用シナリオ。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 9,
+    "manualJournals": 6
+  },
+  "error_manifest": [
+    {
+      "rule": "RECEIVABLE-001",
+      "location": "deals[0~2] — account_item_name: 売掛金, 6ヶ月超未回収",
+      "description": "売掛金が6ヶ月以上回収できていないにもかかわらず、貸倒引当金を計上していない。長期未回収債権に対する貸倒見積もりを行わないと、資産の過大計上・当期損益の歪みが生じる。",
+      "expected_fix": "6ヶ月超の未回収売掛金に対して、回収可能性を評価した上で貸倒引当金（一般債権は期末残高×貸倒実績率、個別評価債権は回収不能見込額）を計上する"
+    },
+    {
+      "rule": "RECEIVABLE-002",
+      "location": "deals[3~5] — account_item_name: 売掛金, 相殺処理の誤り",
+      "description": "同一取引先への買掛金と売掛金を、両者の合意なく一方的に相殺している。相殺は両者の合意（相殺予約または相殺通知・承諾）が必要であり、勝手な相殺は民法上の問題が生じる可能性がある。",
+      "expected_fix": "相殺する場合は必ず相手方の同意を得た上で相殺合意書を作成し、相殺通知を送付する。その上で買掛金・売掛金を同額消込する"
+    },
+    {
+      "rule": "RECEIVABLE-003",
+      "location": "deals[6~8] — account_item_name: 売掛金, 法的に貸倒れ確定",
+      "description": "取引先の倒産（破産手続き開始決定）が確定しているにもかかわらず、売掛金を資産として計上し続けている。貸倒損失として計上せず、資産が過大表示されている状態。",
+      "expected_fix": "破産手続き開始決定等の法的事実が確定した時点で、売掛金残高を貸倒損失として費用計上する（または貸倒引当金を取り崩す）"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "さくら銀行 普通預金（債権管理テスト）",
+        "bank_id": 2407
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2025-07-31",
+        "type": "income",
+        "partner_name": "株式会社レイクサイドトレーディング",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 330000, "description": "商品販売 7月（誤り: 8ヶ月経過・未回収。貸倒引当金未計上）" }
+        ]
+      },
+      {
+        "issue_date": "2025-08-31",
+        "type": "income",
+        "partner_name": "株式会社レイクサイドトレーディング",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 275000, "description": "商品販売 8月（誤り: 7ヶ月経過・未回収）" }
+        ]
+      },
+      {
+        "issue_date": "2025-09-30",
+        "type": "income",
+        "partner_name": "株式会社レイクサイドトレーディング",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 220000, "description": "商品販売 9月（誤り: 6ヶ月経過・未回収）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "株式会社マウンテンビュー",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 165000, "description": "役務提供代金 1月（誤り: 買掛金110,000と勝手に相殺し差額55,000のみ請求する処理が行われた）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "income",
+        "partner_name": "株式会社マウンテンビュー",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 198000, "description": "役務提供代金 2月（誤り: 同取引先への買掛金88,000と合意なく相殺処理）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "income",
+        "partner_name": "株式会社マウンテンビュー",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 132000, "description": "役務提供代金 3月（相殺予約あり・正常: 相互合意済み）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "income",
+        "partner_name": "株式会社サンセットカンパニー",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 440000, "description": "商品販売 1月（誤り: 2月に破産手続き開始決定。売掛金を貸倒損失として計上すべきだが未処理）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "income",
+        "partner_name": "株式会社サンセットカンパニー",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 220000, "description": "商品販売 1月追加分（誤り: 同社は2月に破産手続き。回収見込みなし）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-01",
+        "type": "income",
+        "partner_name": "株式会社サンセットカンパニー",
+        "details": [
+          { "account_item_name": "売掛金", "tax_code": 0, "amount": 110000, "description": "商品販売 2月上旬（誤り: 破産手続き開始直前の取引。回収不能）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 412500, "description": "レイクサイドトレーディング 長期未回収売掛金 貸倒引当金計上（825,000×50%）" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金",       "tax_code": 0, "amount": 412500, "description": "長期未回収売掛金 個別評価引当（回収可能性50%判断）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "貸倒損失", "tax_code": 0, "amount": 770000, "description": "サンセットカンパニー 破産手続き開始決定に伴う売掛金の貸倒損失計上（440,000+220,000+110,000）" },
+          { "entry_side": "credit", "account_item_name": "売掛金",   "tax_code": 0, "amount": 770000, "description": "サンセットカンパニー 売掛金消込（貸倒確定）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "買掛金", "tax_code": 0, "amount": 110000, "description": "マウンテンビュー 相殺（買掛金側: 正しい相殺処理の見本）" },
+          { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 110000, "description": "マウンテンビュー 相殺（売掛金側: 双方合意後の消込）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "買掛金", "tax_code": 0, "amount": 88000, "description": "マウンテンビュー 2月相殺（正しくは合意書面を要する）" },
+          { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 88000, "description": "マウンテンビュー 2月相殺消込" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金",            "tax_code": 0, "amount": 500000, "description": "3月末 売掛金残高計上（回収済み分以外）" },
+          { "entry_side": "credit", "account_item_name": "売上高",            "tax_code": 21, "amount": 500000, "description": "3月末 売上対応売掛金" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 5000, "description": "3月末 一般債権 期末残高の1%貸倒引当金追加計上" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金",       "tax_code": 0, "amount": 5000, "description": "一般債権 期末評価 引当金計上" }
+        ]
+      }
+    ]
+  }
+}

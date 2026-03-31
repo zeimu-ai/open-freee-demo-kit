@@ -83,6 +83,14 @@ tests/unit/            — vitest 単体テスト
 | errors/mixed | 2 | 12 | 3 |
 | errors/consumption-tax | 1 | 9 | 3 |
 | accounting/freelance-invoice | 2 | 24 | 6 |
+| errors/year-end-closing | 1 | 9 | 6 |
+| accounting/manufacturing | 2 | 30 | 9 |
+| errors/depreciation-method | 1 | 6 | 6 |
+| invoices/subscription | 2 | 24 | 6 |
+| accounting/payroll-agency | 2 | 27 | 6 |
+| accounting/npo-subsidy | 2 | 24 | 6 |
+| errors/overdue-receivable | 1 | 9 | 6 |
+| errors/duplicate-journal | 1 | 12 | 6 |
 
 **⚠️ プリセットを変更したらこの表も更新する。**
 

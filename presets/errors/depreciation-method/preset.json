@@ -1,0 +1,133 @@
+{
+  "name": "減価償却ミスエラーデータ",
+  "description": "固定資産の減価償却処理に関する典型的なミスを含むエラーデータ。償却方法の誤り（定率法→定額法）、耐用年数の誤適用、少額減価償却資産の誤処理など。税理士・会計士の研修・修正トレーニング用。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 6,
+    "manualJournals": 6
+  },
+  "error_manifest": [
+    {
+      "rule": "DEPRECIATION-001",
+      "location": "manualJournals[0~1] — account_item_name: 減価償却費, 機械装置",
+      "description": "機械装置（製造業用）の償却方法を定額法で処理しているが、法人税法では機械装置は定率法が原則（届出がない限り）。定率法未届出で定額法を適用しており、税務上の償却超過が発生する可能性がある。",
+      "expected_fix": "機械装置は定率法（200%定率法）で償却額を再計算し、差額を修正する。定額法を使用する場合は所轄税務署への届出が必要"
+    },
+    {
+      "rule": "DEPRECIATION-002",
+      "location": "manualJournals[2~3] — account_item_name: 減価償却費, 車両",
+      "description": "業務用普通乗用車（5年耐用年数が正しい）を3年として償却計算している。耐用年数の誤適用により減価償却費が過大計上され、税務上の損金算入超過となる。",
+      "expected_fix": "普通乗用車（総排気量3L以下）の耐用年数は6年（法定耐用年数表）。3年ではなく6年で再計算し、差額を修正仕訳する"
+    },
+    {
+      "rule": "DEPRECIATION-003",
+      "location": "deals[3~5] — account_item_name: 消耗品費, 取得価額30万円超",
+      "description": "取得価額が30万円を超える資産（パソコン・サーバー）を一括で消耗品費として費用計上している。中小企業者の少額減価償却資産の特例（30万円未満）の適用要件を超えており、固定資産として資産計上・減価償却が必要。",
+      "expected_fix": "取得価額30万円以上の資産は固定資産（器具備品等）として計上し、耐用年数に従い減価償却する。30万円未満であれば特例適用可能"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "みどり銀行 当座預金（固定資産管理テスト）",
+        "bank_id": 2407
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "機械設備リース株式会社",
+        "details": [
+          { "account_item_name": "機械装置", "tax_code": 34, "amount": 1980000, "description": "製造機械 A型プレス機 取得（耐用年数10年・定率法が正しい→定額法で誤処理）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-01",
+        "type": "expense",
+        "partner_name": "オートディーラー株式会社",
+        "details": [
+          { "account_item_name": "車両運搬具", "tax_code": 34, "amount": 1650000, "description": "業務用普通乗用車 取得（耐用年数6年が正しい→3年で誤処理）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "精密機器リース株式会社",
+        "details": [
+          { "account_item_name": "工具器具備品", "tax_code": 34, "amount": 330000, "description": "測定器具 取得（耐用年数5年・正常計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "コンピュータ機器株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 418000, "description": "業務用サーバー 取得（誤り: 取得価額41.8万円→30万円超のため固定資産計上が必要。消耗品費で一括費用化は不可）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "コンピュータ機器株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 352000, "description": "高性能ノートPC 取得（誤り: 取得価額35.2万円→30万円超のため固定資産計上が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "コンピュータ機器株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 264000, "description": "ノートPC 取得（正常: 取得価額26.4万円→30万円未満のため少額減価償却特例適用可）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "減価償却費",    "tax_code": 0, "amount": 49500, "description": "A型プレス機 定額法償却（誤り: 1,980,000÷10年÷12月×3月=49,500。定率法なら200%定率: 1,980,000×0.200=396,000/年→99,000/3月）" },
+          { "entry_side": "credit", "account_item_name": "減価償却累計額", "tax_code": 0, "amount": 49500, "description": "A型プレス機 減価償却累計額（定額法）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "減価償却費",    "tax_code": 0, "amount": 49500, "description": "A型プレス機 定率法との差額（修正仕訳見本: 定率法99,000-定額法49,500=追加計上49,500）" },
+          { "entry_side": "credit", "account_item_name": "減価償却累計額", "tax_code": 0, "amount": 49500, "description": "A型プレス機 減価償却累計額（定率法修正分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "減価償却費",    "tax_code": 0, "amount": 137500, "description": "業務用車両 3年耐用年数で償却（誤り: 1,650,000÷3年÷12月×3月=137,500。正しくは6年: 68,750）" },
+          { "entry_side": "credit", "account_item_name": "減価償却累計額", "tax_code": 0, "amount": 137500, "description": "業務用車両 減価償却累計額（3年・誤計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "減価償却累計額", "tax_code": 0, "amount": 68750, "description": "業務用車両 耐用年数修正（修正仕訳: 137,500-68,750=過大計上分68,750を戻す）" },
+          { "entry_side": "credit", "account_item_name": "減価償却費",     "tax_code": 0, "amount": 68750, "description": "業務用車両 減価償却費戻し（6年耐用年数への修正）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "工具器具備品",  "tax_code": 0, "amount": 418000, "description": "業務用サーバー 固定資産計上修正（誤り: 消耗品費418,000→器具備品として計上が正しい）" },
+          { "entry_side": "credit", "account_item_name": "消耗品費",      "tax_code": 0, "amount": 418000, "description": "業務用サーバー 消耗品費戻し（固定資産計上への振替）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "工具器具備品",  "tax_code": 0, "amount": 352000, "description": "高性能ノートPC 固定資産計上修正（誤り: 消耗品費352,000→器具備品として計上が正しい）" },
+          { "entry_side": "credit", "account_item_name": "消耗品費",      "tax_code": 0, "amount": 352000, "description": "高性能ノートPC 消耗品費戻し（固定資産計上への振替）" }
+        ]
+      }
+    ]
+  }
+}

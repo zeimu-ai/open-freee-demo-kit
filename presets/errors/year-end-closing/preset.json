@@ -1,0 +1,163 @@
+{
+  "name": "期末決算ミスエラーデータ",
+  "description": "期末決算処理における典型的なミスを含むエラーデータ。売上・費用の期間帰属誤り、減価償却・引当金の計上漏れ、仮勘定の未振替など、実務研修・修正トレーニング用シナリオ。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 9,
+    "manualJournals": 6
+  },
+  "error_manifest": [
+    {
+      "rule": "PERIOD-001",
+      "location": "deals[0~2] — account_item_name: 売上高, issue_date: 翌期の取引を当期に計上",
+      "description": "翌期（4月以降）に確定する売上を当期（3月）に前倒しで計上している。実現主義の原則に反する期間帰属の誤り。",
+      "expected_fix": "売上計上日を役務提供完了日（翌期）に修正し、当期3月末時点では前受金または未計上とする"
+    },
+    {
+      "rule": "PERIOD-002",
+      "location": "deals[3~5] — account_item_name: 前払費用, tax_code: 34",
+      "description": "翌期分の保険料・家賃を費用計上してしまっている。前払費用として資産計上すべき期間帰属の誤り。",
+      "expected_fix": "翌期分は前払費用（資産）として計上し、当期分のみ費用に振り替える"
+    },
+    {
+      "rule": "ACCRUAL-001",
+      "location": "manualJournals[0~1] — account_item_name: 未払費用, 計上漏れ",
+      "description": "当期発生の電気料金・外注費が翌期支払のため未計上。発生主義に反する費用計上漏れ。",
+      "expected_fix": "当期末に未払費用（負債）として発生額を計上する"
+    },
+    {
+      "rule": "SUSPENSE-001",
+      "location": "manualJournals[2~3] — account_item_name: 仮受金, 未振替",
+      "description": "期中に計上した仮受金（内容不明入金）を期末までに本勘定へ振り替えていない。仮勘定は期末に残高を持ってはならない。",
+      "expected_fix": "仮受金の入金内容を確認し、売上高・前受金等の適切な勘定科目に振り替える"
+    }
+  ],
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "みどり銀行 普通預金（決算テスト用）",
+        "bank_id": 2407
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-03-25",
+        "type": "income",
+        "partner_name": "株式会社フォワードビジネス",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "システム開発 最終納品（誤り: 4月納品予定の売上を3月に前倒し計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-28",
+        "type": "income",
+        "partner_name": "合同会社スプリングテック",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 165000, "description": "コンサルティング 3月分（誤り: 4月実施分を3月請求書発行日で計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "income",
+        "partner_name": "株式会社フォワードビジネス",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 220000, "description": "保守サービス 4月分前払（誤り: 翌期分を当期収益に計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-01",
+        "type": "expense",
+        "partner_name": "ビジネスインシュアランス株式会社",
+        "details": [
+          { "account_item_name": "保険料", "tax_code": 0, "amount": 120000, "description": "火災保険料 年払い（誤り: 4月〜翌3月分12ヶ月分を全額費用計上。翌期9ヶ月分は前払費用計上が正しい）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-01",
+        "type": "expense",
+        "partner_name": "ビジネスシェアスペース株式会社",
+        "details": [
+          { "account_item_name": "地代家賃", "tax_code": 34, "amount": 66000, "description": "事務所家賃 3月・4月の2ヶ月分（誤り: 翌期4月分も当期費用に計上。前払費用計上が正しい）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "ネットワークインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 11000, "description": "通信費 3月・4月2ヶ月分（誤り: 翌期4月分も当期費用に計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "不明入金",
+        "details": [
+          { "account_item_name": "仮受金", "tax_code": 0, "amount": 55000, "description": "2月 原因不明の入金（誤り: 期末までに本勘定へ振替が必要。売上高等への振替漏れ）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "不明入金",
+        "details": [
+          { "account_item_name": "仮受金", "tax_code": 0, "amount": 33000, "description": "3月 原因不明の入金（誤り: 期末までに本勘定へ振替が必要）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "株式会社クリエイティブツールズ",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 8800, "description": "事務用品（3月末仕入・4月支払）— 正常計上（未払費用として翌月支払）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "水道光熱費", "tax_code": 34, "amount": 18700, "description": "3月電気料金 未払計上漏れ（誤り: 発生主義では当期費用計上必須）" },
+          { "entry_side": "credit", "account_item_name": "未払費用",   "tax_code": 0,  "amount": 18700, "description": "3月電気料金 未払金計上漏れ" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "外注費",   "tax_code": 34, "amount": 88000, "description": "3月外注費 未払計上漏れ（誤り: 役務受領済みのため当期費用計上必須）" },
+          { "entry_side": "credit", "account_item_name": "未払費用", "tax_code": 0,  "amount": 88000, "description": "3月外注費 未払金計上漏れ" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仮受金", "tax_code": 0, "amount": 55000, "description": "2月 仮受金振替（誤り: 本来は判明次第速やかに振替。3月末も未振替のまま）" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 55000, "description": "2月 仮受金の売上振替（正しい処理の見本）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "仮受金", "tax_code": 0, "amount": 33000, "description": "3月 仮受金振替（誤り: 本来は期末前に振替済みであるべき）" },
+          { "entry_side": "credit", "account_item_name": "前受金", "tax_code": 0, "amount": 33000, "description": "3月 仮受金の前受金振替（内容確認後に適切な科目へ）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "減価償却費", "tax_code": 0, "amount": 42000, "description": "備品 年間減価償却費（計上漏れ: 期末に計上忘れとなりがちな項目）" },
+          { "entry_side": "credit", "account_item_name": "減価償却累計額", "tax_code": 0, "amount": 42000, "description": "備品 減価償却累計額計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "貸倒引当金繰入額", "tax_code": 0, "amount": 15000, "description": "売掛金 貸倒引当金計上（計上漏れ: 期末評価の引当金計上忘れ）" },
+          { "entry_side": "credit", "account_item_name": "貸倒引当金",       "tax_code": 0, "amount": 15000, "description": "売掛金残高の1%相当 貸倒引当金計上" }
+        ]
+      }
+    ]
+  }
+}

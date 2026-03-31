@@ -1,0 +1,263 @@
+{
+  "name": "SaaS・月次サブスクリプション請求",
+  "description": "SaaS事業者の月次サブスクリプション請求・売上管理データ。前払い・月次・年次プランの混在、トライアル→有料転換、解約返金処理など、SaaS/クラウドサービス事業者の実務を網羅。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 24,
+    "manualJournals": 6
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "さくら銀行 普通預金（SaaS事業用）",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "決済代行サービス（Stripe等）"
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-01",
+        "type": "income",
+        "partner_name": "株式会社アルファソリューション",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 33000, "description": "クラウド会計ツール スタンダードプラン 月次 1月（税込 3万円/月）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-01",
+        "type": "income",
+        "partner_name": "株式会社アルファソリューション",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 33000, "description": "クラウド会計ツール スタンダードプラン 月次 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-01",
+        "type": "income",
+        "partner_name": "株式会社アルファソリューション",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 33000, "description": "クラウド会計ツール スタンダードプラン 月次 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-01",
+        "type": "income",
+        "partner_name": "合同会社ベータテクノロジー",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 110000, "description": "クラウド会計ツール エンタープライズプラン 月次 1月（税込 10万円/月）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-01",
+        "type": "income",
+        "partner_name": "合同会社ベータテクノロジー",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 110000, "description": "クラウド会計ツール エンタープライズプラン 月次 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-01",
+        "type": "income",
+        "partner_name": "合同会社ベータテクノロジー",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 110000, "description": "クラウド会計ツール エンタープライズプラン 月次 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "株式会社ガンマコンサルティング",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "クラウド会計ツール スタンダードプラン 年次一括払い（3万円×12ヶ月=36万税抜→税込）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "株式会社デルタイノベーション",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "クラウド会計ツール スタンダードプラン 年次一括払い（2月開始・12ヶ月分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "income",
+        "partner_name": "フリーランス エプシロン 鈴木 一郎",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 11000, "description": "クラウド会計ツール ライトプラン 月次 1月（トライアル終了→有料転換）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "income",
+        "partner_name": "フリーランス エプシロン 鈴木 一郎",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 11000, "description": "クラウド会計ツール ライトプラン 月次 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "income",
+        "partner_name": "フリーランス エプシロン 鈴木 一郎",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 11000, "description": "クラウド会計ツール ライトプラン 月次 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "株式会社ゼータテック",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": -16500, "description": "クラウド会計ツール スタンダードプラン 途中解約返金（返金額: 残期間8.5ヶ月分 → マイナス計上）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "決済代行サービス",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 11000, "description": "クレジットカード決済手数料 1月（売上の約2.5%相当）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "expense",
+        "partner_name": "決済代行サービス",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 11550, "description": "クレジットカード決済手数料 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "expense",
+        "partner_name": "決済代行サービス",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 10450, "description": "クレジットカード決済手数料 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "クラウドインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 88000, "description": "クラウドインフラ費用 1月（サーバー・ストレージ）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-15",
+        "type": "expense",
+        "partner_name": "クラウドインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 92400, "description": "クラウドインフラ費用 2月（利用量増により微増）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "partner_name": "クラウドインフラ株式会社",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 86900, "description": "クラウドインフラ費用 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 550000, "description": "開発・CS人件費 1月（エンジニア2名・CS担当1名）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 550000, "description": "開発・CS人件費 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "給与計算",
+        "details": [
+          { "account_item_name": "給料手当", "tax_code": 0, "amount": 550000, "description": "開発・CS人件費 3月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "カスタマーサクセス外注",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 110000, "description": "CS業務委託 1月（オンボーディング・テクニカルサポート）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "カスタマーサクセス外注",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 110000, "description": "CS業務委託 2月" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "type": "expense",
+        "partner_name": "カスタマーサクセス外注",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 110000, "description": "CS業務委託 3月" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-15",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金",  "tax_code": 0,  "amount": 330000, "description": "ガンマコンサルティング 年次プラン請求計上" },
+          { "entry_side": "credit", "account_item_name": "前受金",  "tax_code": 0,  "amount": 302500, "description": "年次プラン 翌月〜12月分 前受計上（11ヶ月分）" },
+          { "entry_side": "credit", "account_item_name": "売上高",  "tax_code": 21, "amount": 27500,  "description": "年次プラン 当月分（1ヶ月）売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-01",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "前受金", "tax_code": 0,  "amount": 27500, "description": "ガンマコンサルティング 前受金 2月分振替" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 27500, "description": "ガンマコンサルティング 年次プラン 2月分売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-01",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "前受金", "tax_code": 0,  "amount": 27500, "description": "ガンマコンサルティング 前受金 3月分振替" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 27500, "description": "ガンマコンサルティング 年次プラン 3月分売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金",  "tax_code": 0,  "amount": 330000, "description": "デルタイノベーション 年次プラン請求計上" },
+          { "entry_side": "credit", "account_item_name": "前受金",  "tax_code": 0,  "amount": 302500, "description": "年次プラン 翌月〜1月分 前受計上（11ヶ月分）" },
+          { "entry_side": "credit", "account_item_name": "売上高",  "tax_code": 21, "amount": 27500,  "description": "年次プラン 当月分（1ヶ月）売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-01",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "前受金", "tax_code": 0,  "amount": 27500, "description": "デルタイノベーション 前受金 3月分振替" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 27500, "description": "デルタイノベーション 年次プラン 3月分売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit",  "account_item_name": "売掛金", "tax_code": 0,  "amount": 154000, "description": "3月末 売掛金計上（月次プラン未回収分: アルファ+ベータ+エプシロン）" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 154000, "description": "3月末 売掛金対応売上計上" }
+        ]
+      }
+    ]
+  }
+}
