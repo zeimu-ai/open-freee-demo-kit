@@ -1,0 +1,68 @@
+name: 📋 プリセットリクエスト
+description: 新しいプリセット（業種・シナリオ）を提案する
+labels: ["preset-request", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        プリセットのご提案ありがとうございます！以下の項目を記入してください。
+        プリセットを自分で作成して PR を送ることも大歓迎です。
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: カテゴリ
+      description: どのカテゴリに属するプリセットですか？
+      options:
+        - accounting（業種別会計）
+        - invoices（請求書）
+        - expenses（経費精算）
+        - hr（給与・人事）
+        - errors（エラーデータ・研修用）
+        - advanced（高度なシナリオ）
+        - common（共通シナリオ）
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: preset_name
+    attributes:
+      label: プリセット名（案）
+      description: 例: accounting/manufacturing、errors/consumption-tax
+      placeholder: "accounting/your-industry"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: ユースケース・背景
+      description: このプリセットが誰にとって、どんな場面で役立つか教えてください
+      placeholder: |
+        対象ユーザー: 製造業の税理士・経理担当
+        用途: freee での原価計算仕訳のデモ・研修
+        背景: 製造業の原価計算はfreeeのUIで分かりにくく、デモデータが欲しい
+    validations:
+      required: true
+
+  - type: textarea
+    id: data_overview
+    attributes:
+      label: 想定データの概要
+      description: どんな取引・仕訳を含めるべきか教えてください（ざっくりでOK）
+      placeholder: |
+        - 材料費の仕入（課税仕入10%）
+        - 外注加工費（課税仕入10%）
+        - 製品売上（課税売上10%）
+        - 月末の製品在庫・仕掛品の棚卸仕訳
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: self_implement
+    attributes:
+      label: 自分で実装しますか？
+      options:
+        - label: はい、自分でPRを作成します
+        - label: いいえ、メンテナーに実装をお願いしたいです

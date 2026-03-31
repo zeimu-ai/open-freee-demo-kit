@@ -1,6 +1,6 @@
 {
   "name": "freee-demo-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "freee sandbox seeder CLI — Load demo data into your freee test company",
   "type": "module",
   "bin": {
@@ -22,10 +22,17 @@
   ],
   "keywords": [
     "freee",
+    "freee-api",
     "cli",
     "seed",
     "demo",
-    "accounting"
+    "accounting",
+    "bookkeeping",
+    "tax",
+    "invoice",
+    "sandbox",
+    "preset",
+    "japanese-accounting"
   ],
   "author": "tackeyy",
   "license": "MIT",
