@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-03-31
+
+### Added
+- New preset `errors/consumption-tax` — インボイス制度（適格請求書等保存方式）に関する典型的ミスを含むエラーデータ
+  - 免税事業者からの仕入を全額控除で計上（経過措置80%控除が正しい）
+  - 軽減税率8%対象の飲食料品を標準税率10%で計上
+  - 課税仕入10%対象の消耗品費を非課税で計上
+
 ## [0.1.1] - 2026-03-31
 
 ### Changed
