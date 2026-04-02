@@ -220,6 +220,10 @@ npm run test:watch # ウォッチモード
 
 全ての貢献者は GitHub Contributors ページとリリースノートで紹介されます。
 
+## バージョニング
+
+本リポジトリは [Semantic Versioning 2.0.0](https://github.com/zeimu-ai/.github/blob/main/VERSIONING.md) に準拠しています。
+
 ---
 
 Thank you for contributing to freee-demo-kit! 🎉

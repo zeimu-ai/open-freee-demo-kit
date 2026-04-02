@@ -277,6 +277,10 @@ npm test
 
 ---
 
+## バージョニング
+
+[Semantic Versioning 2.0.0](https://github.com/zeimu-ai/.github/blob/main/VERSIONING.md) に準拠しています。
+
 ## ライセンス
 
 [MIT](LICENSE)
