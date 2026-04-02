@@ -36,6 +36,14 @@
   ],
   "author": "tackeyy",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeimu-ai/open-freee-demo-kit.git"
+  },
+  "homepage": "https://github.com/zeimu-ai/open-freee-demo-kit#readme",
+  "bugs": {
+    "url": "https://github.com/zeimu-ai/open-freee-demo-kit/issues"
+  },
   "engines": {
     "node": ">=20.0.0"
   },

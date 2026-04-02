@@ -4,6 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js 20+](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg)](https://nodejs.org/)
 
+> Part of the [zeimu-ai](https://github.com/zeimu-ai) organization
+
 freee サンドボックス事業所に、対話式ウィザードでデモデータを一括投入するOSS CLIツール。
 
 ---
@@ -239,8 +241,8 @@ fdk validate errors/mixed --accounting  # 特定プリセットのみ
 コントリビューションを歓迎します。[CONTRIBUTING.md](CONTRIBUTING.md) をお読みください。
 
 ```bash
-git clone https://github.com/tackeyy/freee-demo-kit.git
-cd freee-demo-kit
+git clone https://github.com/zeimu-ai/open-freee-demo-kit.git
+cd open-freee-demo-kit
 npm install
 npm test
 ```
