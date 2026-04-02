@@ -2,6 +2,12 @@
 
 Thank you for your interest in contributing to freee-demo-kit!
 
+## 📝 Contributor License Agreement (CLA)
+
+本プロジェクトへの初めてのプルリクエスト時に、[CLA（Contributor License Agreement）](CLA.md) への同意が求められます。
+
+CLA は、あなたの著作権を保持したまま、プロジェクトにコントリビューションの使用権をライセンス付与する合意です。CLA Assistant Bot が PR 上で自動的に同意を求めますので、指示に従って署名してください。
+
 ## 🙏 Welcome!
 
 freee-demo-kit は freee サンドボックス事業所にデモデータを投入するOSS CLIツールです。
