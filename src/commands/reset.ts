@@ -108,9 +108,8 @@ export const resetCommand = new Command('reset')
     const companyName = company.display_name || company.name;
 
     if (options.dryRun) {
-      const targets = preset ? [preset] : ['all presets in state.json'];
-      console.log(`🔍 ドライラン — 削除対象: ${targets.join(', ')}`);
       if (preset) {
+        console.log(`🔍 ドライラン — 削除対象: ${preset}`);
         const state = await loadState(preset);
         if (state) {
           console.log(`  仕訳: ${state.manualJournalIds.length}件`);
@@ -118,6 +117,16 @@ export const resetCommand = new Command('reset')
           console.log(`  口座: ${state.walletableIds.length}件`);
         } else {
           console.log('  投入データなし');
+        }
+      } else {
+        const allStates = await listAllStates();
+        if (allStates.length === 0) {
+          console.log('🔍 ドライラン — リセット対象のプリセットがありません。');
+        } else {
+          console.log(`🔍 ドライラン — ${allStates.length}件のプリセットが対象:`);
+          for (const s of allStates) {
+            console.log(`  [${s.preset}] 仕訳: ${s.manualJournalIds.length}件, 取引: ${s.dealIds.length}件, 口座: ${s.walletableIds.length}件`);
+          }
         }
       }
       return;
@@ -132,10 +141,14 @@ export const resetCommand = new Command('reset')
     if (preset) {
       await resetPreset(preset, companyId, client);
     } else {
-      // Reset all — read state file for all preset keys
-      const { loadState: ls } = await import('../utils/state-store.js');
-      // We don't have a listStates function yet; just warn
-      console.log('⚠️  全プリセットリセットはプリセット名指定が必要です。');
-      console.log('例: fdk reset accounting/quickstart');
+      const allStates = await listAllStates();
+      if (allStates.length === 0) {
+        console.log('リセット対象のプリセットがありません。');
+        return;
+      }
+      console.log(`${allStates.length}件のプリセットをリセットします...`);
+      for (const s of allStates) {
+        await resetPreset(s.preset, companyId, client);
+      }
     }
   });
