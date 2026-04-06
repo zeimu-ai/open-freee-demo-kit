@@ -132,6 +132,7 @@ export interface PresetState {
   preset: string;
   loadedAt: string;
   walletableIds: number[];
+  reusedWalletableIds?: number[];
   dealIds: number[];
   manualJournalIds: number[];
 }

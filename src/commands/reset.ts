@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import { FreeeApiClient } from '../utils/freee-api.js';
 import { loadTokens } from '../utils/token-store.js';
-import { loadState, clearState } from '../utils/state-store.js';
+import { loadState, clearState, listAllStates } from '../utils/state-store.js';
 import { info, warn, error as logError } from '../utils/logger.js';
 import { confirmCompany } from '../utils/confirm-company.js';
 
@@ -44,10 +44,23 @@ async function resetPreset(preset: string, companyId: number, client: FreeeApiCl
     }
   }
 
+  // 他のプリセットが使用中の口座IDを収集（削除対象から除外）
+  const allStates = await listAllStates();
+  const usedByOthers = new Set<number>();
+  for (const s of allStates) {
+    if (s.preset === preset) continue;
+    for (const id of s.walletableIds) usedByOthers.add(id);
+    for (const id of (s.reusedWalletableIds ?? [])) usedByOthers.add(id);
+  }
+
   const existingWalletables = await client.getWalletables(companyId);
   const walletableTypeMap = new Map(existingWalletables.map(w => [w.id, w.type]));
 
   for (const id of state.walletableIds) {
+    if (usedByOthers.has(id)) {
+      info(`  口座 (id: ${id}) は他プリセットが使用中 — スキップ`);
+      continue;
+    }
     const type = walletableTypeMap.get(id);
     if (!type) {
       warn(`口座が見つかりません (id: ${id}) — スキップ`);

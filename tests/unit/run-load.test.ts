@@ -179,11 +179,31 @@ describe('runLoad', () => {
   });
 
   describe('walletable スキップ', () => {
-    it('既存のwalletableはスキップされwallet ableIdsに含まれない', async () => {
+    it('既存のwalletableはスキップされwalletableIdsに含まれない', async () => {
       apiClientMock.getWalletables.mockResolvedValue([{ id: 50, type: 'bank_account', name: 'テスト銀行', company_id: 1 }]);
       const result = await runLoad('accounting/quickstart', { yes: true });
       expect(apiClientMock.createWalletable).not.toHaveBeenCalled();
       expect(result.walletableIds).not.toContain(50);
+    });
+
+    it('既存口座を再利用した場合、stateのreusedWalletableIdsに記録される', async () => {
+      apiClientMock.getWalletables.mockResolvedValue([{ id: 50, type: 'bank_account', name: 'テスト銀行', company_id: 1 }]);
+      await runLoad('accounting/quickstart', { yes: true });
+      expect(vi.mocked(saveState)).toHaveBeenCalledWith(
+        expect.objectContaining({
+          reusedWalletableIds: [50],
+        })
+      );
+    });
+
+    it('全て新規作成の場合、reusedWalletableIdsはundefined', async () => {
+      apiClientMock.getWalletables.mockResolvedValue([]);
+      await runLoad('accounting/quickstart', { yes: true });
+      expect(vi.mocked(saveState)).toHaveBeenCalledWith(
+        expect.objectContaining({
+          reusedWalletableIds: undefined,
+        })
+      );
     });
   });
 

@@ -126,10 +126,11 @@ export async function runLoad(
   }
 
   const walletableIds: number[] = [];
+  const reusedWalletableIds: number[] = [];
   const dealIds: number[] = [];
   const manualJournalIds: number[] = [];
 
-  // 口座を作成
+  // 口座を作成（既存口座があれば再利用）
   const existingWalletables = await client.getWalletables(companyId);
   const existingWalletableMap = new Map(existingWalletables.map(w => [w.name, w.id]));
 
@@ -138,7 +139,8 @@ export async function runLoad(
     onProgress?.({ stage: 'walletables', current: i + 1, total: data.walletables.length });
     const existingId = existingWalletableMap.get(w.name);
     if (existingId !== undefined) {
-      info(`  ✓ ${w.name} (既存 id: ${existingId}) — スキップ`);
+      reusedWalletableIds.push(existingId);
+      info(`  ✓ ${w.name} (既存 id: ${existingId}) — 再利用`);
       continue;
     }
     try {
@@ -193,6 +195,7 @@ export async function runLoad(
     preset,
     loadedAt: new Date().toISOString(),
     walletableIds,
+    reusedWalletableIds: reusedWalletableIds.length > 0 ? reusedWalletableIds : undefined,
     dealIds,
     manualJournalIds,
   });
