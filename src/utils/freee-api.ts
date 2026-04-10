@@ -10,6 +10,8 @@ import type {
   DealData,
   FreeeManualJournal,
   ManualJournalData,
+  FreeeReceipt,
+  ReceiptData,
   FreeeAccountItem,
   FreeeTax,
 } from '../types/freee.js';
@@ -136,6 +138,30 @@ export class FreeeApiClient {
     return res.json() as Promise<T>;
   }
 
+  private async requestMultipartPost<T>(
+    apiPath: string,
+    formData: FormData,
+  ): Promise<T> {
+    const tokens = await this.getValidTokens();
+
+    const res = await fetch(`${BASE_URL}${apiPath}`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${tokens.access_token}`,
+        'User-Agent': USER_AGENT,
+        Accept: 'application/json',
+      },
+      body: formData,
+    });
+
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      throw new Error(`freee API error: ${res.status} POST ${apiPath} — ${text}`);
+    }
+
+    return res.json() as Promise<T>;
+  }
+
   private async requestDelete(apiPath: string): Promise<void> {
     const tokens = await this.getValidTokens();
 
@@ -246,5 +272,36 @@ export class FreeeApiClient {
 
   async deleteManualJournal(companyId: number, id: number): Promise<void> {
     await this.requestDelete(`/api/1/manual_journals/${id}?company_id=${companyId}`);
+  }
+
+  // ── Receipt write ───────────────────────────────────────────────────────
+
+  async createReceipt(companyId: number, data: ReceiptData): Promise<FreeeReceipt> {
+    const formData = new FormData();
+    formData.set('company_id', String(companyId));
+
+    if (data.description) formData.set('description', data.description);
+    if (data.document_type) formData.set('document_type', data.document_type);
+    if (data.qualified_invoice) formData.set('qualified_invoice', data.qualified_invoice);
+    if (data.receipt_metadatum_issue_date) {
+      formData.set('receipt_metadatum_issue_date', data.receipt_metadatum_issue_date);
+    }
+    if (data.receipt_metadatum_amount !== undefined) {
+      formData.set('receipt_metadatum_amount', String(data.receipt_metadatum_amount));
+    }
+    if (data.receipt_metadatum_partner_name) {
+      formData.set('receipt_metadatum_partner_name', data.receipt_metadatum_partner_name);
+    }
+
+    const bytes = Buffer.from(data.contentBase64, 'base64');
+    const file = new File([bytes], data.filename, { type: data.mimeType });
+    formData.set('receipt', file);
+
+    const res = await this.requestMultipartPost<{ receipt: FreeeReceipt }>('/api/1/receipts', formData);
+    return res.receipt;
+  }
+
+  async deleteReceipt(companyId: number, id: number): Promise<void> {
+    await this.requestDelete(`/api/1/receipts/${id}?company_id=${companyId}`);
   }
 }

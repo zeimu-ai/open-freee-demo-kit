@@ -78,6 +78,7 @@ fdk setup
      📊 口座   3 件
      💰 取引  52 件
      📝 仕訳   5 件
+     🧾 証憑   0 件
 ```
 
 ---
@@ -144,7 +145,7 @@ freee ログイン後、以下のような画面が表示されます：
 | `accounting/quickstart` | 架空ITサービス業・3ヶ月分（売掛金入金フロー含む） | 3 | 52 | 11 |
 | `accounting/full-year` | 架空ITサービス業・12ヶ月分・異常値パターン付き | 3 | 98 | 12 |
 | `invoices/quickstart` | 請求書・売掛金管理（入金消込フロー含む） | 2 | 22 | 6 |
-| `expenses/quickstart` | 経費精算（交通費・接待費・消耗品費・通信費） | 2 | 24 | 3 |
+| `expenses/quickstart` | 経費精算（交通費・接待費・消耗品費・通信費・証憑3件） | 2 | 24 | 3 |
 | `hr/quickstart` | 給与・人事（基本給・残業代・夏季賞与・社会保険・源泉税）6ヶ月分 | 1 | 34 | 20 |
 | `unclassified/quickstart` | 銀行明細インポート直後を再現（全費用を「雑費」で仮計上） | 1 | 20 | 0 |
 | `common/depreciation` | 固定資産・月次減価償却（PC・サーバー・エアコン） | 1 | 18 | 9 |
@@ -225,7 +226,7 @@ fdk validate errors/mixed --accounting  # 特定プリセットのみ
 | `freee-api.test.ts` / `freee-api-write.test.ts` | API クライアント（正常系・トークンリフレッシュ） |
 | `freee-api-errors.test.ts` | GET/POST/DELETE エラー・トークンリフレッシュ失敗 |
 | `no-real-names.test.ts` | 全プリセットへの実在名混入防止（ブロックリスト 25 件） |
-| `preset-loader.test.ts` | プリセット読み込み・スキーマ検証 |
+| `preset-loader.test.ts` | プリセット読み込み・スキーマ検証・receipts 既定値補完 |
 | `preset-validator.test.ts` | パストラバーサル防止・文字種バリデーション |
 | `run-load.test.ts` | `runLoad` ブランチ（dryRun・force・confirmCompany・onProgress 等） |
 | `state-store.test.ts` / `token-store.test.ts` | ファイル永続化・パーミッション・`listAllStates` |

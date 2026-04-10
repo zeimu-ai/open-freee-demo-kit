@@ -5,7 +5,8 @@
   "expected": {
     "walletables": 2,
     "deals": 24,
-    "manualJournals": 3
+    "manualJournals": 3,
+    "receipts": 3
   },
   "data": {
     "walletables": [
@@ -234,6 +235,35 @@
           { "entry_side": "debit",  "account_item_name": "前払費用", "tax_code": 0, "amount": 66000, "description": "期末 前払費用計上（次期分保険料等）" },
           { "entry_side": "credit", "account_item_name": "保険料", "tax_code": 0, "amount": 66000, "description": "期末 保険料前払振替" }
         ]
+      }
+    ],
+    "receipts": [
+      {
+        "filename": "expense-2026-01-aoki.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "1月 交通費精算 添付証憑",
+        "receipt_metadatum_issue_date": "2026-01-06",
+        "receipt_metadatum_amount": 18500,
+        "receipt_metadatum_partner_name": "社員 青木"
+      },
+      {
+        "filename": "expense-2026-02-matsumoto.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "2月 接待費 添付証憑",
+        "receipt_metadatum_issue_date": "2026-02-12",
+        "receipt_metadatum_amount": 38500,
+        "receipt_metadatum_partner_name": "社員 松本"
+      },
+      {
+        "filename": "expense-2026-03-kawada.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "3月 研修費 添付証憑",
+        "receipt_metadatum_issue_date": "2026-03-25",
+        "receipt_metadatum_amount": 44000,
+        "receipt_metadatum_partner_name": "社員 川田"
       }
     ]
   }

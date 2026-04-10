@@ -106,6 +106,40 @@ describe('FreeeApiClient — write methods', () => {
     });
   });
 
+  describe('createReceipt', () => {
+    it('POSTs multipart form data to /api/1/receipts with company_id', async () => {
+      fetchMock.mockResolvedValue(makeResponse({ receipt: { id: 88, company_id: 99, description: '交通費領収書' } }));
+      const result = await client.createReceipt(99, {
+        filename: 'receipt-001.png',
+        mimeType: 'image/png',
+        contentBase64: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=',
+        description: '交通費領収書',
+        receipt_metadatum_amount: 18500,
+      });
+      const [url, opts] = fetchMock.mock.calls[0] as [string, RequestInit];
+      expect(url).toBe('https://api.freee.co.jp/api/1/receipts');
+      expect(opts.method).toBe('POST');
+      expect(opts.body).toBeInstanceOf(FormData);
+      const body = opts.body as FormData;
+      expect(body.get('company_id')).toBe('99');
+      expect(body.get('description')).toBe('交通費領収書');
+      expect(body.get('receipt_metadatum_amount')).toBe('18500');
+      expect(body.get('receipt')).toBeInstanceOf(File);
+      expect(result.id).toBe(88);
+    });
+  });
+
+  describe('deleteReceipt', () => {
+    it('DELETEs /api/1/receipts/{id}', async () => {
+      fetchMock.mockResolvedValue(makeResponse(null, 204));
+      await client.deleteReceipt(99, 88);
+      const [url, opts] = fetchMock.mock.calls[0] as [string, RequestInit];
+      expect(url).toContain('/api/1/receipts/88');
+      expect(url).toContain('company_id=99');
+      expect(opts.method).toBe('DELETE');
+    });
+  });
+
   describe('deleteManualJournal', () => {
     it('DELETEs /api/1/manual_journals/{id}', async () => {
       fetchMock.mockResolvedValue(makeResponse(null, 204));

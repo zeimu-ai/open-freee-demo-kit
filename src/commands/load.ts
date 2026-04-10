@@ -21,7 +21,7 @@ export interface LoadOptions {
 }
 
 export interface LoadProgress {
-  stage: 'walletables' | 'deals' | 'journals';
+  stage: 'walletables' | 'deals' | 'journals' | 'receipts';
   current: number;
   total: number;
 }
@@ -30,6 +30,7 @@ export interface LoadResult {
   walletableIds: number[];
   dealIds: number[];
   manualJournalIds: number[];
+  receiptIds: number[];
   presetName: string;
   companyName: string;
 }
@@ -62,8 +63,19 @@ export async function runLoad(
     for (const mj of data.manualJournals) {
       console.log(`  ${mj.issue_date} (${mj.details.length}明細)`);
     }
-    console.log(`\n期待値: 口座${expected.walletables}件, 取引${expected.deals}件, 仕訳${expected.manualJournals}件`);
-    return { walletableIds: [], dealIds: [], manualJournalIds: [], presetName, companyName: '' };
+    console.log(`\n証憑 (${data.receipts.length}件):`);
+    for (const receipt of data.receipts) {
+      console.log(`  ${receipt.filename} [${receipt.mimeType}] ${receipt.description ?? ''}`.trim());
+    }
+    console.log(`\n期待値: 口座${expected.walletables}件, 取引${expected.deals}件, 仕訳${expected.manualJournals}件, 証憑${expected.receipts ?? 0}件`);
+    return {
+      walletableIds: [],
+      dealIds: [],
+      manualJournalIds: [],
+      receiptIds: [],
+      presetName,
+      companyName: '',
+    };
   }
 
   if (!options.force) {
@@ -129,6 +141,7 @@ export async function runLoad(
   const reusedWalletableIds: number[] = [];
   const dealIds: number[] = [];
   const manualJournalIds: number[] = [];
+  const receiptIds: number[] = [];
 
   // 口座を作成（既存口座があれば再利用）
   const existingWalletables = await client.getWalletables(companyId);
@@ -190,6 +203,22 @@ export async function runLoad(
     }
   }
 
+  // 証憑をアップロード
+  if (data.receipts.length > 0) {
+    for (let i = 0; i < data.receipts.length; i++) {
+      const receipt = data.receipts[i];
+      onProgress?.({ stage: 'receipts', current: i + 1, total: data.receipts.length });
+      try {
+        const created = await client.createReceipt(companyId, receipt);
+        receiptIds.push(created.id);
+        info(`  ✓ ${receipt.filename} (id: ${created.id})`);
+        await sleep(DELAY_MS);
+      } catch (err) {
+        logError(`証憑アップロード失敗: ${receipt.filename} — ${String(err)}`);
+      }
+    }
+  }
+
   // 状態を保存
   await saveState({
     preset,
@@ -198,9 +227,10 @@ export async function runLoad(
     reusedWalletableIds: reusedWalletableIds.length > 0 ? reusedWalletableIds : undefined,
     dealIds,
     manualJournalIds,
+    receiptIds,
   });
 
-  return { walletableIds, dealIds, manualJournalIds, presetName, companyName };
+  return { walletableIds, dealIds, manualJournalIds, receiptIds, presetName, companyName };
 }
 
 export const loadCommand = new Command('load')
@@ -220,7 +250,7 @@ export const loadCommand = new Command('load')
     try {
       const result = await runLoad(preset, options);
       if (!options.dryRun) {
-        console.log(`\n✅ 投入完了: 口座${result.walletableIds.length}件, 取引${result.dealIds.length}件, 仕訳${result.manualJournalIds.length}件`);
+        console.log(`\n✅ 投入完了: 口座${result.walletableIds.length}件, 取引${result.dealIds.length}件, 仕訳${result.manualJournalIds.length}件, 証憑${result.receiptIds.length}件`);
         console.log('確認するには: fdk verify ' + preset);
       }
     } catch (err) {

@@ -4,10 +4,20 @@ import type { PresetState } from '../types/freee.js';
 
 type StateMap = Record<string, PresetState>;
 
+function normalizeState(state: PresetState | (Omit<PresetState, 'receiptIds'> & { receiptIds?: number[] })): PresetState {
+  return {
+    ...state,
+    receiptIds: state.receiptIds ?? [],
+  };
+}
+
 async function readStateMap(): Promise<StateMap> {
   try {
     const raw = await fs.readFile(STATE_FILE, 'utf-8');
-    return JSON.parse(raw) as StateMap;
+    const parsed = JSON.parse(raw) as Record<string, PresetState>;
+    return Object.fromEntries(
+      Object.entries(parsed).map(([preset, state]) => [preset, normalizeState(state)])
+    );
   } catch {
     return {};
   }

@@ -47,7 +47,7 @@ const mockPreset = {
   name: 'テストプリセット',
   description: 'テスト用',
   version: '1.0.0',
-  expected: { walletables: 1, deals: 2, manualJournals: 1 },
+  expected: { walletables: 1, deals: 2, manualJournals: 1, receipts: 1 },
   data: {
     walletables: [{ type: 'bank_account' as const, name: 'テスト銀行', bank_id: 1 }],
     deals: [
@@ -71,6 +71,14 @@ const mockPreset = {
           { entry_side: 'debit' as const, account_item_name: '売掛金', tax_code: 21, amount: 100000 },
           { entry_side: 'credit' as const, account_item_name: '売上高', tax_code: 21, amount: 100000 },
         ],
+      },
+    ],
+    receipts: [
+      {
+        filename: 'receipt-001.png',
+        mimeType: 'image/png',
+        contentBase64: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=',
+        description: '交通費領収書',
       },
     ],
   },
@@ -97,6 +105,7 @@ function makeApiClient() {
     ]),
     createDeal: vi.fn().mockResolvedValue({ id: 201 }),
     createManualJournal: vi.fn().mockResolvedValue({ id: 301 }),
+    createReceipt: vi.fn().mockResolvedValue({ id: 401 }),
   };
 }
 
@@ -125,6 +134,7 @@ describe('runLoad', () => {
       expect(result.walletableIds).toEqual([]);
       expect(result.dealIds).toEqual([]);
       expect(result.manualJournalIds).toEqual([]);
+      expect(result.receiptIds).toEqual([]);
       expect(apiClientMock.createWalletable).not.toHaveBeenCalled();
     });
 
@@ -147,6 +157,7 @@ describe('runLoad', () => {
         walletableIds: [1],
         dealIds: [2],
         manualJournalIds: [3],
+        receiptIds: [4],
       });
       await expect(runLoad('accounting/quickstart', {})).rejects.toThrow(/既にロード済みです/);
     });
@@ -158,6 +169,7 @@ describe('runLoad', () => {
         walletableIds: [1],
         dealIds: [2],
         manualJournalIds: [3],
+        receiptIds: [4],
       });
       const result = await runLoad('accounting/quickstart', { force: true, yes: true });
       expect(result.dealIds).not.toEqual([]);
@@ -226,6 +238,7 @@ describe('runLoad', () => {
       expect(stages).toContain('walletables');
       expect(stages).toContain('deals');
       expect(stages).toContain('journals');
+      expect(stages).toContain('receipts');
     });
 
     it('deals の current は 1 から始まり total まで増える', async () => {
@@ -241,18 +254,20 @@ describe('runLoad', () => {
   });
 
   describe('正常系', () => {
-    it('作成された walletableIds / dealIds / manualJournalIds を返す', async () => {
+    it('作成された walletableIds / dealIds / manualJournalIds / receiptIds を返す', async () => {
       apiClientMock.createWalletable.mockResolvedValue({ id: 101 });
       apiClientMock.createDeal
         .mockResolvedValueOnce({ id: 201 })
         .mockResolvedValueOnce({ id: 202 });
       apiClientMock.createManualJournal.mockResolvedValue({ id: 301 });
+      apiClientMock.createReceipt.mockResolvedValue({ id: 401 });
 
       const result = await runLoad('accounting/quickstart', { yes: true });
 
       expect(result.walletableIds).toEqual([101]);
       expect(result.dealIds).toEqual([201, 202]);
       expect(result.manualJournalIds).toEqual([301]);
+      expect(result.receiptIds).toEqual([401]);
     });
 
     it('saveState が正しく呼ばれる', async () => {
@@ -263,6 +278,7 @@ describe('runLoad', () => {
           walletableIds: expect.any(Array),
           dealIds: expect.any(Array),
           manualJournalIds: expect.any(Array),
+          receiptIds: expect.any(Array),
         })
       );
     });

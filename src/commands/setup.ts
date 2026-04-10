@@ -201,7 +201,7 @@ export async function runSetup(): Promise<void> {
       selectedPreset as string,
       { yes: true },
       (progress) => {
-        const labels = { walletables: '口座', deals: '取引', journals: '仕訳' };
+        const labels = { walletables: '口座', deals: '取引', journals: '仕訳', receipts: '証憑' };
         s2.message(
           `${labels[progress.stage]} を投入中 ` +
           `${pc.dim(`(${progress.current}/${progress.total})`)}`,
@@ -222,6 +222,7 @@ export async function runSetup(): Promise<void> {
       `${pc.cyan('📊 口座')}  ${pc.bold(String(loadResult.walletableIds.length).padStart(4))} 件`,
       `${pc.yellow('💰 取引')}  ${pc.bold(String(loadResult.dealIds.length).padStart(4))} 件`,
       `${pc.magenta('📝 仕訳')}  ${pc.bold(String(loadResult.manualJournalIds.length).padStart(4))} 件`,
+      `${pc.green('🧾 証憑')}  ${pc.bold(String(loadResult.receiptIds.length).padStart(4))} 件`,
       '',
       `事業所: ${pc.bold(loadResult.companyName)}`,
     ].join('\n'),

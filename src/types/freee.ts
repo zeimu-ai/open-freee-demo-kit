@@ -86,6 +86,25 @@ export interface FreeeManualJournal {
   issue_date: string;
 }
 
+// Receipt (証憑ファイル)
+export interface ReceiptData {
+  filename: string;
+  mimeType: string;
+  contentBase64: string;
+  description?: string;
+  document_type?: string;
+  qualified_invoice?: string;
+  receipt_metadatum_issue_date?: string;
+  receipt_metadatum_amount?: number;
+  receipt_metadatum_partner_name?: string;
+}
+
+export interface FreeeReceipt {
+  id: number;
+  company_id: number;
+  description?: string;
+}
+
 // AccountItem (勘定科目)
 export interface FreeeAccountItem {
   id: number;
@@ -117,12 +136,14 @@ export interface PresetDefinition {
     walletables: number;
     deals: number;
     manualJournals: number;
+    receipts?: number;
     plTotal?: number;
   };
   data: {
     walletables: WalletableData[];
     deals: DealData[];
     manualJournals: ManualJournalData[];
+    receipts: ReceiptData[];
   };
   error_manifest?: ErrorManifestItem[];
 }
@@ -135,4 +156,5 @@ export interface PresetState {
   reusedWalletableIds?: number[];
   dealIds: number[];
   manualJournalIds: number[];
+  receiptIds: number[];
 }

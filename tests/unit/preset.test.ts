@@ -15,15 +15,16 @@ describe('Preset types', () => {
       version: '1.0.0',
       resources: [
         { type: 'deals', file: 'deals.json', count: 10 },
+        { type: 'receipts', file: 'receipts.json', count: 2 },
       ],
     };
     expect(preset.name).toBe('quickstart');
-    expect(preset.resources).toHaveLength(1);
+    expect(preset.resources).toHaveLength(2);
   });
 
   it('should reject invalid resource types at compile time', () => {
     // TypeScriptの型チェックで防ぐ — ランタイムでの検証は別途実装
     const resource = { type: 'deals' as const, file: 'deals.json', count: 10 };
-    expect(['deals', 'manual_journals', 'walletables', 'account_items', 'partners']).toContain(resource.type);
+    expect(['deals', 'manual_journals', 'walletables', 'account_items', 'partners', 'receipts']).toContain(resource.type);
   });
 });

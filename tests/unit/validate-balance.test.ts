@@ -13,6 +13,7 @@ function makePreset(journals: Array<{ issue_date: string; details: Array<{ entry
       walletables: [],
       deals: [],
       manualJournals: journals,
+      receipts: [],
     },
   } as unknown as MinimalPreset;
 }

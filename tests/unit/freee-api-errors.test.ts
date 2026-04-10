@@ -93,6 +93,17 @@ describe('FreeeApiClient — error handling', () => {
         client.createDeal(1, { issue_date: '2026-01-01', type: 'income', details: [] })
       ).rejects.toThrow('freee API error: 500 POST /api/1/deals');
     });
+
+    it('receipt upload 失敗時もレスポンス本文を含める', async () => {
+      fetchMock.mockResolvedValue(makeResponse({}, 422, '{"message":"invalid receipt"}'));
+      await expect(
+        client.createReceipt(1, {
+          filename: 'receipt-001.png',
+          mimeType: 'image/png',
+          contentBase64: 'AAAA',
+        })
+      ).rejects.toThrow('invalid receipt');
+    });
   });
 
   describe('DELETE エラー', () => {

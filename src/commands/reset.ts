@@ -19,10 +19,20 @@ async function resetPreset(preset: string, companyId: number, client: FreeeApiCl
   }
 
   console.log(`\n🗑️  "${preset}" を削除中...`);
-  console.log(`  仕訳: ${state.manualJournalIds.length}件, 取引: ${state.dealIds.length}件, 口座: ${state.walletableIds.length}件`);
+  console.log(`  証憑: ${state.receiptIds.length}件, 仕訳: ${state.manualJournalIds.length}件, 取引: ${state.dealIds.length}件, 口座: ${state.walletableIds.length}件`);
 
-  // Delete in reverse order: journals → deals → walletables
+  // Delete in reverse order: receipts → journals → deals → walletables
   let errors = 0;
+
+  for (const id of state.receiptIds) {
+    try {
+      await client.deleteReceipt(companyId, id);
+      await sleep(DELAY_MS);
+    } catch {
+      warn(`証憑の削除失敗 (id: ${id})`);
+      errors++;
+    }
+  }
 
   for (const id of state.manualJournalIds) {
     try {
@@ -112,6 +122,7 @@ export const resetCommand = new Command('reset')
         console.log(`🔍 ドライラン — 削除対象: ${preset}`);
         const state = await loadState(preset);
         if (state) {
+          console.log(`  証憑: ${state.receiptIds.length}件`);
           console.log(`  仕訳: ${state.manualJournalIds.length}件`);
           console.log(`  取引: ${state.dealIds.length}件`);
           console.log(`  口座: ${state.walletableIds.length}件`);
@@ -125,7 +136,7 @@ export const resetCommand = new Command('reset')
         } else {
           console.log(`🔍 ドライラン — ${allStates.length}件のプリセットが対象:`);
           for (const s of allStates) {
-            console.log(`  [${s.preset}] 仕訳: ${s.manualJournalIds.length}件, 取引: ${s.dealIds.length}件, 口座: ${s.walletableIds.length}件`);
+            console.log(`  [${s.preset}] 証憑: ${s.receiptIds.length}件, 仕訳: ${s.manualJournalIds.length}件, 取引: ${s.dealIds.length}件, 口座: ${s.walletableIds.length}件`);
           }
         }
       }

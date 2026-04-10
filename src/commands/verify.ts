@@ -79,6 +79,12 @@ export const verifyCommand = new Command('verify')
     console.log(`${journalMark} 手動仕訳: ${journalCount}件 (期待値: ${expected.manualJournals}件)`);
     if (!journalOk) passed = false;
 
+    const receiptCount = state.receiptIds.length;
+    const receiptOk = receiptCount === (expected.receipts ?? 0);
+    const receiptMark = receiptOk ? '✅' : '❌';
+    console.log(`${receiptMark} 証憑: ${receiptCount}件 (期待値: ${expected.receipts ?? 0}件)`);
+    if (!receiptOk) passed = false;
+
     console.log('──────────────────');
     if (passed) {
       console.log('✅ 検証PASS: 全項目が期待値と一致しました');

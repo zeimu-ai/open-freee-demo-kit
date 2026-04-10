@@ -24,6 +24,7 @@ const sampleState: PresetState = {
   walletableIds: [101, 102, 103],
   dealIds: [201, 202, 203],
   manualJournalIds: [301],
+  receiptIds: [401],
 };
 
 describe('state-store', () => {
@@ -51,7 +52,7 @@ describe('state-store', () => {
 
     it('merges multiple presets in the same file', async () => {
       await saveState(sampleState);
-      const state2: PresetState = { preset: 'hr', loadedAt: '2026-01-16T00:00:00.000Z', walletableIds: [], dealIds: [999], manualJournalIds: [] };
+      const state2: PresetState = { preset: 'hr', loadedAt: '2026-01-16T00:00:00.000Z', walletableIds: [], dealIds: [999], manualJournalIds: [], receiptIds: [] };
       await saveState(state2);
       const raw = await fs.readFile(mocks.stateFile, 'utf-8');
       const saved = JSON.parse(raw);
@@ -81,7 +82,7 @@ describe('state-store', () => {
   describe('clearState', () => {
     it('removes a preset from state without deleting other presets', async () => {
       await saveState(sampleState);
-      const state2: PresetState = { preset: 'hr', loadedAt: '2026-01-16T00:00:00.000Z', walletableIds: [], dealIds: [999], manualJournalIds: [] };
+      const state2: PresetState = { preset: 'hr', loadedAt: '2026-01-16T00:00:00.000Z', walletableIds: [], dealIds: [999], manualJournalIds: [], receiptIds: [] };
       await saveState(state2);
       await clearState('accounting/quickstart');
       const raw = await fs.readFile(mocks.stateFile, 'utf-8');
@@ -110,8 +111,8 @@ describe('state-store', () => {
 
     it('複数のstateは全要素を返す', async () => {
       await saveState(sampleState);
-      const state2: PresetState = { preset: 'hr/quickstart', loadedAt: '2026-02-01T00:00:00.000Z', walletableIds: [10], dealIds: [20], manualJournalIds: [] };
-      const state3: PresetState = { preset: 'invoices/quickstart', loadedAt: '2026-02-02T00:00:00.000Z', walletableIds: [], dealIds: [30, 31], manualJournalIds: [40] };
+      const state2: PresetState = { preset: 'hr/quickstart', loadedAt: '2026-02-01T00:00:00.000Z', walletableIds: [10], dealIds: [20], manualJournalIds: [], receiptIds: [] };
+      const state3: PresetState = { preset: 'invoices/quickstart', loadedAt: '2026-02-02T00:00:00.000Z', walletableIds: [], dealIds: [30, 31], manualJournalIds: [40], receiptIds: [50] };
       await saveState(state2);
       await saveState(state3);
       const result = await listAllStates();

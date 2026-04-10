@@ -21,7 +21,7 @@ const samplePreset = {
   name: 'テスト プリセット',
   description: 'ユニットテスト用',
   version: '1.0.0',
-  expected: { walletables: 1, deals: 2, manualJournals: 0 },
+  expected: { walletables: 1, deals: 2, manualJournals: 0, receipts: 1 },
   data: {
     walletables: [{ type: 'bank_account', name: '普通預金' }],
     deals: [
@@ -29,6 +29,13 @@ const samplePreset = {
       { issue_date: '2026-01-20', type: 'expense', details: [{ account_item_name: '消耗品費', tax_code: 34, amount: 5000 }] },
     ],
     manualJournals: [],
+    receipts: [
+      {
+        filename: 'receipt-001.png',
+        mimeType: 'image/png',
+        contentBase64: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=',
+      },
+    ],
   },
 };
 
@@ -51,7 +58,31 @@ describe('preset-loader', () => {
     expect(preset.name).toBe('テスト プリセット');
     expect(preset.data.walletables).toHaveLength(1);
     expect(preset.data.deals).toHaveLength(2);
+    expect(preset.data.receipts).toHaveLength(1);
     expect(preset.expected.walletables).toBe(1);
+  });
+
+  it('fills receipts defaults when older preset.json does not define them', async () => {
+    const legacyPreset = {
+      name: '旧形式プリセット',
+      description: 'receipts 未対応',
+      version: '1.0.0',
+      expected: { walletables: 0, deals: 0, manualJournals: 0 },
+      data: {
+        walletables: [],
+        deals: [],
+        manualJournals: [],
+      },
+    };
+    await fs.writeFile(
+      path.join(presetsDir, 'test-preset', 'preset.json'),
+      JSON.stringify(legacyPreset),
+      'utf-8'
+    );
+
+    const preset = await loadPreset('test-preset');
+    expect(preset.expected.receipts).toBe(0);
+    expect(preset.data.receipts).toEqual([]);
   });
 
   it('throws when preset directory does not exist', async () => {

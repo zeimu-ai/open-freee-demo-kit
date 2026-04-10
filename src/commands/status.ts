@@ -20,7 +20,7 @@ export const statusCommand = new Command('status')
         timeZone: 'Asia/Tokyo',
       });
       console.log(`  ${state.preset}`);
-      console.log(`    口座 ${state.walletableIds.length}件 | 取引 ${state.dealIds.length}件 | 仕訳 ${state.manualJournalIds.length}件`);
+      console.log(`    口座 ${state.walletableIds.length}件 | 取引 ${state.dealIds.length}件 | 仕訳 ${state.manualJournalIds.length}件 | 証憑 ${state.receiptIds.length}件`);
       console.log(`    投入日時: ${loadedAt}`);
     }
 

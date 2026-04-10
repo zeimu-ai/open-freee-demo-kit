@@ -73,10 +73,13 @@ export const validateCommand = new Command('validate')
         if (data.manualJournals.length !== expected.manualJournals) {
           errors.push(`仕訳件数: 実際${data.manualJournals.length}件 ≠ expected.manualJournals(${expected.manualJournals})`);
         }
+        if (data.receipts.length !== (expected.receipts ?? 0)) {
+          errors.push(`証憑件数: 実際${data.receipts.length}件 ≠ expected.receipts(${expected.receipts ?? 0})`);
+        }
 
         if (errors.length === 0) {
           console.log(' ✅ PASS');
-          info(`  スキーマ: OK | 口座${data.walletables.length}件 | 取引${data.deals.length}件 | 仕訳${data.manualJournals.length}件 | 貸借: 一致`);
+          info(`  スキーマ: OK | 口座${data.walletables.length}件 | 取引${data.deals.length}件 | 仕訳${data.manualJournals.length}件 | 証憑${data.receipts.length}件 | 貸借: 一致`);
         } else {
           console.log(' ❌ FAIL');
           for (const err of errors) {

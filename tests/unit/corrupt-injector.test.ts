@@ -17,6 +17,7 @@ function makePreset(overrides: Partial<PresetDefinition['data']> = {}): PresetDe
       walletables: [],
       deals: [],
       manualJournals: [],
+      receipts: [],
       ...overrides,
     },
   };

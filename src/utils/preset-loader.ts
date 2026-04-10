@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { PRESETS_DIR } from './preset-validator.js';
-import type { PresetDefinition } from '../types/freee.js';
+import type { PresetDefinition, ReceiptData } from '../types/freee.js';
 
 function isValidPreset(obj: unknown): obj is PresetDefinition {
   if (!obj || typeof obj !== 'object') return false;
@@ -50,5 +50,20 @@ export async function loadPreset(presetName: string): Promise<PresetDefinition> 
     );
   }
 
-  return parsed;
+  const preset = parsed as PresetDefinition & {
+    expected: PresetDefinition['expected'] & { receipts?: number };
+    data: PresetDefinition['data'] & { receipts?: ReceiptData[] };
+  };
+
+  return {
+    ...preset,
+    expected: {
+      ...preset.expected,
+      receipts: preset.expected.receipts ?? 0,
+    },
+    data: {
+      ...preset.data,
+      receipts: preset.data.receipts ?? [],
+    },
+  };
 }

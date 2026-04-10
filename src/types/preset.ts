@@ -7,7 +7,7 @@ export interface Preset {
 }
 
 export interface PresetResource {
-  type: 'deals' | 'manual_journals' | 'walletables' | 'account_items' | 'partners';
+  type: 'deals' | 'manual_journals' | 'walletables' | 'account_items' | 'partners' | 'receipts';
   file: string;
   count: number;
 }

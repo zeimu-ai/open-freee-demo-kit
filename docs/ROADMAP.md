@@ -71,6 +71,13 @@ $ fdk corrupt accounting/quickstart --rules officer-pay,tax-code
 - `error_manifest` を自動生成してどこをどう壊したか記録
 - `--dry-run` で注入内容のプレビュー可能
 
+### receipts upload（完了）
+
+- preset.json に `data.receipts[]` と `expected.receipts` を追加
+- `fdk load` で freee ファイルボックスへ証憑アップロード
+- `fdk reset` / `fdk status` / `fdk verify` も証憑件数に対応
+- `expenses/quickstart` に証憑サンプルを追加
+
 ### 今後の実装候補
 
 - `fdk export` — 本番データを匿名化してプリセット化
