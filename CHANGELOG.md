@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.7] - 2026-04-10
+
+### Added
+- New preset field `data.receipts[]` for file-box receipt uploads
+- `expected.receipts` validation and verification support
+- Receipt upload/delete support in `fdk load` / `fdk reset`
+- Receipt count visibility in `fdk status` / `fdk setup`
+- Sample receipts for `expenses/quickstart`
+
+### Changed
+- Backward compatibility for older presets and state files by defaulting missing receipts to `[]`
+
 ## [0.1.4] - 2026-03-31
 
 ### Added
