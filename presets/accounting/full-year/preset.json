@@ -1298,6 +1298,51 @@
             "description": "文房具・コピー用紙 3月分"
           }
         ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "due_date": "2026-02-20",
+        "partner_name": "串焼き酒場 やまと",
+        "details": [
+          {
+            "account_item_name": "交際費",
+            "tax_code": 2,
+            "amount": 44000,
+            "description": "取引先との打合せ会食（3名）"
+          }
+        ],
+        "payment_from_walletable_id": "__CREDIT_CARD__"
+      },
+      {
+        "issue_date": "2026-03-15",
+        "type": "expense",
+        "due_date": "2026-03-15",
+        "partner_name": "料亭 花月",
+        "details": [
+          {
+            "account_item_name": "交際費",
+            "tax_code": 2,
+            "amount": 66000,
+            "description": "期末接待 A社役員会食（4名）"
+          }
+        ],
+        "payment_from_walletable_id": "__CREDIT_CARD__"
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "due_date": "2026-03-25",
+        "partner_name": "ホテルニューオータニ",
+        "details": [
+          {
+            "account_item_name": "交際費",
+            "tax_code": 2,
+            "amount": 55000,
+            "description": "期末接待 B社幹部会食（5名）"
+          }
+        ],
+        "payment_from_walletable_id": "__CREDIT_CARD__"
       }
     ],
     "manualJournals": [
@@ -1526,6 +1571,25 @@
             "tax_code": 0,
             "amount": 132000,
             "description": "3月末 外注費未払"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "普通預金",
+            "amount": 550000,
+            "tax_code": 0,
+            "description": "3月売上入金（売掛金計上漏れ — 本来は売掛金/売上高の仕訳が必要）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "amount": 550000,
+            "tax_code": 2,
+            "description": "3月売上（売掛金を経由せず直接入金処理 — 異常パターン）"
           }
         ]
       }
