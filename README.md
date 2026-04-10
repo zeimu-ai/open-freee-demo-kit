@@ -8,6 +8,14 @@
 
 freee サンドボックス事業所に、対話式ウィザードでデモデータを一括投入するOSS CLIツール。
 
+## できること
+
+- 口座・取引・手動仕訳をプリセットから一括投入
+- 業種別プリセットやエラー注入プリセットでデモ・検証環境をすばやく再現
+- 0.1.7 から **領収書/証憑ファイルのアップロード** に対応
+  - `data.receipts[]` を preset に含めると、`fdk load` 時に freee ファイルボックスへ自動アップロードされます
+  - `expenses/quickstart` には証憑サンプル3件が含まれており、経費精算デモをそのまま再現できます
+
 ---
 
 ## はじめかた
@@ -45,6 +53,8 @@ freee-demo-kit は freee の OAuth アプリ認証情報（Client ID / Client Se
 npm install -g freee-demo-kit
 fdk setup
 ```
+
+証憑アップロード込みのサンプルをすぐ試したい場合は、セットアップ後に `expenses/quickstart` を選ぶと、経費データ24件に加えて**証憑3件**が自動アップロードされます。
 
 `fdk setup` を実行すると、対話式ウィザードが起動します。
 
@@ -210,6 +220,8 @@ fdk validate --accounting          # 全プリセットを検証
 fdk validate errors/mixed --accounting  # 特定プリセットのみ
 ```
 
+`data.receipts[]` を定義したプリセットでは、`fdk validate` が `expected.receipts` と実際の `data.receipts.length` の一致もチェックします。`fdk verify` でもロード済み state の証憑件数を突合します。
+
 ---
 
 ## テストカバレッジ
@@ -234,6 +246,66 @@ fdk validate errors/mixed --accounting  # 特定プリセットのみ
 | `validate-balance.test.ts` | `validateAccountingBalance` 貸借一致チェック |
 
 > freee API との実際の通信（load / reset / verify）は統合テスト未対応です。動作確認は実際のサンドボックス事業所に対して手動で実施してください。
+
+---
+
+## カスタムプリセットの作り方
+
+プリセットの詳細仕様は [`presets/README.md`](presets/README.md) にまとめています。ここでは receipts 対応を含む最小例だけ先に示します。
+
+### 最小の receipts 対応 preset 例
+
+```json
+{
+  "name": "経費精算 + 証憑サンプル",
+  "description": "交通費の取引と領収書1件を含む最小例",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 1,
+    "deals": 1,
+    "manualJournals": 0,
+    "receipts": 1
+  },
+  "data": {
+    "walletables": [
+      { "type": "wallet", "name": "小口現金" }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-04-10",
+        "type": "expense",
+        "partner_name": "社員 青木",
+        "details": [
+          {
+            "account_item_name": "旅費交通費",
+            "tax_code": 34,
+            "amount": 18500,
+            "description": "営業訪問の交通費"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [],
+    "receipts": [
+      {
+        "filename": "expense-2026-04-10-aoki.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "交通費領収書",
+        "receipt_metadatum_issue_date": "2026-04-10",
+        "receipt_metadatum_amount": 18500,
+        "receipt_metadatum_partner_name": "社員 青木"
+      }
+    ]
+  }
+}
+```
+
+### receipts で覚えておく点
+
+- 現在の preset schema は `path` ではなく `contentBase64` を使います。ローカルの画像や PDF を使いたい場合は、生成スクリプト側で Base64 に変換して `preset.json` に埋め込んでください。
+- `deal_id` を receipts 側に持たせる仕組みは現時点ではありません。取引との対応づけが必要な場合は、`description` やファイル名に同じ識別子を入れて管理するのが安全です。
+- `expected.receipts` を必ず更新してください。`fdk validate` と `fdk verify` の両方で証憑件数の整合に使われます。
 
 ---
 

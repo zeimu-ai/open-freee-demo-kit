@@ -73,10 +73,10 @@ $ fdk corrupt accounting/quickstart --rules officer-pay,tax-code
 
 ### receipts upload（完了）
 
-- preset.json に `data.receipts[]` と `expected.receipts` を追加
-- `fdk load` で freee ファイルボックスへ証憑アップロード
-- `fdk reset` / `fdk status` / `fdk verify` も証憑件数に対応
-- `expenses/quickstart` に証憑サンプルを追加
+- [x] preset.json に `data.receipts[]` と `expected.receipts` を追加
+- [x] `fdk load` で freee ファイルボックスへ証憑アップロード
+- [x] `fdk reset` / `fdk status` / `fdk verify` も証憑件数に対応
+- [x] `expenses/quickstart` に証憑サンプルを追加
 
 ### 今後の実装候補
 
