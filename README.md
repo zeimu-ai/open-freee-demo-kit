@@ -284,3 +284,14 @@ npm test
 ## ライセンス
 
 [MIT](LICENSE)
+
+---
+
+このプロジェクトは [Zeimu AI](https://zeimu.ai) が開発・メンテナンスしています。
+
+### 関連プロジェクト
+
+| プロジェクト | 内容 |
+|------------|------|
+| [open-journal-rules](https://github.com/zeimu-ai/open-journal-rules) | 日本の税務仕訳ルールのオープンソースデータセット |
+| [open-industry-support-guide](https://github.com/zeimu-ai/open-industry-support-guide) | 金融庁『業種別支援の着眼点』のMarkdown + JSONデータセット |
