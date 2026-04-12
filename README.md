@@ -174,6 +174,7 @@ freee ログイン後、以下のような画面が表示されます：
 | `accounting/medical` | 架空内科クリニック・保険診療（非課税）と自費診療（課税）の混在 | 2 | 24 | 6 |
 | `accounting/real-estate` | 架空不動産賃貸業・居住用（非課税）と事務所（課税）の混在 | 2 | 24 | 6 |
 | `accounting/retail` | 架空雑貨小売店・商品仕入・棚卸・月次在庫調整 | 3 | 30 | 6 |
+| `accounting/ecommerce-marketplace` | 架空EC事業・Amazon/楽天/Shopify の手数料差引入金、配送費、返品返金、広告費、梱包資材、棚卸資産評価損 | 3 | 30 | 7 |
 | `accounting/it-startup` | 架空SaaS企業・サブスク収益・ソフトウェア資産計上・前受収益 | 2 | 21 | 9 |
 | `accounting/non-profit` | 架空NPO法人・収益事業（課税）と非収益事業（非課税）の区分管理 | 1 | 18 | 6 |
 | `accounting/manufacturing` | 架空製造業・材料費・労務費・製造間接費の三分法・仕掛品・製品勘定 | 2 | 30 | 9 |

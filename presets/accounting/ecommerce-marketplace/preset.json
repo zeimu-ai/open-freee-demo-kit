@@ -1,0 +1,359 @@
+{
+  "name": "ECモール・自社ECクイックスタート",
+  "description": "架空のEC事業（モールA・楽天・Shopify運営）の3ヶ月分デモデータ。モール売上の手数料差引入金、自社ECの決済手数料、配送費、商品仕入、返品返金、広告費、梱包資材、月末の売上値引・売掛金調整・棚卸資産評価損を含む。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 3,
+    "deals": 30,
+    "manualJournals": 7,
+    "receipts": 3
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "みらい信用銀行 普通預金（入金口座）",
+        "bank_id": 2407
+      },
+      {
+        "type": "wallet",
+        "name": "モール決済代行口座"
+      },
+      {
+        "type": "credit_card",
+        "name": "法人クレジットカード（仕入広告用）",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-08",
+        "type": "expense",
+        "partner_name": "仕入先集計",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 462000, "description": "モールA向け商品仕入 1月前半" },
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 308000, "description": "Shopify自社EC向け商品仕入 1月" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "income",
+        "partner_name": "アクアモール決済株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 924000, "description": "モールA販売 1月前半売上（手数料差引後の入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "income",
+        "partner_name": "みらいショッパー株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 616000, "description": "Shopify自社EC売上 1月第1便（決済代行入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "ラクテラス株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 693000, "description": "楽天モール売上 1月分（手数料差引後の入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-10",
+        "type": "expense",
+        "partner_name": "アクアモール決済株式会社",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 52800, "description": "モールA販売手数料 1月前半" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "expense",
+        "partner_name": "みらいショッパー株式会社",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 18480, "description": "Shopify決済手数料 1月第1便" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "ラクテラス株式会社",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 46200, "description": "楽天販売手数料 1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-18",
+        "type": "expense",
+        "partner_name": "桜波物流株式会社",
+        "details": [
+          { "account_item_name": "荷造運賃", "tax_code": 34, "amount": 34100, "description": "配送費 ヤマト便 1月上旬出荷分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-22",
+        "type": "expense",
+        "partner_name": "株式会社グロー広告",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 88000, "description": "モールA広告 1月クリック課金" },
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 66000, "description": "検索広告 1月検索枠" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-24",
+        "type": "expense",
+        "partner_name": "フォレスト包装資材株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 37400, "description": "梱包資材 1月分（段ボール・緩衝材）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-26",
+        "type": "expense",
+        "partner_name": "アクアモール決済株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": -13200, "description": "返品返金処理 1件（モールA販売分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-28",
+        "type": "expense",
+        "partner_name": "東雲商品センター株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 286000, "description": "追加仕入 1月下旬（売れ筋補充）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-06",
+        "type": "income",
+        "partner_name": "アクアモール決済株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 946000, "description": "モールA販売 2月前半売上（手数料差引後の入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-08",
+        "type": "income",
+        "partner_name": "みらいショッパー株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 638000, "description": "Shopify自社EC売上 2月便" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-11",
+        "type": "income",
+        "partner_name": "ラクテラス株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 715000, "description": "楽天モール売上 2月分（手数料差引後の入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-06",
+        "type": "expense",
+        "partner_name": "決済代行サービス集計",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 54100, "description": "モールA販売手数料 2月前半" },
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 19140, "description": "Shopify決済手数料 2月便" },
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 47700, "description": "楽天販売手数料 2月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-14",
+        "type": "expense",
+        "partner_name": "桜波物流株式会社",
+        "details": [
+          { "account_item_name": "荷造運賃", "tax_code": 34, "amount": 36300, "description": "配送費 2月分（ヤマト・佐川の混載）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-21",
+        "type": "expense",
+        "partner_name": "株式会社グロー広告",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 99000, "description": "検索広告 2月検索枠" },
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 77000, "description": "モールA広告 2月スポンサード枠" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-24",
+        "type": "expense",
+        "partner_name": "フォレスト包装資材株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 41800, "description": "梱包資材 2月分（段ボール・緩衝材・テープ）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-26",
+        "type": "expense",
+        "partner_name": "アクアモール決済株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": -17600, "description": "返品返金処理 2件（モールA販売分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "type": "expense",
+        "partner_name": "北浜商材株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 319000, "description": "追加仕入 2月末（春物補充）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "アクアモール決済株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 968000, "description": "モールA販売 3月売上（手数料差引後の入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-07",
+        "type": "income",
+        "partner_name": "みらいショッパー株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 660000, "description": "Shopify自社EC売上 3月便" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-10",
+        "type": "income",
+        "partner_name": "ラクテラス株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 737000, "description": "楽天モール売上 3月分（手数料差引後の入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "expense",
+        "partner_name": "決済代行サービス集計",
+        "details": [
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 55000, "description": "モールA販売手数料 3月" },
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 19800, "description": "Shopify決済手数料 3月便" },
+          { "account_item_name": "支払手数料", "tax_code": 34, "amount": 49200, "description": "楽天販売手数料 3月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-13",
+        "type": "expense",
+        "partner_name": "桜波物流株式会社",
+        "details": [
+          { "account_item_name": "荷造運賃", "tax_code": 34, "amount": 38500, "description": "配送費 3月分（繁忙期増便）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "株式会社グロー広告",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 121000, "description": "モールA広告 3月スポンサーブランド" },
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 88000, "description": "検索広告 3月検索枠" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-24",
+        "type": "expense",
+        "partner_name": "フォレスト包装資材株式会社",
+        "details": [
+          { "account_item_name": "消耗品費", "tax_code": 34, "amount": 42900, "description": "梱包資材 3月分（段ボール・緩衝材）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-27",
+        "type": "expense",
+        "partner_name": "アクアモール決済株式会社",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": -14300, "description": "返品返金処理 1件（モールA販売分）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-30",
+        "type": "expense",
+        "partner_name": "北浜商材株式会社",
+        "details": [
+          { "account_item_name": "仕入高", "tax_code": 34, "amount": 297000, "description": "追加仕入 3月末（年度末補充）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売上値引", "tax_code": 0, "amount": 24000, "description": "1月 ポイント値引・クーポン値引の振替" },
+          { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 24000, "description": "1月 売掛金から値引分を控除" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売掛金", "tax_code": 0, "amount": 1590000, "description": "1月末 モールA/Shopify/楽天の未入金売上計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 1590000, "description": "1月末 売上高計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売上値引", "tax_code": 0, "amount": 18000, "description": "2月 ポイント値引・返品調整の振替" },
+          { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 18000, "description": "2月 売掛金から値引分を控除" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売掛金", "tax_code": 0, "amount": 1650000, "description": "2月末 モールA/Shopify/楽天の未入金売上計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 1650000, "description": "2月末 売上高計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売上値引", "tax_code": 0, "amount": 22000, "description": "3月 ポイント値引・返品調整の振替" },
+          { "entry_side": "credit", "account_item_name": "売掛金", "tax_code": 0, "amount": 22000, "description": "3月 売掛金から値引分を控除" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売掛金", "tax_code": 0, "amount": 1700000, "description": "3月末 モールA/Shopify/楽天の未入金売上計上" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 21, "amount": 1700000, "description": "3月末 売上高計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "商品評価損", "tax_code": 0, "amount": 68000, "description": "3月末 棚卸資産の評価損" },
+          { "entry_side": "credit", "account_item_name": "商品", "tax_code": 0, "amount": 68000, "description": "3月末 商品の評価減" }
+        ]
+      }
+    ],
+    "receipts": [
+      {
+        "filename": "supplier-invoice-2026-01.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "仕入請求書 1月分",
+        "receipt_metadatum_issue_date": "2026-01-31",
+        "receipt_metadatum_amount": 462000,
+        "receipt_metadatum_partner_name": "東雲商品センター株式会社"
+      },
+      {
+        "filename": "shipping-statement-2026-02.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "配送費明細 2月分",
+        "receipt_metadatum_issue_date": "2026-02-28",
+        "receipt_metadatum_amount": 36300,
+        "receipt_metadatum_partner_name": "桜波物流株式会社"
+      },
+      {
+        "filename": "ads-invoice-2026-03.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "広告費請求書 3月分",
+        "receipt_metadatum_issue_date": "2026-03-31",
+        "receipt_metadatum_amount": 209000,
+        "receipt_metadatum_partner_name": "株式会社グロー広告"
+      }
+    ]
+  }
+}

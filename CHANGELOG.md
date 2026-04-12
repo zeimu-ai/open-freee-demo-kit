@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- New preset `accounting/ecommerce-marketplace` — ECモール・自社EC向けデモデータ
+  - Amazon・楽天・Shopify の手数料差引入金と決済手数料の流れを再現した
+  - 配送費・商品仕入・返品返金・広告費・梱包資材・棚卸資産評価損を含めた
+  - `expected` と README の件数表記を実データに合わせて更新した
+
 ### Changed
 - `accounting/office-demo` を receipts + 固定資産付きの完全版に昇格
   - 証憑 3 件を追加し、請求書・領収書・レシートの投入を一度に試せるようにした
