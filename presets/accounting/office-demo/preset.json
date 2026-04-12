@@ -1,11 +1,12 @@
 {
   "name": "会計+経費クイックスタート（統合版）",
-  "description": "合同会社グリーンテックの会計データに、社員立替精算と月末未払費用振替を統合した3ヶ月分の初回体験向けデモデータ。売上・外注・給与・経費・経費精算・手動仕訳を一度に試せる。",
+  "description": "合同会社グリーンテックの会計データに、社員立替精算・証憑アップロード・固定資産購入・月末未払費用振替を統合した3ヶ月分の初回体験向けデモデータ。売上・外注・給与・経費・経費精算・手動仕訳を一度に試せる。",
   "version": "1.0.0",
   "expected": {
     "walletables": 3,
-    "deals": 76,
-    "manualJournals": 14
+    "deals": 77,
+    "manualJournals": 15,
+    "receipts": 3
   },
   "data": {
     "walletables": [
@@ -555,6 +556,19 @@
             "tax_code": 21,
             "amount": 550000,
             "description": "コンサルティング 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-14",
+        "type": "expense",
+        "partner_name": "株式会社オフィス機器センター",
+        "details": [
+          {
+            "account_item_name": "工具器具備品",
+            "tax_code": 34,
+            "amount": 352000,
+            "description": "ノートPC購入（固定資産計上・48ヶ月償却想定）"
           }
         ]
       },
@@ -1168,6 +1182,25 @@
         ]
       },
       {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 0,
+            "amount": 7333,
+            "description": "2月 ノートPC 月次償却（48ヶ月按分）"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "工具器具備品",
+            "tax_code": 0,
+            "amount": 7333,
+            "description": "2月 ノートPC 減価償却累計"
+          }
+        ]
+      },
+      {
         "issue_date": "2026-03-10",
         "details": [
           {
@@ -1280,6 +1313,35 @@
             "description": "3月分売掛金 消込"
           }
         ]
+      }
+    ],
+    "receipts": [
+      {
+        "filename": "invoice-2026-02-office-pc.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "2月 ノートPC購入 請求書",
+        "receipt_metadatum_issue_date": "2026-02-14",
+        "receipt_metadatum_amount": 352000,
+        "receipt_metadatum_partner_name": "株式会社オフィス機器センター"
+      },
+      {
+        "filename": "receipt-2026-02-taxi.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "2月 出張交通費 領収書",
+        "receipt_metadatum_issue_date": "2026-02-18",
+        "receipt_metadatum_amount": 13200,
+        "receipt_metadatum_partner_name": "東都タクシー株式会社"
+      },
+      {
+        "filename": "receipt-2026-03-dinner.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "3月 接待費 レシート",
+        "receipt_metadatum_issue_date": "2026-03-18",
+        "receipt_metadatum_amount": 18400,
+        "receipt_metadatum_partner_name": "銀座 北風食堂"
       }
     ]
   }

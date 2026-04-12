@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- `accounting/office-demo` を receipts + 固定資産付きの完全版に昇格
+  - 証憑 3 件を追加し、請求書・領収書・レシートの投入を一度に試せるようにした
+  - ノートPC購入の固定資産取引と月次減価償却仕訳を追加した
+  - `expected` と README の件数表記を実データに合わせて更新した
+
 ## [0.1.8] - 2026-04-12
 
 ### Added

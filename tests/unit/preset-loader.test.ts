@@ -120,9 +120,10 @@ describe('preset-loader', () => {
 
     const preset = await loadPreset('accounting/office-demo');
     expect(preset.name).toBe('会計+経費クイックスタート（統合版）');
-    expect(preset.expected).toEqual({ walletables: 3, deals: 76, manualJournals: 14, receipts: 0 });
+    expect(preset.expected).toEqual({ walletables: 3, deals: 77, manualJournals: 15, receipts: 3 });
     expect(preset.data.walletables).toHaveLength(3);
-    expect(preset.data.deals).toHaveLength(76);
-    expect(preset.data.manualJournals).toHaveLength(14);
+    expect(preset.data.deals).toHaveLength(77);
+    expect(preset.data.manualJournals).toHaveLength(15);
+    expect(preset.data.receipts).toHaveLength(3);
   });
 });
