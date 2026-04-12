@@ -1,0 +1,313 @@
+{
+  "name": "越境SaaSクイックスタート",
+  "description": "架空のB2B SaaS企業の3ヶ月分デモデータ。国内課税売上と海外顧客向け輸出売上、USD外貨預金、海外クラウド費用・広告費、国内外注費、前受収益、為替差損益、期末換算をまとめて再現する。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 3,
+    "deals": 25,
+    "manualJournals": 7,
+    "receipts": 3
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "みらい信用銀行 円貨普通預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "bank_account",
+        "name": "みらい信用銀行 USD外貨預金",
+        "bank_id": 2407
+      },
+      {
+        "type": "credit_card",
+        "name": "グローバル法人カード",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "株式会社ハーバーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 880000, "description": "国内SaaS月額利用料 1月分（法人顧客8社・円貨普通預金入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-09",
+        "type": "income",
+        "partner_name": "Northwind Labs Pte. Ltd.",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 22, "amount": 540000, "description": "海外顧客向けSaaS月額利用料 1月分（USD 3,600・輸出売上・USD外貨預金入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "expense",
+        "partner_name": "Nimbus Web Services LLC",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 242000, "description": "海外SaaS仕入 海外クラウド基盤A 利用料 1月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "income",
+        "partner_name": "株式会社ルートブリッジ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 330000, "description": "国内顧客向け初期導入支援 1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "Orbit Media Ireland Ltd.",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 176000, "description": "海外検索広告プラットフォーム利用料 1月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-22",
+        "type": "expense",
+        "partner_name": "合同会社スカイテスト",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 198000, "description": "国内QA業務委託 1月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-25",
+        "type": "expense",
+        "partner_name": "Blue Current Holdings LLC",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 99000, "description": "海外SNS広告プラットフォーム利用料 1月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-28",
+        "type": "income",
+        "partner_name": "Blue Orbit LLC",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 22, "amount": 1320000, "description": "海外顧客向け年額プラン一括請求（USD 8,800・輸出売上・USD外貨預金入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "expense",
+        "partner_name": "みらい信用銀行 為替デスク",
+        "details": [
+          { "account_item_name": "外貨預金", "tax_code": 0, "amount": 1435000, "description": "USD 10,000 を円転（USD外貨預金から払出）" },
+          { "account_item_name": "支払手数料", "tax_code": 0, "amount": 5500, "description": "USD外貨預金から円貨普通預金への換金手数料" }
+        ]
+      },
+      {
+        "issue_date": "2026-01-31",
+        "type": "income",
+        "partner_name": "みらい信用銀行 為替デスク",
+        "details": [
+          { "account_item_name": "普通預金", "tax_code": 0, "amount": 1435000, "description": "USD外貨預金から円貨普通預金へ換金着金" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "株式会社ハーバーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 935000, "description": "国内SaaS月額利用料 2月分（法人顧客9社）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-08",
+        "type": "income",
+        "partner_name": "Northwind Labs Pte. Ltd.",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 22, "amount": 605000, "description": "海外顧客向けSaaS月額利用料 2月分（USD 4,000・輸出売上・USD外貨預金入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-12",
+        "type": "expense",
+        "partner_name": "Pacific Compute Inc.",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 264000, "description": "海外SaaS仕入 海外クラウド基盤B 利用料 2月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-20",
+        "type": "expense",
+        "partner_name": "Orbit Media Ireland Ltd.",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 198000, "description": "海外検索広告プラットフォーム利用料 2月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-22",
+        "type": "expense",
+        "partner_name": "合同会社ノースデザイン",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 242000, "description": "国内UIデザイン業務委託 2月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-25",
+        "type": "expense",
+        "partner_name": "Blue Current Holdings LLC",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 121000, "description": "海外SNS広告プラットフォーム利用料 2月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-26",
+        "type": "income",
+        "partner_name": "Silverline Analytics Inc.",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 22, "amount": 495000, "description": "海外顧客向け追加IDライセンス 2月分（USD 3,300・輸出売上・USD外貨預金入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "株式会社ハーバーシステムズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 990000, "description": "国内SaaS月額利用料 3月分（法人顧客10社）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-08",
+        "type": "income",
+        "partner_name": "Northwind Labs Pte. Ltd.",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 22, "amount": 660000, "description": "海外顧客向けSaaS月額利用料 3月分（USD 4,400・輸出売上・USD外貨預金入金）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-12",
+        "type": "expense",
+        "partner_name": "Nimbus Web Services LLC",
+        "details": [
+          { "account_item_name": "通信費", "tax_code": 34, "amount": 286000, "description": "海外SaaS仕入 海外クラウド基盤A 利用料 3月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-18",
+        "type": "income",
+        "partner_name": "株式会社レイクビューソリューションズ",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 21, "amount": 275000, "description": "国内顧客向けプレミアムサポート 3月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-20",
+        "type": "expense",
+        "partner_name": "Orbit Media Ireland Ltd.",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 220000, "description": "海外検索広告プラットフォーム利用料 3月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-22",
+        "type": "expense",
+        "partner_name": "合同会社グローバルローカライズ",
+        "details": [
+          { "account_item_name": "外注費", "tax_code": 34, "amount": 165000, "description": "国内翻訳・ローカライズ業務委託 3月分" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-25",
+        "type": "expense",
+        "partner_name": "Blue Current Holdings LLC",
+        "details": [
+          { "account_item_name": "広告宣伝費", "tax_code": 34, "amount": 132000, "description": "海外SNS広告プラットフォーム利用料 3月分（USD建て・リバースチャージ対象）" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-27",
+        "type": "income",
+        "partner_name": "Cloud Harbor LLC",
+        "details": [
+          { "account_item_name": "売上高", "tax_code": 22, "amount": 1650000, "description": "海外顧客向け年額プラン更新（USD 11,000・輸出売上・USD外貨預金入金）" }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売上高", "tax_code": 22, "amount": 1210000, "description": "Blue Orbit LLC 年額プランの未経過分を前受収益へ振替" },
+          { "entry_side": "credit", "account_item_name": "前受収益", "tax_code": 0, "amount": 1210000, "description": "Blue Orbit LLC 年額プラン 前受収益計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "前受収益", "tax_code": 0, "amount": 110000, "description": "Blue Orbit LLC 年額プラン 2月分収益振替" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 22, "amount": 110000, "description": "Blue Orbit LLC 年額プラン 2月分売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "外貨預金", "tax_code": 0, "amount": 18000, "description": "海外顧客入金の為替差益（実現）" },
+          { "entry_side": "credit", "account_item_name": "為替差益", "tax_code": 0, "amount": 18000, "description": "USD入金時の為替差益計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-27",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "売上高", "tax_code": 22, "amount": 1512500, "description": "Cloud Harbor LLC 年額更新の未経過分を前受収益へ振替" },
+          { "entry_side": "credit", "account_item_name": "前受収益", "tax_code": 0, "amount": 1512500, "description": "Cloud Harbor LLC 年額更新 前受収益計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "前受収益", "tax_code": 0, "amount": 247500, "description": "Blue Orbit LLC 3月分 110,000 と Cloud Harbor LLC 3月分 137,500 を収益振替" },
+          { "entry_side": "credit", "account_item_name": "売上高", "tax_code": 22, "amount": 247500, "description": "海外年額プラン 3月分売上計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "為替差損", "tax_code": 0, "amount": 25000, "description": "USD円転時の為替差損（実現）" },
+          { "entry_side": "credit", "account_item_name": "外貨預金", "tax_code": 0, "amount": 25000, "description": "USD外貨預金の為替差損計上" }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          { "entry_side": "debit", "account_item_name": "外貨預金", "tax_code": 0, "amount": 42000, "description": "期末外貨建て資産換算（USD残高を期末TTMで再評価）" },
+          { "entry_side": "credit", "account_item_name": "為替差益", "tax_code": 0, "amount": 42000, "description": "期末外貨預金評価差額の計上" }
+        ]
+      }
+    ],
+    "receipts": [
+      {
+        "filename": "northwind-labs-invoice-2026-01.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "海外顧客向け Invoice（輸出売上）",
+        "receipt_metadatum_issue_date": "2026-01-09",
+        "receipt_metadatum_amount": 540000,
+        "receipt_metadatum_partner_name": "Northwind Labs Pte. Ltd."
+      },
+      {
+        "filename": "nimbus-aws-bill-2026-01.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "海外SaaS仕入 海外クラウド基盤A 利用料 請求書",
+        "receipt_metadatum_issue_date": "2026-01-12",
+        "receipt_metadatum_amount": 242000,
+        "receipt_metadatum_partner_name": "Nimbus Web Services LLC"
+      },
+      {
+        "filename": "orbit-media-ads-2026-01.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "海外検索広告プラットフォーム 広告明細",
+        "receipt_metadatum_issue_date": "2026-01-20",
+        "receipt_metadatum_amount": 176000,
+        "receipt_metadatum_partner_name": "Orbit Media Ireland Ltd."
+      }
+    ]
+  }
+}

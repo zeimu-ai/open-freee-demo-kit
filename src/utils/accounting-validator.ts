@@ -18,7 +18,7 @@ const TAX_CODE_RULES: Record<string, { allowedCodes: number[]; severity: 'error'
   '役員報酬':  { allowedCodes: [0],      severity: 'error' },
   '給料手当':  { allowedCodes: [0],      severity: 'error' },
   '外注費':    { allowedCodes: [34, 18], severity: 'error' },
-  '売上高':    { allowedCodes: [21, 13], severity: 'error' },
+  '売上高':    { allowedCodes: [21, 13, 22], severity: 'error' },
   '交際費':    { allowedCodes: [34, 18], severity: 'warning' },
   '地代家賃':  { allowedCodes: [0, 34],  severity: 'warning' },
   '諸会費':    { allowedCodes: [0],      severity: 'warning' },

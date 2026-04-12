@@ -20,6 +20,9 @@ const presetsDir = dirs.presetsDir;
 const officeDemoPresetPath = fileURLToPath(
   new URL('../../presets/accounting/office-demo/preset.json', import.meta.url)
 );
+const crossBorderPresetPath = fileURLToPath(
+  new URL('../../presets/accounting/cross-border-saas/preset.json', import.meta.url)
+);
 
 const samplePreset = {
   name: 'テスト プリセット',
@@ -124,6 +127,21 @@ describe('preset-loader', () => {
     expect(preset.data.walletables).toHaveLength(3);
     expect(preset.data.deals).toHaveLength(77);
     expect(preset.data.manualJournals).toHaveLength(15);
+    expect(preset.data.receipts).toHaveLength(3);
+  });
+
+  it('loads the accounting/cross-border-saas preset fixture', async () => {
+    const mockPresetDir = path.join(presetsDir, 'accounting', 'cross-border-saas');
+    await fs.access(crossBorderPresetPath);
+    await fs.mkdir(mockPresetDir, { recursive: true });
+    await fs.copyFile(crossBorderPresetPath, path.join(mockPresetDir, 'preset.json'));
+
+    const preset = await loadPreset('accounting/cross-border-saas');
+    expect(preset.name).toBe('越境SaaSクイックスタート');
+    expect(preset.expected).toEqual({ walletables: 3, deals: 25, manualJournals: 7, receipts: 3 });
+    expect(preset.data.walletables).toHaveLength(3);
+    expect(preset.data.deals).toHaveLength(25);
+    expect(preset.data.manualJournals).toHaveLength(7);
     expect(preset.data.receipts).toHaveLength(3);
   });
 });

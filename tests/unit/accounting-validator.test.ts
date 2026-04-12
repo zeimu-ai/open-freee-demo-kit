@@ -99,6 +99,21 @@ describe('TAX-CODE-001: 税区分整合性チェック', () => {
     expect(result.issues.filter(i => i.rule === 'TAX-CODE-001')).toHaveLength(0);
   });
 
+  it('売上高 tax_code 22（輸出売上）→ issue なし', () => {
+    const preset = makePreset({
+      deals: [
+        {
+          issue_date: '2026-01-05',
+          type: 'income',
+          partner_name: 'Northwind Labs Pte. Ltd.',
+          details: [{ account_item_name: '売上高', tax_code: 22, amount: 1100000 }],
+        },
+      ],
+    });
+    const result = runAccountingValidation(preset);
+    expect(result.issues.filter(i => i.rule === 'TAX-CODE-001')).toHaveLength(0);
+  });
+
   it('外注費 tax_code 0 → error', () => {
     const preset = makePreset({
       deals: [

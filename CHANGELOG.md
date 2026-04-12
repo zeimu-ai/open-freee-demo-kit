@@ -16,8 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Amazon・楽天・Shopify の手数料差引入金と決済手数料の流れを再現した
   - 配送費・商品仕入・返品返金・広告費・梱包資材・棚卸資産評価損を含めた
   - `expected` と README の件数表記を実データに合わせて更新した
+- New preset `accounting/cross-border-saas` — 越境SaaS・外貨預金・輸出売上
+  - 国内課税売上と海外顧客向け輸出売上（tax_code `22`）を同時に再現した
+  - USD外貨預金口座、円転処理、為替差損益、期末換算の仕訳を追加した
+  - 海外クラウド費用、Google Ads / Meta Ads 相当の海外広告費、証憑3件を追加した
 
 ### Changed
+- `TAX-CODE-001` の売上高許容税区分に `22`（輸出売上）を追加した
 - `accounting/office-demo` を receipts + 固定資産付きの完全版に昇格
   - 証憑 3 件を追加し、請求書・領収書・レシートの投入を一度に試せるようにした
   - ノートPC購入の固定資産取引と月次減価償却仕訳を追加した
