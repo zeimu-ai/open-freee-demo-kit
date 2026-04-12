@@ -25,6 +25,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Backward compatibility for older presets and state files by defaulting missing receipts to `[]`
 
+## [0.1.6] - 2026-04-07
+
+### Added
+- `fdk reset`（引数なし）で全プリセットデータを一括削除する reset-all 機能
+- README に Zeimu AI リンク・関連プロジェクトセクションを追加
+- `accounting/full-year` プリセットに交際費急増・売掛金ゼロ異常パターンを追加
+
+## [0.1.5] - 2026-04-05
+
+### Added
+- プリセット横断でのウォレット再利用 ID 追跡（安全なリセット対応）
+- CLA（Contributor License Agreement）追加
+
+### Changed
+- freee デフォルト勘定科目名に合わせたプリセット修正（`unclassified/quickstart` 等）
+- NPO 不課税収入に `雑収入` 勘定科目を使用するよう修正
+- バージョニングルールリンクを README・CONTRIBUTING に追加
+- リポジトリ URL を `zeimu-ai` org に更新
+
 ## [0.1.4] - 2026-03-31
 
 ### Added
