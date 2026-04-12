@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 証憑 3 件を追加し、請求書・領収書・レシートの投入を一度に試せるようにした
   - ノートPC購入の固定資産取引と月次減価償却仕訳を追加した
   - `expected` と README の件数表記を実データに合わせて更新した
+- `accounting/full-year` の `expected` を実データ件数に合わせて修正した（`deals: 101`, `manualJournals: 13`）
+- README、`presets/README.md`、カテゴリ別 README の件数・実装状況表記を現行プリセットに合わせて更新した
+- README と ROADMAP のバージョン表記を `0.1.8` に統一した
 
 ## [0.1.8] - 2026-04-12
 

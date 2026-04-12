@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "expected": {
     "walletables": 3,
-    "deals": 98,
-    "manualJournals": 12
+    "deals": 101,
+    "manualJournals": 13
   },
   "data": {
     "walletables": [
