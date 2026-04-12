@@ -76,9 +76,9 @@ fdk setup
   └────────────────────────────────────────────────┘
 
   ┌─ Step 3/3  プリセット選択 ──────────────────────┐
-  ❯ accounting/quickstart  — 架空ITサービス業・3ヶ月分
-    accounting/restaurant  — 架空居酒屋・飲食業
-    invoices/quickstart    — 請求書・売掛金管理
+  ❯ accounting/office-demo — 会計+経費の統合版・初回体験向け
+    accounting/quickstart  — 架空ITサービス業・3ヶ月分
+    expenses/quickstart    — 経費精算だけ試したい場合
     ...
   └────────────────────────────────────────────────┘
   ⠋ 取引を投入中 (23/52)...
@@ -146,12 +146,16 @@ freee ログイン後、以下のような画面が表示されます：
 
 ## プリセット一覧
 
+> まずは `accounting/office-demo` を選べば十分です。`accounting/quickstart` と `expenses/quickstart` は個別機能を試したい場合に使ってください。
+> 同じ事業所に `office-demo` と分離版を重ねて入れると、売上・経費・仕訳が重複します。
+
 ### 通常プリセット
 
 #### 汎用・スタンダード
 
 | プリセット | 内容 | 口座 | 取引 | 仕訳 |
 |-----------|------|:----:|:----:|:----:|
+| `accounting/office-demo` | 会計+経費の統合版・初回体験向け（売上・外注・給与・社員立替・未払費用振替） | 3 | 76 | 14 |
 | `accounting/quickstart` | 架空ITサービス業・3ヶ月分（売掛金入金フロー含む） | 3 | 52 | 11 |
 | `accounting/full-year` | 架空ITサービス業・12ヶ月分・異常値パターン付き | 3 | 98 | 12 |
 | `invoices/quickstart` | 請求書・売掛金管理（入金消込フロー含む） | 2 | 22 | 6 |

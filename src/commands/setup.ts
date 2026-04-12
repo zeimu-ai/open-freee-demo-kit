@@ -68,8 +68,8 @@ async function getPresetsForSelect(): Promise<PresetOption[]> {
 
   await scan(PRESETS_DIR);
 
-  // accounting → invoices → expenses → hr → unclassified → errors の順に並べる
-  const ORDER = ['accounting', 'invoices', 'expenses', 'hr', 'unclassified', 'errors'];
+  // office-demo を最優先にし、その後は accounting → invoices → expenses → hr → unclassified → errors の順に並べる
+  const ORDER = ['accounting/office-demo', 'accounting', 'invoices', 'expenses', 'hr', 'unclassified', 'errors'];
   results.sort((a, b) => {
     const ai = ORDER.findIndex(p => a.value.startsWith(p));
     const bi = ORDER.findIndex(p => b.value.startsWith(p));

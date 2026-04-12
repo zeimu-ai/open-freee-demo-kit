@@ -107,4 +107,19 @@ describe('preset-loader', () => {
     );
     await expect(loadPreset('test-preset')).rejects.toThrow();
   });
+
+  it('loads the merged accounting/office-demo preset fixture', async () => {
+    const realPresetPath = '/Users/tackeyy/dev/open-freee-demo-kit/presets/accounting/office-demo/preset.json';
+    const mockPresetDir = path.join(presetsDir, 'accounting', 'office-demo');
+    await fs.access(realPresetPath);
+    await fs.mkdir(mockPresetDir, { recursive: true });
+    await fs.copyFile(realPresetPath, path.join(mockPresetDir, 'preset.json'));
+
+    const preset = await loadPreset('accounting/office-demo');
+    expect(preset.name).toBe('会計+経費クイックスタート（統合版）');
+    expect(preset.expected).toEqual({ walletables: 3, deals: 76, manualJournals: 14 });
+    expect(preset.data.walletables).toHaveLength(3);
+    expect(preset.data.deals).toHaveLength(76);
+    expect(preset.data.manualJournals).toHaveLength(14);
+  });
 });

@@ -22,6 +22,7 @@ CLIスタブ・プロジェクト初期化
 ## Phase 3（完了）
 
 - `fdk status` — 投入済みプリセット一覧と件数表示
+- `accounting/office-demo` プリセット（会計+経費統合 quickstart・初回体験向け）
 - `invoices/quickstart` プリセット（取引22件・口座2件・仕訳6件）
 - `expenses/quickstart` プリセット（取引24件・口座2件・仕訳3件）
 - `hr/quickstart` プリセット（取引15件・口座1件・仕訳9件）

@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- New preset `accounting/office-demo` — 会計+経費の統合 quickstart
+  - `accounting/quickstart` をベースに、`expenses/quickstart` の社員立替精算と月末未払費用振替を統合
+  - 合同会社グリーンテック / ITサービス業の会計ストーリーに統一
+  - まずはこの 1 つで、売上・外注・給与・経費・経費精算をまとめて試せる導線を追加
+
 ## [0.1.7] - 2026-04-10
 
 ### Added

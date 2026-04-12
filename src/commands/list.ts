@@ -44,10 +44,20 @@ async function scanPresets(dir: string, prefix = ''): Promise<PresetEntry[]> {
   return entries;
 }
 
+function sortPresets(entries: PresetEntry[]): PresetEntry[] {
+  const ORDER = ['accounting/office-demo', 'accounting', 'invoices', 'expenses', 'hr', 'unclassified', 'errors'];
+  return entries.sort((a, b) => {
+    const ai = ORDER.findIndex(p => a.id.startsWith(p));
+    const bi = ORDER.findIndex(p => b.id.startsWith(p));
+    if (ai !== bi) return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+    return a.id.localeCompare(b.id);
+  });
+}
+
 export const listCommand = new Command('list')
   .description('List available presets')
   .action(async () => {
-    const presets = await scanPresets(PRESETS_DIR);
+    const presets = sortPresets(await scanPresets(PRESETS_DIR));
 
     if (presets.length === 0) {
       console.log('利用可能なプリセット:');
