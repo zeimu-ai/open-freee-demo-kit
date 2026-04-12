@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- New preset `accounting/accounting-office` — 税理士事務所デモ
+  - 複数顧問先の月額顧問料、記帳代行、前受顧問料、決算申告報酬、年末調整報酬を再現した
+  - 事務所賃料、税理士会会費、研修費、書籍代、会計ソフト利用料、通信費、事務用品、源泉徴収ありの支払報酬を含めた
+  - `expected` と README の件数表記を実データに合わせて更新した
 - New preset `accounting/ecommerce-marketplace` — ECモール・自社EC向けデモデータ
   - Amazon・楽天・Shopify の手数料差引入金と決済手数料の流れを再現した
   - 配送費・商品仕入・返品返金・広告費・梱包資材・棚卸資産評価損を含めた

@@ -1,0 +1,490 @@
+{
+  "name": "税理士事務所デモ",
+  "description": "税理士事務所自身の会計実務を再現した3ヶ月分のデモデータ。複数顧問先の月額顧問料、記帳代行、決算申告報酬、年末調整報酬、前受顧問料、源泉徴収ありの支払報酬、事務所運営費、研修費、書籍代、ソフトウェア利用料、通信費、事務用品、減価償却の論点をまとめて試せる。",
+  "version": "1.0.0",
+  "expected": {
+    "walletables": 2,
+    "deals": 24,
+    "manualJournals": 6,
+    "receipts": 3
+  },
+  "data": {
+    "walletables": [
+      {
+        "type": "bank_account",
+        "name": "あおば信用銀行 普通預金（事務所運営用）",
+        "bank_id": 2407
+      },
+      {
+        "type": "credit_card",
+        "name": "事務所クレジットカード",
+        "bank_id": 1442
+      }
+    ],
+    "deals": [
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "株式会社あかねコンサル",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 110000,
+            "description": "1月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "合同会社みどり経営",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 88000,
+            "description": "1月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-05",
+        "type": "income",
+        "partner_name": "株式会社はるか会計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 132000,
+            "description": "1月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-08",
+        "type": "income",
+        "partner_name": "株式会社あかねコンサル",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 55000,
+            "description": "1月 記帳代行料"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-12",
+        "type": "income",
+        "partner_name": "合同会社みどり経営",
+        "details": [
+          {
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 660000,
+            "description": "年間契約の前受顧問料入金"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "株式会社あかねコンサル",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 110000,
+            "description": "2月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "合同会社みどり経営",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 88000,
+            "description": "2月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-05",
+        "type": "income",
+        "partner_name": "株式会社はるか会計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 132000,
+            "description": "2月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-10",
+        "type": "income",
+        "partner_name": "合同会社みどり経営",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 55000,
+            "description": "2月 記帳代行料"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "株式会社あかねコンサル",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 110000,
+            "description": "3月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "合同会社みどり経営",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 88000,
+            "description": "3月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-05",
+        "type": "income",
+        "partner_name": "株式会社はるか会計",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 132000,
+            "description": "3月 顧問料（月額固定）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-18",
+        "type": "income",
+        "partner_name": "合同会社みどり経営",
+        "details": [
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 330000,
+            "description": "決算申告報酬"
+          },
+          {
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 165000,
+            "description": "年末調整報酬"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-15",
+        "type": "expense",
+        "partner_name": "みらい税理士会",
+        "details": [
+          {
+            "account_item_name": "諸会費",
+            "tax_code": 0,
+            "amount": 24000,
+            "description": "税理士会 年会費"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-18",
+        "type": "expense",
+        "partner_name": "学び舎アカデミー合同会社",
+        "details": [
+          {
+            "account_item_name": "研修費",
+            "tax_code": 34,
+            "amount": 22000,
+            "description": "相続税実務セミナー 受講料"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-20",
+        "type": "expense",
+        "partner_name": "書苑出版株式会社",
+        "details": [
+          {
+            "account_item_name": "新聞図書費",
+            "tax_code": 34,
+            "amount": 8800,
+            "description": "税務実務書籍 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-22",
+        "type": "expense",
+        "partner_name": "クラウド会計ソリューション合同会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "会計クラウド月額利用料 1月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-24",
+        "type": "expense",
+        "partner_name": "事務用品センター株式会社",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 16500,
+            "description": "事務用品一式（用紙・ファイル・文具）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-01-27",
+        "type": "expense",
+        "partner_name": "甲斐税理士事務所",
+        "details": [
+          {
+            "account_item_name": "支払報酬料",
+            "tax_code": 34,
+            "amount": 132000,
+            "description": "外部税理士への月次レビュー報酬（源泉徴収あり）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-08",
+        "type": "expense",
+        "partner_name": "さくら不動産管理株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 165000,
+            "description": "事務所賃料 2月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-12",
+        "type": "expense",
+        "partner_name": "クラウド通信サービス株式会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 19800,
+            "description": "事務所通信費 2月分（回線・電話）"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-18",
+        "type": "expense",
+        "partner_name": "事務用品センター株式会社",
+        "details": [
+          {
+            "account_item_name": "消耗品費",
+            "tax_code": 34,
+            "amount": 19800,
+            "description": "プリンタ消耗品・封筒・付箋"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-08",
+        "type": "expense",
+        "partner_name": "さくら不動産管理株式会社",
+        "details": [
+          {
+            "account_item_name": "地代家賃",
+            "tax_code": 0,
+            "amount": 165000,
+            "description": "事務所賃料 3月分"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-12",
+        "type": "expense",
+        "partner_name": "クラウド会計ソリューション合同会社",
+        "details": [
+          {
+            "account_item_name": "通信費",
+            "tax_code": 34,
+            "amount": 33000,
+            "description": "会計クラウド月額利用料 3月分"
+          }
+        ]
+      }
+    ],
+    "manualJournals": [
+      {
+        "issue_date": "2026-01-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "1月末 前受顧問料の月次振替"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 55000,
+            "description": "1月分 顧問料収益計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "2月末 前受顧問料の月次振替"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 55000,
+            "description": "2月分 顧問料収益計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "前受収益",
+            "tax_code": 0,
+            "amount": 55000,
+            "description": "3月末 前受顧問料の月次振替"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 55000,
+            "description": "3月分 顧問料収益計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-02-28",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 88000,
+            "description": "2月末 未収顧問料の計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 88000,
+            "description": "2月分 未収顧問料の収益計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "売掛金",
+            "tax_code": 0,
+            "amount": 132000,
+            "description": "3月末 未収顧問料の計上"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "売上高",
+            "tax_code": 21,
+            "amount": 132000,
+            "description": "3月分 未収顧問料の収益計上"
+          }
+        ]
+      },
+      {
+        "issue_date": "2026-03-31",
+        "details": [
+          {
+            "entry_side": "debit",
+            "account_item_name": "減価償却費",
+            "tax_code": 34,
+            "amount": 77000,
+            "description": "事務所PC・周辺機器の月次減価償却"
+          },
+          {
+            "entry_side": "credit",
+            "account_item_name": "減価償却累計額",
+            "tax_code": 0,
+            "amount": 77000,
+            "description": "3月分 減価償却累計額の計上"
+          }
+        ]
+      }
+    ],
+    "receipts": [
+      {
+        "filename": "consulting-agreement-2026-01.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "顧問契約書サンプル",
+        "receipt_metadatum_issue_date": "2026-01-10",
+        "receipt_metadatum_amount": 660000,
+        "receipt_metadatum_partner_name": "合同会社みどり経営"
+      },
+      {
+        "filename": "training-receipt-2026-02.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "研修費領収書サンプル",
+        "receipt_metadatum_issue_date": "2026-02-18",
+        "receipt_metadatum_amount": 27500,
+        "receipt_metadatum_partner_name": "学び舎アカデミー合同会社"
+      },
+      {
+        "filename": "software-invoice-2026-03.png",
+        "mimeType": "image/png",
+        "contentBase64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0V8AAAAASUVORK5CYII=",
+        "description": "会計クラウド利用料請求書サンプル",
+        "receipt_metadatum_issue_date": "2026-03-12",
+        "receipt_metadatum_amount": 33000,
+        "receipt_metadatum_partner_name": "クラウド会計ソリューション合同会社"
+      }
+    ]
+  }
+}
