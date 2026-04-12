@@ -1,6 +1,6 @@
 {
   "name": "freee-demo-kit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "freee sandbox seeder CLI — Load demo data into your freee test company",
   "type": "module",
   "bin": {

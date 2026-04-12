@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.8] - 2026-04-12
+
 ### Added
 - New preset `accounting/office-demo` — 会計+経費の統合 quickstart
   - `accounting/quickstart` をベースに、`expenses/quickstart` の社員立替精算と月末未払費用振替を統合
