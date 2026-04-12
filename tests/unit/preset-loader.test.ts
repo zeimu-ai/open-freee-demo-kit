@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
+import { fileURLToPath } from 'node:url';
 import { loadPreset } from '../../src/utils/preset-loader.js';
 
 const dirs = vi.hoisted(() => {
@@ -16,6 +17,9 @@ vi.mock('../../src/utils/preset-validator.js', () => ({
 
 const tmpDir = dirs.tmpDir;
 const presetsDir = dirs.presetsDir;
+const officeDemoPresetPath = fileURLToPath(
+  new URL('../../presets/accounting/office-demo/preset.json', import.meta.url)
+);
 
 const samplePreset = {
   name: 'テスト プリセット',
@@ -109,15 +113,14 @@ describe('preset-loader', () => {
   });
 
   it('loads the merged accounting/office-demo preset fixture', async () => {
-    const realPresetPath = '/Users/tackeyy/dev/open-freee-demo-kit/presets/accounting/office-demo/preset.json';
     const mockPresetDir = path.join(presetsDir, 'accounting', 'office-demo');
-    await fs.access(realPresetPath);
+    await fs.access(officeDemoPresetPath);
     await fs.mkdir(mockPresetDir, { recursive: true });
-    await fs.copyFile(realPresetPath, path.join(mockPresetDir, 'preset.json'));
+    await fs.copyFile(officeDemoPresetPath, path.join(mockPresetDir, 'preset.json'));
 
     const preset = await loadPreset('accounting/office-demo');
     expect(preset.name).toBe('会計+経費クイックスタート（統合版）');
-    expect(preset.expected).toEqual({ walletables: 3, deals: 76, manualJournals: 14 });
+    expect(preset.expected).toEqual({ walletables: 3, deals: 76, manualJournals: 14, receipts: 0 });
     expect(preset.data.walletables).toHaveLength(3);
     expect(preset.data.deals).toHaveLength(76);
     expect(preset.data.manualJournals).toHaveLength(14);
